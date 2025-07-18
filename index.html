@@ -1,35 +1,82 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Merricano</title>
+        <link rel="stylesheet" href="css/style.css">
+            <style>
+            /* Banner */
+            .banner 
+            {
+                width: 100%;
+                height: 300px;
+                background-image: url('Images/Banner.png');
+                background-size: cover;
+                background-position: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                    color: white;
+                text-align: center;
+                transition: margin-top 0.3s;
+            }
+
+            .banner h1
+            {
+                background-color: rgba(0, 0, 0, 0.5);
+                padding: 10px 20px;
+                border-radius: 10px;
+                font-size: 2.5rem;
+            }
+
+            @media (max-width: 768px) 
+            {
+            .banner {
+                height: 200px;
+                }
+
+        .banner h1 
+                {
+                font-size: 1.5rem;
+                }
+            }
+        </style>
+        <script src="JavaScript/script.js" defer></script>
     </head>
     <body>
-        <br>
-        <br>
-        <a href="History.html">History</a>
-        <br>
-        <br>
-        <a href="Menu.html">Menu</a>
-        <br>
-        <br>
-        <a href="GetOurApp.html">Get Our App</a>
-        <br>
-        <br>
-        <a href="LogInSignUp.html">Log in and Sign up</a>
-        <br>
-        <br>
-        <a href="Countries.html">Countries</a>
-        <br>
-        <br>
-        <a href="ContextUs.html">Context us</a>
-        <br>
-        <br>
-        <a href="NewsRoom.html">Newsroom</a>
-        <br>
-        <br>
-        <a href="Collections.html">Collactions</a>
-        <br>
-        <br>
-        <a href="JoinUs.html">Join Us</a>
+        <div class="header">
+            <!--header with logo-->
+            <div class="logo">
+                <a href="index.html" class="logo">
+                    <img src="Images/1.png" alt="Logo">
+                        Merricano
+                </a>
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- Navigation Menu-->
+            <div class="menu" id="menu">
+                <a href="History.html">History</a>
+                <a href="Menu.html">Menu</a>
+                <a href="GetOurApp.html">Get Our App</a>
+                <a href="LogInSignUp.html">Log in and Sign up</a>
+                <a href="Countries.html">Countries</a>
+                <a href="ContextUs.html">Context us</a>
+                <a href="NewsRoom.html">Newsroom</a>
+                <a href="Collections.html">Collactions</a>
+                <a href="JoinUs.html">Join Us</a>
+            </div>
+        </div>
+        <!-- Image Banner -->
+        <div class="banner" id="banner">
+            <img src="Images/make an banner of a coffee brand call Mericano..jpg" alt="banner">
+            <h1>Gear Up. Move Forward</h1>
+            </a>
+        </div>
     </body>
 </html>
