@@ -1,18 +1,15 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Merricano - 意见反馈 Feedback</title>
-    <meta name="description"
-        content="Feedback page for Merricano, allowing customers to provide suggestions and comments.">
+    <title>Merricano - 隐私政策 Privacy Policy</title>
+    <meta name="description" content="Merricano Privacy Policy page using Bootstrap 5 CDN">
 
-    <!-- Bootstrap 5.3 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-    <!-- Optional: site favicon -->
     <link rel="icon" type="image/png" href="Images/IconMerricano1.jpg">
     <style>
         :root {
@@ -128,16 +125,10 @@
             color: var(--text-inverse);
             opacity: 1;
         }
-
-        /* Specific styles for this page */
-        .feedback-form-card {
-            background-color: #F3EFE9;
-        }
     </style>
 </head>
 
 <body>
-    <!-- Navbar (from index.html) -->
     <nav class="navbar navbar-expand-lg sbx-navbar">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
@@ -171,66 +162,53 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="py-5 sbx-hero">
-        <div class="container text-center">
-            <h1 class="display-5 fw-bold mb-3" data-i18n="feedback.title">意见反馈</h1>
-            <p class="lead text-secondary" data-i18n="feedback.subtitle">我们非常重视您的宝贵意见。您的反馈将帮助我们不断改进，提供更优质的服务和产品。</p>
-        </div>
-    </section>
-
-    <!-- Feedback Form Section -->
-    <section class="py-5">
+    <main class="py-5">
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="card p-4 rounded-3 shadow-sm feedback-form-card">
-                        <h4 class="h5 fw-bold mb-4" data-i18n="feedback.form.header">告诉我们您的想法</h4>
-                        <form id="feedbackForm">
-                            <div class="mb-3">
-                                <label for="feedbackName" class="form-label"
-                                    data-i18n="feedback.form.label.name">您的姓名</label>
-                                <input type="text" class="form-control" id="feedbackName" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="feedbackEmail" class="form-label"
-                                    data-i18n="feedback.form.label.email">邮箱</label>
-                                <input type="email" class="form-control" id="feedbackEmail" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="feedbackType" class="form-label"
-                                    data-i18n="feedback.form.label.type">反馈类型</label>
-                                <select class="form-select" id="feedbackType" required>
-                                    <option value="" data-i18n="feedback.form.type.select" disabled selected>请选择...
-                                    </option>
-                                    <option value="product" data-i18n="feedback.form.type.product">产品建议</option>
-                                    <option value="service" data-i18n="feedback.form.type.service">门店服务</option>
-                                    <option value="app" data-i18n="feedback.form.type.app">App/网站体验</option>
-                                    <option value="other" data-i18n="feedback.form.type.other">其他</option>
-                                </select>
-                            </div>
-                            <div class="mb-3">
-                                <label for="feedbackMessage" class="form-label"
-                                    data-i18n="feedback.form.label.message">详细内容</label>
-                                <textarea class="form-control" id="feedbackMessage" rows="6" required></textarea>
-                            </div>
-                            <div class="d-grid">
-                                <button type="submit" class="btn sbx-cta-primary btn-lg"
-                                    data-i18n="feedback.form.submit">提交反馈</button>
-                            </div>
-                        </form>
-                        <!-- Success Message -->
-                        <div id="formSuccessMessage" class="alert alert-success text-center mt-4 d-none" role="alert"
-                            data-i18n="feedback.form.success">
-                            感谢您的宝贵意见！您的反馈已成功提交。
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+            <h1 class="display-5 fw-bold mb-4" data-i18n="privacy.title">隐私政策</h1>
+            <p data-i18n="privacy.intro">生效日期：2024年9月16日</p>
 
-    <!-- Footer (multi-column links) -->
+            <h2 class="h4 fw-bold mt-5 mb-3" data-i18n="privacy.h1">我们收集的信息</h2>
+            <p data-i18n="privacy.p1">Merricano Promax（以下简称“我们”或“本公司”）致力于保护您的隐私。本政策解释了我们如何收集、使用和披露您在使用我们服务时提供的信息。</p>
+            <p data-i18n="privacy.p2">我们可能收集以下信息：</p>
+            <ul class="list-unstyled">
+                <li class="mb-2" data-i18n="privacy.list1">**个人识别信息**：例如您的姓名、电子邮件地址、电话号码和支付信息。</li>
+                <li class="mb-2" data-i18n="privacy.list2">**交易信息**：您的订单历史、购买偏好和会员卡信息。</li>
+                <li class="mb-2" data-i18n="privacy.list3">**设备信息**：您的IP地址、浏览器类型、操作系统和访问时间。</li>
+            </ul>
+
+            <h2 class="h4 fw-bold mt-5 mb-3" data-i18n="privacy.h2">我们如何使用您的信息</h2>
+            <p data-i18n="privacy.p3">我们使用收集到的信息用于：</p>
+            <ul class="list-unstyled">
+                <li class="mb-2" data-i18n="privacy.list4">处理和履行您的订单。</li>
+                <li class="mb-2" data-i18n="privacy.list5">管理您的会员账户，提供会员福利和奖励。</li>
+                <li class="mb-2" data-i18n="privacy.list6">改善我们的服务、产品和网站体验。</li>
+                <li class="mb-2" data-i18n="privacy.list7">向您发送营销和促销通讯（如果您已同意）。</li>
+            </ul>
+
+            <h2 class="h4 fw-bold mt-5 mb-3" data-i18n="privacy.h3">信息共享与披露</h2>
+            <p data-i18n="privacy.p4">我们不会向第三方出售或出租您的个人信息。我们可能在以下情况下与第三方共享信息：</p>
+            <ul class="list-unstyled">
+                <li class="mb-2" data-i18n="privacy.list8">与为我们提供服务的供应商（如支付处理商和物流服务商）。</li>
+                <li class="mb-2" data-i18n="privacy.list9">在法律要求或为了保护我们的权利和安全时。</li>
+            </ul>
+
+            <h2 class="h4 fw-bold mt-5 mb-3" data-i18n="privacy.h4">您的权利</h2>
+            <p data-i18n="privacy.p5">您有权访问、更正或删除您的个人信息。您可以通过我们的客户服务渠道联系我们，行使您的权利。</p>
+
+            <h2 class="h4 fw-bold mt-5 mb-3" data-i18n="privacy.h5">政策更新</h2>
+            <p data-i18n="privacy.p6">我们可能不时更新本隐私政策。任何更改将在本页面上发布，并附带新的生效日期。</p>
+
+            <h2 class="h4 fw-bold mt-5 mb-3" data-i18n="privacy.h6">联系我们</h2>
+            <p data-i18n="privacy.p7">如果您对我们的隐私政策有任何疑问或问题，请通过以下邮箱联系我们：</p>
+            <p><a href="mailto:merrick.gjz@gmail.com?subject=隐私政策咨询&body=您好，我想咨询一下关于隐私政策的问题。">
+                    merrick.gjz@gmail.com
+                </a>
+            </p>
+
+
+        </div>
+    </main>
+
     <footer class="sbx-footer border-top pt-5 pb-4">
         <div class="container">
             <div class="row g-4">
@@ -278,19 +256,17 @@
                 <span class="text-secondary small">© <span id="year"></span> Merricano Promax</span>
                 <div class="d-flex gap-3 small">
                     <a href="ContextUs.html" data-i18n="footer.bottom.contact">联系我们</a>
-                    <a href="PrivacyAndPolity.html" data-i18n="footer.bottom.privacy">隐私政策</a>
-                    <a href="TermsOfUse.html" data-i18n="footer.bottom.terms">使用条款</a>
+                    <a href="PrivacyAndPolice.html" data-i18n="footer.bottom.privacy">隐私政策</a>
+                    <a href="#" data-i18n="footer.bottom.terms">使用条款</a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Bootstrap JS (bundle includes Popper) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 
-    <!-- Small helper script with i18n -->
     <script>
         const yearEl = document.getElementById('year');
         if (yearEl) {
@@ -299,29 +275,12 @@
 
         const translations = {
             zh: {
-                // Nav
                 'nav.menu': '菜单',
                 'nav.collections': '臻选',
                 'nav.stores': '门店',
                 'nav.brand': '品牌',
                 'nav.login': '登录/注册',
                 'nav.language': '语言/EN',
-                // Feedback Page Specific
-                'feedback.title': '意见反馈',
-                'feedback.subtitle': '我们非常重视您的宝贵意见。您的反馈将帮助我们不断改进，提供更优质的服务和产品。',
-                'feedback.form.header': '告诉我们您的想法',
-                'feedback.form.label.name': '您的姓名',
-                'feedback.form.label.email': '邮箱',
-                'feedback.form.label.type': '反馈类型',
-                'feedback.form.type.select': '请选择...',
-                'feedback.form.type.product': '产品建议',
-                'feedback.form.type.service': '门店服务',
-                'feedback.form.type.app': 'App/网站体验',
-                'feedback.form.type.other': '其他',
-                'feedback.form.label.message': '详细内容',
-                'feedback.form.submit': '提交反馈',
-                'feedback.form.success': '感谢您的宝贵意见！您的反馈已成功提交。',
-                // Footer
                 'footer.about': '关于我们',
                 'footer.about.story': '品牌故事',
                 'footer.about.news': '新闻中心',
@@ -335,38 +294,45 @@
                 'footer.business.career': '人才招聘',
                 'footer.business.franchise': '加盟合作',
                 'footer.follow': '关注我们',
-                'footer.follow.weibo': '微博',
-                'footer.follow.wechat': '微信',
+                'footer.follow.instagram': 'Instagram',
                 'footer.follow.Facebook': '脸书',
                 'footer.follow.douyin': '抖音',
                 'footer.bottom.contact': '联系我们',
                 'footer.bottom.privacy': '隐私政策',
-                'footer.bottom.terms': '使用条款'
+                'footer.bottom.terms': '使用条款',
+                'privacy.title': '隐私政策',
+                'privacy.intro': '生效日期：2024年9月16日',
+                'privacy.h1': '我们收集的信息',
+                'privacy.p1': 'Merricano Promax（以下简称“我们”或“本公司”）致力于保护您的隐私。本政策解释了我们如何收集、使用和披露您在使用我们服务时提供的信息。',
+                'privacy.p2': '我们可能收集以下信息：',
+                'privacy.list1': '**个人识别信息**：例如您的姓名、电子邮件地址、电话号码和支付信息。',
+                'privacy.list2': '**交易信息**：您的订单历史、购买偏好和会员卡信息。',
+                'privacy.list3': '**设备信息**：您的IP地址、浏览器类型、操作系统和访问时间。',
+                'privacy.h2': '我们如何使用您的信息',
+                'privacy.p3': '我们使用收集到的信息用于：',
+                'privacy.list4': '处理和履行您的订单。',
+                'privacy.list5': '管理您的会员账户，提供会员福利和奖励。',
+                'privacy.list6': '改善我们的服务、产品和网站体验。',
+                'privacy.list7': '向您发送营销和促销通讯（如果您已同意）。',
+                'privacy.h3': '信息共享与披露',
+                'privacy.p4': '我们不会向第三方出售或出租您的个人信息。我们可能在以下情况下与第三方共享信息：',
+                'privacy.list8': '与为我们提供服务的供应商（如支付处理商和物流服务商）。',
+                'privacy.list9': '在法律要求或为了保护我们的权利和安全时。',
+                'privacy.h4': '您的权利',
+                'privacy.p5': '您有权访问、更正或删除您的个人信息。您可以通过我们的客户服务渠道联系我们，行使您的权利。',
+                'privacy.h5': '政策更新',
+                'privacy.p6': '我们可能不时更新本隐私政策。任何更改将在本页面上发布，并附带新的生效日期。',
+                'privacy.h6': '联系我们',
+                'privacy.p7': '如果您对我们的隐私政策有任何疑问或问题，请通过以下邮箱联系我们：',
+                'privacy.email': 'merrick.gjz@gmail.com'
             },
             en: {
-                // Nav
                 'nav.menu': 'Menu',
                 'nav.collections': 'Collections',
                 'nav.stores': 'Stores',
                 'nav.brand': 'Brand',
                 'nav.login': 'Sign In / Join',
                 'nav.language': 'Language/语言',
-                // Feedback Page Specific
-                'feedback.title': 'Feedback',
-                'feedback.subtitle': 'We highly value your opinion. Your feedback helps us to continuously improve our services and products.',
-                'feedback.form.header': 'Tell Us What You Think',
-                'feedback.form.label.name': 'Your Name',
-                'feedback.form.label.email': 'Email',
-                'feedback.form.label.type': 'Feedback Type',
-                'feedback.form.type.select': 'Please select...',
-                'feedback.form.type.product': 'Product Suggestion',
-                'feedback.form.type.service': 'Store Service',
-                'feedback.form.type.app': 'App/Website Experience',
-                'feedback.form.type.other': 'Other',
-                'feedback.form.label.message': 'Details',
-                'feedback.form.submit': 'Submit Feedback',
-                'feedback.form.success': 'Thank you for your valuable feedback! Your message has been submitted successfully.',
-                // Footer
                 'footer.about': 'About us',
                 'footer.about.story': 'Our story',
                 'footer.about.news': 'Newsroom',
@@ -380,13 +346,37 @@
                 'footer.business.career': 'Careers',
                 'footer.business.franchise': 'Franchise',
                 'footer.follow': 'Follow us',
-                'footer.follow.weibo': 'Weibo',
-                'footer.follow.wechat': 'WeChat',
+                'footer.follow.instagram': 'Instagram',
                 'footer.follow.Facebook': 'Facebook',
                 'footer.follow.douyin': 'Douyin',
                 'footer.bottom.contact': 'Contact us',
                 'footer.bottom.privacy': 'Privacy policy',
-                'footer.bottom.terms': 'Terms of use'
+                'footer.bottom.terms': 'Terms of use',
+                'privacy.title': 'Privacy Policy',
+                'privacy.intro': 'Effective Date: September 16, 2024',
+                'privacy.h1': 'Information We Collect',
+                'privacy.p1': 'Merricano Promax (referred to as "we," "us," or "the company") is committed to protecting your privacy. This policy explains how we collect, use, and disclose information you provide when using our services.',
+                'privacy.p2': 'We may collect the following information:',
+                'privacy.list1': '**Personal Identification Information**: such as your name, email address, phone number, and payment information.',
+                'privacy.list2': '**Transaction Information**: your order history, purchase preferences, and membership card details.',
+                'privacy.list3': '**Device Information**: your IP address, browser type, operating system, and access times.',
+                'privacy.h2': 'How We Use Your Information',
+                'privacy.p3': 'We use the collected information to:',
+                'privacy.list4': 'Process and fulfill your orders.',
+                'privacy.list5': 'Manage your membership account and provide member benefits and rewards.',
+                'privacy.list6': 'Improve our services, products, and website experience.',
+                'privacy.list7': 'Send you marketing and promotional communications (if you have consented).',
+                'privacy.h3': 'Information Sharing and Disclosure',
+                'privacy.p4': 'We do not sell or rent your personal information to third parties. We may share information with third parties in the following circumstances:',
+                'privacy.list8': 'With vendors who provide services to us (such as payment processors and logistics providers).',
+                'privacy.list9': 'When required by law or to protect our rights and safety.',
+                'privacy.h4': 'Your Rights',
+                'privacy.p5': 'You have the right to access, correct, or delete your personal information. You can exercise your rights by contacting us through our customer service channels.',
+                'privacy.h5': 'Policy Updates',
+                'privacy.p6': 'We may update this privacy policy from time to time. Any changes will be posted on this page with a new effective date.',
+                'privacy.h6': 'Contact Us',
+                'privacy.p7': 'If you have any questions or concerns about our privacy policy, please contact us at the following email address:',
+                'privacy.email': 'merrick.gjz@gmail.com',
             }
         };
 
@@ -395,7 +385,7 @@
             document.querySelectorAll('[data-i18n]').forEach(function (el) {
                 const key = el.getAttribute('data-i18n');
                 if (dict[key]) {
-                    el.textContent = dict[key];
+                    el.innerHTML = dict[key];
                 }
             });
             localStorage.setItem('lang', lang);
@@ -406,16 +396,6 @@
                 const lang = this.getAttribute('data-lang');
                 setLanguage(lang);
             });
-        });
-
-        document.getElementById('feedbackForm').addEventListener('submit', function (event) {
-            event.preventDefault();
-            // In a real app, you would send this to a backend service.
-            console.log('Feedback form submitted.');
-
-            // Hide form and show success message
-            this.style.display = 'none';
-            document.getElementById('formSuccessMessage').classList.remove('d-none');
         });
 
         setLanguage(localStorage.getItem('lang') || 'zh');
