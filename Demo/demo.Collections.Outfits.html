@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title data-i18n="page.title">Merricano - 服饰系列</title>
+    <meta name="description" content="Merricano 品牌服饰系列，穿上咖啡美学">
+
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://placehold.co/36x36/6B4226/fff?text=M">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        :root {
+            /* Primary */
+            --brand-primary: #6B4226;
+            /* Coffee Brown */
+            /* Background */
+            --bg-light-cream: #FAF3E7;
+            --bg-dark-brown: #3E2723;
+            /* Accents */
+            --accent-caramel: #D4A373;
+            --accent-olive: #7B8D42;
+            /* Text */
+            --text-main: #2C2C2C;
+            --text-secondary: #5C5C5C;
+            --text-inverse: #FFFFFF;
+            /* Borders */
+            --border-light: #E0D6CC;
+            --border-dark: #8B5E3C;
+        }
+
+        body {
+            background-color: var(--bg-light-cream);
+            color: var(--text-main);
+        }
+
+        .text-secondary {
+            color: var(--text-secondary) !important;
+        }
+
+        /* Navbar */
+        .nav-brandbar {
+            background-color: var(--brand-primary);
+        }
+
+        .nav-brandbar .navbar-brand,
+        .nav-brandbar .nav-link {
+            color: var(--text-inverse);
+        }
+
+        .nav-brandbar .nav-link:hover {
+            color: var(--text-inverse);
+            opacity: .9;
+        }
+
+        /* Hero */
+        .outfit-hero {
+            /* 使用更具视觉冲击力的占位图 */
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('Images/2.png') no-repeat center center/cover;
+            color: white;
+            padding: 150px 0;
+            text-align: center;
+        }
+
+        /* Filters & Sort */
+        .filter-sort-bar {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Product Cards */
+        .card {
+            border: none;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-img-top {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-top-left-radius: 0.5rem;
+            border-top-right-radius: 0.5rem;
+        }
+
+        /* Modal */
+        .modal-body img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Footer */
+        .site-footer {
+            background-color: var(--bg-dark-brown);
+            color: var(--text-inverse);
+        }
+
+        .site-footer a {
+            color: var(--text-inverse);
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.2s ease-in-out;
+        }
+
+        .site-footer a:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg nav-brandbar">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <img src="https://placehold.co/36x36/6B4226/fff?text=M" alt="Merricano" width="36" height="36"
+                    class="rounded-circle">
+                <span class="fw-semibold">Merricano</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+                aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-lg-2">
+                    <li class="nav-item"><a class="nav-link" href="Menu.html" data-i18n="nav.menu">菜单</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Collections.html" data-i18n="nav.collections">臻选</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="Countries.html" data-i18n="nav.stores">门店</a></li>
+                    <li class="nav-item"><a class="nav-link" href="NewsRoom.html" data-i18n="nav.brand">品牌</a></li>
+                    <li class="nav-item"><a class="nav-link" href="LogInSignUp.html" data-i18n="nav.login">登录/注册</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="langDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false" data-i18n="nav.language">语言/EN</a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
+                            <li><button class="dropdown-item" data-lang="zh">中文</button></li>
+                            <li><button class="dropdown-item" data-lang="en">English</button></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="outfit-hero d-flex flex-column justify-content-center align-items-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-3" data-i18n="hero.title">穿上 Merricano，把咖啡美学穿在身上</h1>
+            <p class="lead" data-i18n="hero.subtitle">灵感源自咖啡的醇厚色彩与优雅质感，打造专属你的时尚态度。</p>
+            <a href="#product-grid" class="btn btn-light rounded-pill mt-4 px-5 py-2 fw-bold"
+                data-i18n="hero.cta">探索系列</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-5">
+        <div class="container">
+            <!-- Filter & Sort Bar -->
+            <div class="filter-sort-bar p-3 d-flex flex-wrap gap-3 justify-content-between align-items-center mb-4">
+                <div class="d-flex flex-wrap gap-2">
+                    <button class="btn btn-outline-secondary rounded-pill active" data-filter="all"
+                        data-i18n="filter.all">全部</button>
+                    <button class="btn btn-outline-secondary rounded-pill" data-filter="tshirt"
+                        data-i18n="filter.tshirt">T恤</button>
+                    <button class="btn btn-outline-secondary rounded-pill" data-filter="hoodie"
+                        data-i18n="filter.hoodie">卫衣</button>
+                    <button class="btn btn-outline-secondary rounded-pill" data-filter="hat"
+                        data-i18n="filter.hat">帽子</button>
+                    <button class="btn btn-outline-secondary rounded-pill" data-filter="bag"
+                        data-i18n="filter.bag">包袋</button>
+                    <button class="btn btn-outline-secondary rounded-pill" data-filter="canvas-tote"
+                        data-i18n="filter.canvastote">帆布袋</button>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                    <label class="form-label mb-0 small text-secondary" for="sortBy" data-i18n="sort.label">排序：</label>
+                    <select class="form-select form-select-sm" id="sortBy">
+                        <option value="newest" selected data-i18n="sort.newest">最新上架</option>
+                        <option value="price-asc" data-i18n="sort.priceAsc">价格从低到高</option>
+                        <option value="price-desc" data-i18n="sort.priceDesc">价格从高到低</option>
+                    </select>
+                </div>
+                <button class="btn btn-link text-decoration-none fw-bold" data-bs-toggle="modal"
+                    data-bs-target="#sizeGuideModal" data-i18n="size.guide">尺寸指南</button>
+            </div>
+
+            <!-- Product Grid -->
+            <div id="product-grid" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <!-- Product 1: Merricano Logo T-shirt -->
+                <div class="col product-card" data-category="tshirt" data-price="129">
+                    <div class="card h-100 shadow-sm rounded-3">
+                        <div class="card-img-container">
+                            <img src="https://placehold.co/600x600/D4A373/fff?text=Tshirt+Front"
+                                data-hover="https://placehold.co/600x600/7B8D42/fff?text=Tshirt+Back"
+                                class="card-img-top img-fluid" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold" data-i18n="product1.title">Merricano 经典Logo T恤</h5>
+                            <p class="card-text text-secondary mb-2" data-i18n="product1.desc">
+                                采用100%纯棉面料，舒适透气，胸前Merricano经典Logo，简约而不失品味。</p>
+                            <p class="card-text fw-bold fs-5 mb-0" data-i18n="product1.price">¥129</p>
+                            <div class="d-flex flex-wrap gap-2 mt-2">
+                                <span class="badge bg-secondary" data-i18n="product1.size">尺码: S, M, L, XL</span>
+                                <span class="badge bg-primary" data-i18n="product1.color">颜色: 棕色, 米白</span>
+                            </div>
+                            <button class="btn btn-dark w-100 rounded-pill mt-3 add-to-cart"
+                                data-i18n="product.cta">加入购物车</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2: Merricano City Walk Hoodie -->
+                <div class="col product-card" data-category="hoodie" data-price="299">
+                    <div class="card h-100 shadow-sm rounded-3">
+                        <div class="card-img-container">
+                            <img src="https://placehold.co/600x600/6B4226/fff?text=Hoodie+Front"
+                                data-hover="https://placehold.co/600x600/3E2723/fff?text=Hoodie+Back"
+                                class="card-img-top img-fluid" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold" data-i18n="product2.title">Merricano 城市漫步连帽衫</h5>
+                            <p class="card-text text-secondary mb-2" data-i18n="product2.desc">
+                                厚实抓绒内里，保暖舒适，适合城市漫步或周末咖啡时光。背面印有城市简笔画。</p>
+                            <p class="card-text fw-bold fs-5 mb-0" data-i18n="product2.price">¥299</p>
+                            <div class="d-flex flex-wrap gap-2 mt-2">
+                                <span class="badge bg-secondary" data-i18n="product2.size">尺码: S, M, L, XL</span>
+                                <span class="badge bg-primary" data-i18n="product2.color">颜色: 咖啡棕, 墨绿</span>
+                            </div>
+                            <button class="btn btn-dark w-100 rounded-pill mt-3 add-to-cart"
+                                data-i18n="product.cta">加入购物车</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3: Merricano Barista Cap -->
+                <div class="col product-card" data-category="hat" data-price="159">
+                    <div class="card h-100 shadow-sm rounded-3">
+                        <div class="card-img-container">
+                            <img src="https://placehold.co/600x600/8B5E3C/fff?text=Cap+Front"
+                                data-hover="https://placehold.co/600x600/E0D6CC/fff?text=Cap+Back"
+                                class="card-img-top img-fluid" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold" data-i18n="product3.title">Merricano 咖啡师棒球帽</h5>
+                            <p class="card-text text-secondary mb-2" data-i18n="product3.desc">
+                                简约设计，调节方便，透气面料，是你在阳光下享受咖啡的最佳伴侣。</p>
+                            <p class="card-text fw-bold fs-5 mb-0" data-i18n="product3.price">¥159</p>
+                            <div class="d-flex flex-wrap gap-2 mt-2">
+                                <span class="badge bg-secondary" data-i18n="product3.size">尺码: 均码</span>
+                                <span class="badge bg-primary" data-i18n="product3.color">颜色: 燕麦白, 棕色</span>
+                            </div>
+                            <button class="btn btn-dark w-100 rounded-pill mt-3 add-to-cart"
+                                data-i18n="product.cta">加入购物车</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Product 4 -->
+                <div class="col product-card" data-category="hoodie" data-price="269">
+                    <div class="card h-100 shadow-sm rounded-3">
+                        <div class="card-img-container">
+                            <img src="https://placehold.co/600x600/5C4033/fff?text=Hoodie+Latte+Front"
+                                data-hover="https://placehold.co/600x600/967259/fff?text=Hoodie+Latte+Back"
+                                class="card-img-top img-fluid" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold" data-i18n="product4.title">拿铁色落肩卫衣</h5>
+                            <p class="card-text text-secondary mb-2" data-i18n="product4.desc">温暖的拿铁色调，宽松的落肩设计，适合任何休闲场合。
+                            </p>
+                            <p class="card-text fw-bold fs-5 mb-0" data-i18n="product4.price">¥269</p>
+                            <div class="d-flex flex-wrap gap-2 mt-2">
+                                <span class="badge bg-secondary" data-i18n="product4.size">尺码: M, L, XL</span>
+                                <span class="badge bg-primary" data-i18n="product4.color">颜色: 拿铁色</span>
+                            </div>
+                            <button class="btn btn-dark w-100 rounded-pill mt-3 add-to-cart"
+                                data-i18n="product.cta">加入购物车</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Product 5 -->
+                <div class="col product-card" data-category="tshirt" data-price="139">
+                    <div class="card h-100 shadow-sm rounded-3">
+                        <div class="card-img-container">
+                            <img src="https://placehold.co/600x600/E0D6CC/fff?text=Tshirt+Brewing+Front"
+                                data-hover="https://placehold.co/600x600/F0E5D9/2C2C2C?text=Tshirt+Brewing+Back"
+                                class="card-img-top img-fluid" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold" data-i18n="product5.title">手冲咖啡印花T恤</h5>
+                            <p class="card-text text-secondary mb-2" data-i18n="product5.desc">背面有手冲咖啡图案，是咖啡爱好者的不二之选。
+                            </p>
+                            <p class="card-text fw-bold fs-5 mb-0" data-i18n="product5.price">¥139</p>
+                            <div class="d-flex flex-wrap gap-2 mt-2">
+                                <span class="badge bg-secondary" data-i18n="product5.size">尺码: S, M, L</span>
+                                <span class="badge bg-primary" data-i18n="product5.color">颜色: 燕麦色</span>
+                            </div>
+                            <button class="btn btn-dark w-100 rounded-pill mt-3 add-to-cart"
+                                data-i18n="product.cta">加入购物车</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Product 6 -->
+                <div class="col product-card" data-category="hat" data-price="179">
+                    <div class="card h-100 shadow-sm rounded-3">
+                        <div class="card-img-container">
+                            <img src="https://placehold.co/600x600/7B8D42/fff?text=Bucket+Hat+Front"
+                                data-hover="https://placehold.co/600x600/A2B59F/fff?text=Bucket+Hat+Side"
+                                class="card-img-top img-fluid" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold" data-i18n="product6.title">橄榄绿渔夫帽</h5>
+                            <p class="card-text text-secondary mb-2" data-i18n="product6.desc">
+                                可正反两面佩戴，一面是纯色橄榄绿，一面是咖啡豆印花。</p>
+                            <p class="card-text fw-bold fs-5 mb-0" data-i18n="product6.price">¥179</p>
+                            <div class="d-flex flex-wrap gap-2 mt-2">
+                                <span class="badge bg-secondary" data-i18n="product6.size">尺码: 均码</span>
+                                <span class="badge bg-primary" data-i18n="product6.color">颜色: 橄榄绿</span>
+                            </div>
+                            <button class="btn btn-dark w-100 rounded-pill mt-3 add-to-cart"
+                                data-i18n="product.cta">加入购物车</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Product 7 -->
+                <div class="col product-card" data-category="tshirt" data-price="149">
+                    <div class="card h-100 shadow-sm rounded-3">
+                        <div class="card-img-container">
+                            <img src="https://placehold.co/600x600/3E2723/fff?text=Tshirt+Oversized+Front"
+                                data-hover="https://placehold.co/600x600/2C2C2C/fff?text=Tshirt+Oversized+Back"
+                                class="card-img-top img-fluid" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold" data-i18n="product7.title">oversized 廓形T恤</h5>
+                            <p class="card-text text-secondary mb-2" data-i18n="product7.desc">宽大剪裁，上身效果极佳，适合打造休闲随性风格。
+                            </p>
+                            <p class="card-text fw-bold fs-5 mb-0" data-i18n="product7.price">¥149</p>
+                            <div class="d-flex flex-wrap gap-2 mt-2">
+                                <span class="badge bg-secondary" data-i18n="product7.size">尺码: L, XL</span>
+                                <span class="badge bg-primary" data-i18n="product7.color">颜色: 碳灰色</span>
+                            </div>
+                            <button class="btn btn-dark w-100 rounded-pill mt-3 add-to-cart"
+                                data-i18n="product.cta">加入购物车</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Product 8 -->
+                <div class="col product-card" data-category="hoodie" data-price="329">
+                    <div class="card h-100 shadow-sm rounded-3">
+                        <div class="card-img-container">
+                            <img src="https://placehold.co/600x600/D4A373/fff?text=Zip+Hoodie+Front"
+                                data-hover="https://placehold.co/600x600/E5C09F/fff?text=Zip+Hoodie+Back"
+                                class="card-img-top img-fluid" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold" data-i18n="product8.title">焦糖色拉链卫衣</h5>
+                            <p class="card-text text-secondary mb-2" data-i18n="product8.desc">
+                                柔软的内里，方便穿脱的拉链设计，焦糖色系温暖又百搭。</p>
+                            <p class="card-text fw-bold fs-5 mb-0" data-i18n="product8.price">¥329</p>
+                            <div class="d-flex flex-wrap gap-2 mt-2">
+                                <span class="badge bg-secondary" data-i18n="product8.size">尺码: S, M, L</span>
+                                <span class="badge bg-primary" data-i18n="product8.color">颜色: 焦糖色</span>
+                            </div>
+                            <button class="btn btn-dark w-100 rounded-pill mt-3 add-to-cart"
+                                data-i18n="product.cta">加入购物车</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Product 9 -->
+                <div class="col product-card" data-category="hat" data-price="99">
+                    <div class="card h-100 shadow-sm rounded-3">
+                        <div class="card-img-container">
+                            <img src="https://placehold.co/600x600/6B4226/fff?text=Beanie+Front"
+                                data-hover="https://placehold.co/600x600/4A2C1C/fff?text=Beanie+Side"
+                                class="card-img-top img-fluid" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold" data-i18n="product9.title">咖啡色针织帽</h5>
+                            <p class="card-text text-secondary mb-2" data-i18n="product9.desc">柔软亲肤，保暖性好，是冬日里不可或缺的时尚单品。
+                            </p>
+                            <p class="card-text fw-bold fs-5 mb-0" data-i18n="product9.price">¥99</p>
+                            <div class="d-flex flex-wrap gap-2 mt-2">
+                                <span class="badge bg-secondary" data-i18n="product9.size">尺码: 均码</span>
+                                <span class="badge bg-primary" data-i18n="product9.color">颜色: 咖啡色</span>
+                            </div>
+                            <button class="btn btn-dark w-100 rounded-pill mt-3 add-to-cart"
+                                data-i18n="product.cta">加入购物车</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Product 10 -->
+                <div class="col product-card" data-category="tshirt" data-price="169">
+                    <div class="card h-100 shadow-sm rounded-3">
+                        <div class="card-img-container">
+                            <img src="https://placehold.co/600x600/FAF3E7/2C2C2C?text=Long+Sleeve+Front"
+                                data-hover="https://placehold.co/600x600/F4E8D8/2C2C2C?text=Long+Sleeve+Back"
+                                class="card-img-top img-fluid" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold" data-i18n="product10.title">米白色长袖T恤</h5>
+                            <p class="card-text text-secondary mb-2" data-i18n="product10.desc">适合春秋的叠穿单品，柔软面料，简单大方。</p>
+                            <p class="card-text fw-bold fs-5 mb-0" data-i18n="product10.price">¥169</p>
+                            <div class="d-flex flex-wrap gap-2 mt-2">
+                                <span class="badge bg-secondary" data-i18n="product10.size">尺码: S, M, L, XL</span>
+                                <span class="badge bg-primary" data-i18n="product10.color">颜色: 米白色</span>
+                            </div>
+                            <button class="btn btn-dark w-100 rounded-pill mt-3 add-to-cart"
+                                data-i18n="product.cta">加入购物车</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Product 11 -->
+                <div class="col product-card" data-category="hoodie" data-price="279">
+                    <div class="card h-100 shadow-sm rounded-3">
+                        <div class="card-img-container">
+                            <img src="https://placehold.co/600x600/7B8D42/fff?text=Light+Hoodie+Front"
+                                data-hover="https://placehold.co/600x600/6A8853/fff?text=Light+Hoodie+Back"
+                                class="card-img-top img-fluid" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold" data-i18n="product11.title">薄款连帽卫衣</h5>
+                            <p class="card-text text-secondary mb-2" data-i18n="product11.desc">
+                                轻薄透气，适合春夏季穿着，多色可选，打造个性穿搭。</p>
+                            <p class="card-text fw-bold fs-5 mb-0" data-i18n="product11.price">¥279</p>
+                            <div class="d-flex flex-wrap gap-2 mt-2">
+                                <span class="badge bg-secondary" data-i18n="product11.size">尺码: S, M</span>
+                                <span class="badge bg-primary" data-i18n="product11.color">颜色: 橄榄绿</span>
+                            </div>
+                            <button class="btn btn-dark w-100 rounded-pill mt-3 add-to-cart"
+                                data-i18n="product.cta">加入购物车</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Product 12 -->
+                <div class="col product-card" data-category="tshirt" data-price="119">
+                    <div class="card h-100 shadow-sm rounded-3">
+                        <div class="card-img-container">
+                            <img src="https://placehold.co/600x600/2C2C2C/fff?text=Minimalist+Tshirt+Front"
+                                data-hover="https://placehold.co/600x600/5C5C5C/fff?text=Minimalist+Tshirt+Back"
+                                class="card-img-top img-fluid" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold" data-i18n="product12.title">极简主义T恤</h5>
+                            <p class="card-text text-secondary mb-2" data-i18n="product12.desc">纯色设计，无任何多余装饰，质感高级，百搭性强。
+                            </p>
+                            <p class="card-text fw-bold fs-5 mb-0" data-i18n="product12.price">¥119</p>
+                            <div class="d-flex flex-wrap gap-2 mt-2">
+                                <span class="badge bg-secondary" data-i18n="product12.size">尺码: S, M, L, XL</span>
+                                <span class="badge bg-primary" data-i18n="product12.color">颜色: 黑色, 白色</span>
+                            </div>
+                            <button class="btn btn-dark w-100 rounded-pill mt-3 add-to-cart"
+                                data-i18n="product.cta">加入购物车</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Product 13 -->
+                <div class="col product-card" data-category="bag" data-price="199">
+                    <div class="card h-100 shadow-sm rounded-3">
+                        <div class="card-img-container">
+                            <img src="https://placehold.co/600x600/6B4226/fff?text=Tote+Bag"
+                                data-hover="https://placehold.co/600x600/D4A373/fff?text=Tote+Bag+Detail"
+                                class="card-img-top img-fluid" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold" data-i18n="product13.title">Merricano 极简托特包</h5>
+                            <p class="card-text text-secondary mb-2" data-i18n="product13.desc">
+                                采用耐磨帆布，内含多个口袋，简约实用，日常通勤必备。</p>
+                            <p class="card-text fw-bold fs-5 mb-0" data-i18n="product13.price">¥199</p>
+                            <div class="d-flex flex-wrap gap-2 mt-2">
+                                <span class="badge bg-secondary" data-i18n="product13.size">尺寸: 均码</span>
+                                <span class="badge bg-primary" data-i18n="product13.color">颜色: 咖啡棕</span>
+                            </div>
+                            <button class="btn btn-dark w-100 rounded-pill mt-3 add-to-cart"
+                                data-i18n="product.cta">加入购物车</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Product 14 -->
+                <div class="col product-card" data-category="bag" data-price="359">
+                    <div class="card h-100 shadow-sm rounded-3">
+                        <div class="card-img-container">
+                            <img src="https://placehold.co/600x600/3E2723/fff?text=Backpack"
+                                data-hover="https://placehold.co/600x600/5C4033/fff?text=Backpack+Side"
+                                class="card-img-top img-fluid" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold" data-i18n="product14.title">咖啡豆印花双肩包</h5>
+                            <p class="card-text text-secondary mb-2" data-i18n="product14.desc">
+                                容量大，适合短途旅行或上学，全包咖啡豆印花，彰显个性。</p>
+                            <p class="card-text fw-bold fs-5 mb-0" data-i18n="product14.price">¥359</p>
+                            <div class="d-flex flex-wrap gap-2 mt-2">
+                                <span class="badge bg-secondary" data-i18n="product14.size">尺寸: 均码</span>
+                                <span class="badge bg-primary" data-i18n="product14.color">颜色: 碳黑</span>
+                            </div>
+                            <button class="btn btn-dark w-100 rounded-pill mt-3 add-to-cart"
+                                data-i18n="product.cta">加入购物车</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Product 15 -->
+                <div class="col product-card" data-category="canvas-tote" data-price="89">
+                    <div class="card h-100 shadow-sm rounded-3">
+                        <div class="card-img-container">
+                            <img src="https://placehold.co/600x600/FAF3E7/2C2C2C?text=Canvas+Tote"
+                                data-hover="https://placehold.co/600x600/F4E8D8/2C2C2C?text=Canvas+Tote+Detail"
+                                class="card-img-top img-fluid" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold" data-i18n="product15.title">城市系列帆布袋</h5>
+                            <p class="card-text text-secondary mb-2" data-i18n="product15.desc">
+                                轻便耐用，可重复使用，印有城市剪影图案，环保又时尚。</p>
+                            <p class="card-text fw-bold fs-5 mb-0" data-i18n="product15.price">¥89</p>
+                            <div class="d-flex flex-wrap gap-2 mt-2">
+                                <span class="badge bg-secondary" data-i18n="product15.size">尺寸: 均码</span>
+                                <span class="badge bg-primary" data-i18n="product15.color">颜色: 米白</span>
+                            </div>
+                            <button class="btn btn-dark w-100 rounded-pill mt-3 add-to-cart"
+                                data-i18n="product.cta">加入购物车</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Product 16 -->
+                <div class="col product-card" data-category="hat" data-price="169">
+                    <div class="card h-100 shadow-sm rounded-3">
+                        <div class="card-img-container">
+                            <img src="https://placehold.co/600x600/D4A373/fff?text=Hat+Wide+Brim"
+                                data-hover="https://placehold.co/600x600/E5C09F/fff?text=Hat+Side+View"
+                                class="card-img-top img-fluid" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold" data-i18n="product16.title">宽檐遮阳帽</h5>
+                            <p class="card-text text-secondary mb-2" data-i18n="product16.desc">
+                                复古设计，宽大帽檐有效防晒，搭配夏日装扮更显优雅。</p>
+                            <p class="card-text fw-bold fs-5 mb-0" data-i18n="product16.price">¥169</p>
+                            <div class="d-flex flex-wrap gap-2 mt-2">
+                                <span class="badge bg-secondary" data-i18n="product16.size">尺寸: 均码</span>
+                                <span class="badge bg-primary" data-i18n="product16.color">颜色: 焦糖色</span>
+                            </div>
+                            <button class="btn btn-dark w-100 rounded-pill mt-3 add-to-cart"
+                                data-i18n="product.cta">加入购物车</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- User Reviews Section -->
+            <div class="mt-5 pt-5 border-top">
+                <h2 class="text-center fw-bold mb-4" data-i18n="reviews.title">顾客好评</h2>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card p-3 shadow-sm h-100">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <span class="ms-2 small text-secondary">王**</span>
+                            </div>
+                            <p class="mb-0" data-i18n="review1.text">“T恤质量超好，穿上很舒服，颜色也很高级，搭配起来很显气质！”</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card p-3 shadow-sm h-100">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star-half-stroke text-warning"></i>
+                                <span class="ms-2 small text-secondary">李**</span>
+                            </div>
+                            <p class="mb-0" data-i18n="review2.text">“卫衣很暖和，设计简单大方，是今年秋冬必备单品！”</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card p-3 shadow-sm h-100">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-solid fa-star text-warning"></i>
+                                <i class="fa-regular fa-star text-warning"></i>
+                                <span class="ms-2 small text-secondary">张**</span>
+                            </div>
+                            <p class="mb-0" data-i18n="review3.text">“帽子颜色特别，戴上很舒服，拍照很上镜，已经推荐给朋友了！”</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Size Guide Modal -->
+    <div class="modal fade" id="sizeGuideModal" tabindex="-1" aria-labelledby="sizeGuideModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-3">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="sizeGuideModalLabel" data-i18n="size.modal.title">尺寸指南</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p data-i18n="size.modal.desc">以下为通用尺码表，具体尺码可能因款式和版型略有差异，仅供参考。</p>
+
+                    <img src="https://placehold.co/600x400/D4A373/fff?text=Size+Guide" alt=""
+                        class="img-fluid rounded-3 my-3">
+                    <div class="small text-secondary" data-i18n="size.modal.note">
+                        <p>模特身高：175cm，体重：60kg，试穿 L 码</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer border-top pt-5 pb-4 mt-4">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-6 col-md-3">
+                    <h6 class="fw-bold mb-3" data-i18n="footer.about">关于我们</h6>
+                    <ul class="list-unstyled small mb-0">
+                        <li class="mb-2"><a href="History.html" data-i18n="footer.about.story">品牌故事</a></li>
+                        <li class="mb-2"><a href="NewsRoom.html" data-i18n="footer.about.news">新闻中心</a></li>
+                        <li class="mb-2"><a href="JoinUs.html" data-i18n="footer.about.join">加入我们</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h6 class="fw-bold mb-3" data-i18n="footer.help">帮助与支持</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="ContextUs.CustomerService.html" data-i18n="footer.help.cs">客户服务</a>
+                        </li>
+                        <li class="mb-2"><a href="ContextUs.Feedback.html" data-i18n="footer.help.feedback">意见反馈</a>
+                        </li>
+                        <li class="mb-2"><a href="GetOurApp.html" data-i18n="footer.help.app">下载 App</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h6 class="fw-bold mb-3" data-i18n="footer.business">商务合作</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="JoinUs.Inverstor.html" data-i18n="footer.business.invest">投资者关系</a>
+                        </li>
+                        <li class="mb-2"><a href="JoinUs.Career.html" data-i18n="footer.business.career">人才招聘</a></li>
+                        <li class="mb-2"><a href="JoinUs.Franchisees.html"
+                                data-i18n="footer.business.franchise">加盟合作</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h6 class="fw-bold mb-3" data-i18n="footer.follow">关注我们</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="https://www.instagram.com/shylie_gj/"
+                                data-i18n="footer.follow.instagram" target="_blank">Instagram</a></li>
+                        <li class="mb-2"><a href="https://www.facebook.com/profile.php?id=61577266087614"
+                                data-i18n="footer.follow.Facebook" target="_blank">脸书</a></li>
+                        <li class="mb-2"><a href="https://www.tiktok.com/@merricano_" data-i18n="footer.follow.douyin"
+                                target="_blank">抖音</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-flex flex-column flex-md-row align-items-center justify-content-between pt-4 mt-4 border-top">
+                <span class="small">© <span id="year"></span> Merricano Promax</span>
+                <div class="d-flex gap-3 small">
+                    <a href="ContextUs.html" data-i18n="footer.bottom.contact">联系我们</a>
+                    <a href="#" data-i18n="footer.bottom.privacy">隐私政策</a>
+                    <a href="#" data-i18n="footer.bottom.terms">使用条款</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- JS for product interactions and i18n -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Add to cart functionality
+            document.querySelectorAll('.add-to-cart').forEach(button => {
+                button.addEventListener('click', () => {
+                    // Replaced alert with console.log for better UX
+                    console.log('商品已成功加入购物车！');
+                });
+            });
+
+            // Image hover effect
+            const productCards = document.querySelectorAll('.product-card');
+            productCards.forEach(card => {
+                const img = card.querySelector('.card-img-top');
+                const originalSrc = img.src;
+                const hoverSrc = img.dataset.hover;
+
+                img.addEventListener('mouseenter', () => {
+                    img.src = hoverSrc;
+                });
+                img.addEventListener('mouseleave', () => {
+                    img.src = originalSrc;
+                });
+            });
+
+            // Filter functionality
+            const filterButtons = document.querySelectorAll('[data-filter]');
+            const products = document.querySelectorAll('.product-card');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to the clicked button
+                    button.classList.add('active');
+
+                    const filterValue = button.dataset.filter;
+                    products.forEach(product => {
+                        const productCategory = product.dataset.category;
+                        if (filterValue === 'all' || productCategory === filterValue) {
+                            product.style.display = 'block';
+                        } else {
+                            product.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Sort functionality
+            document.getElementById('sortBy').addEventListener('change', (event) => {
+                const sortBy = event.target.value;
+                const grid = document.getElementById('product-grid');
+                const sortedProducts = Array.from(products);
+
+                if (sortBy === 'price-asc') {
+                    sortedProducts.sort((a, b) => parseFloat(a.dataset.price) - parseFloat(b.dataset.price));
+                } else if (sortBy === 'price-desc') {
+                    sortedProducts.sort((a, b) => parseFloat(b.dataset.price) - parseFloat(a.dataset.price));
+                } else { // 'newest' is default
+                    // Keep original order, which is "newest"
+                }
+
+                grid.innerHTML = '';
+                sortedProducts.forEach(product => grid.appendChild(product));
+            });
+        });
+
+        // i18n and year logic (from previous file)
+        const yearEl = document.getElementById('year');
+        if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+        const i18n = {
+            zh: {
+                'page.title': 'Merricano - 服饰系列',
+                'nav.menu': '菜单',
+                'nav.collections': '臻选',
+                'nav.stores': '门店',
+                'nav.brand': '品牌',
+                'nav.login': '登录/注册',
+                'nav.language': '语言/EN',
+                'hero.title': '穿上 Merricano，把咖啡美学穿在身上',
+                'hero.subtitle': '灵感源自咖啡的醇厚色彩与优雅质感，打造专属你的时尚态度。',
+                'hero.cta': '探索系列',
+                'filter.all': '全部',
+                'filter.tshirt': 'T恤',
+                'filter.hoodie': '卫衣',
+                'filter.hat': '帽子',
+                'filter.bag': '包袋',
+                'filter.canvastote': '帆布袋',
+                'sort.label': '排序：',
+                'sort.newest': '最新上架',
+                'sort.priceAsc': '价格从低到高',
+                'sort.priceDesc': '价格从高到低',
+                'size.guide': '尺寸指南',
+                'size.modal.title': '尺寸指南',
+                'size.modal.desc': '以下为通用尺码表，具体尺码可能因款式和版型略有差异，仅供参考。',
+                'size.modal.note': '模特身高：175cm，体重：60kg，试穿 L 码',
+                'product1.title': 'Merricano 经典Logo T恤',
+                'product1.desc': '采用100%纯棉面料，舒适透气，胸前Merricano经典Logo，简约而不失品味。',
+                'product1.price': '¥129',
+                'product1.size': '尺码: S, M, L, XL',
+                'product1.color': '颜色: 棕色, 米白',
+                'product2.title': 'Merricano 城市漫步连帽衫',
+                'product2.desc': '厚实抓绒内里，保暖舒适，适合城市漫步或周末咖啡时光。背面印有城市简笔画。',
+                'product2.price': '¥299',
+                'product2.size': '尺码: S, M, L, XL',
+                'product2.color': '颜色: 咖啡棕, 墨绿',
+                'product3.title': 'Merricano 咖啡师棒球帽',
+                'product3.desc': '简约设计，调节方便，透气面料，是你在阳光下享受咖啡的最佳伴侣。',
+                'product3.price': '¥159',
+                'product3.size': '尺码: 均码',
+                'product3.color': '颜色: 燕麦白, 棕色',
+                'product4.title': '拿铁色落肩卫衣',
+                'product4.desc': '温暖的拿铁色调，宽松的落肩设计，适合任何休闲场合。',
+                'product4.price': '¥269',
+                'product4.size': '尺码: M, L, XL',
+                'product4.color': '颜色: 拿铁色',
+                'product5.title': '手冲咖啡印花T恤',
+                'product5.desc': '背面有手冲咖啡图案，是咖啡爱好者的不二之选。',
+                'product5.price': '¥139',
+                'product5.size': '尺码: S, M, L',
+                'product5.color': '颜色: 燕麦色',
+                'product6.title': '橄榄绿渔夫帽',
+                'product6.desc': '可正反两面佩戴，一面是纯色橄榄绿，一面是咖啡豆印花。',
+                'product6.price': '¥179',
+                'product6.size': '尺码: 均码',
+                'product6.color': '颜色: 橄榄绿',
+                'product7.title': 'oversized 廓形T恤',
+                'product7.desc': '宽大剪裁，上身效果极佳，适合打造休闲随性风格。',
+                'product7.price': '¥149',
+                'product7.size': '尺码: L, XL',
+                'product7.color': '颜色: 碳灰色',
+                'product8.title': '焦糖色拉链卫衣',
+                'product8.desc': '柔软的内里，方便穿脱的拉链设计，焦糖色系温暖又百搭。',
+                'product8.price': '¥329',
+                'product8.size': '尺码: S, M, L',
+                'product8.color': '颜色: 焦糖色',
+                'product9.title': '咖啡色针织帽',
+                'product9.desc': '柔软亲肤，保暖性好，是冬日里不可或缺的时尚单品。',
+                'product9.price': '¥99',
+                'product9.size': '尺码: 均码',
+                'product9.color': '颜色: 咖啡色',
+                'product10.title': '米白色长袖T恤',
+                'product10.desc': '适合春秋的叠穿单品，柔软面料，简单大方。',
+                'product10.price': '¥169',
+                'product10.size': '尺码: S, M, L, XL',
+                'product10.color': '颜色: 米白色',
+                'product11.title': '薄款连帽卫衣',
+                'product11.desc': '轻薄透气，适合春夏季穿着，多色可选，打造个性穿搭。',
+                'product11.price': '¥279',
+                'product11.size': '尺码: S, M',
+                'product11.color': '颜色: 橄榄绿',
+                'product12.title': '极简主义T恤',
+                'product12.desc': '纯色设计，无任何多余装饰，质感高级，百搭性强。',
+                'product12.price': '¥119',
+                'product12.size': '尺码: S, M, L, XL',
+                'product12.color': '颜色: 黑色, 白色',
+                'product13.title': 'Merricano 极简托特包',
+                'product13.desc': '采用耐磨帆布，内含多个口袋，简约实用，日常通勤必备。',
+                'product13.price': '¥199',
+                'product13.size': '尺寸: 均码',
+                'product13.color': '颜色: 咖啡棕',
+                'product14.title': '咖啡豆印花双肩包',
+                'product14.desc': '容量大，适合短途旅行或上学，全包咖啡豆印花，彰显个性。',
+                'product14.price': '¥359',
+                'product14.size': '尺寸: 均码',
+                'product14.color': '颜色: 碳黑',
+                'product15.title': '城市系列帆布袋',
+                'product15.desc': '轻便耐用，可重复使用，印有城市剪影图案，环保又时尚。',
+                'product15.price': '¥89',
+                'product15.size': '尺寸: 均码',
+                'product15.color': '颜色: 米白',
+                'product16.title': '宽檐遮阳帽',
+                'product16.desc': '复古设计，宽大帽檐有效防晒，搭配夏日装扮更显优雅。',
+                'product16.price': '¥169',
+                'product16.size': '尺寸: 均码',
+                'product16.color': '颜色: 焦糖色',
+                'product.cta': '加入购物车',
+                'reviews.title': '顾客好评',
+                'review1.text': '“T恤质量超好，穿上很舒服，颜色也很高级，搭配起来很显气质！”',
+                'review2.text': '“卫衣很暖和，设计简单大方，是今年秋冬必备单品！”',
+                'review3.text': '“帽子颜色特别，戴上很舒服，拍照很上镜，已经推荐给朋友了！”',
+                'footer.about': '关于我们',
+                'footer.about.story': '品牌故事',
+                'footer.about.news': '新闻中心',
+                'footer.about.join': '加入我们',
+                'footer.help': '帮助与支持',
+                'footer.help.cs': '客户服务',
+                'footer.help.feedback': '意见反馈',
+                'footer.help.app': '下载 App',
+                'footer.business': '商务合作',
+                'footer.business.invest': '投资者关系',
+                'footer.business.career': '人才招聘',
+                'footer.business.franchise': '加盟合作',
+                'footer.follow': '关注我们',
+                'footer.follow.instagram': 'Instagram',
+                'footer.follow.Facebook': '脸书',
+                'footer.follow.douyin': '抖音',
+                'footer.bottom.contact': '联系我们',
+                'footer.bottom.privacy': '隐私政策',
+                'footer.bottom.terms': '使用条款'
+            },
+            en: {
+                'page.title': 'Merricano - Outfit Collection',
+                'nav.menu': 'Menu',
+                'nav.collections': 'Collections',
+                'nav.stores': 'Stores',
+                'nav.brand': 'Brand',
+                'nav.login': 'Sign In / Join',
+                'nav.language': 'Language/语言',
+                'hero.title': 'Wear Merricano, Wear Coffee Aesthetics',
+                'hero.subtitle': 'Inspired by the rich colors and elegant textures of coffee, we create your unique fashion statement.',
+                'hero.cta': 'Explore Collection',
+                'filter.all': 'All',
+                'filter.tshirt': 'T-shirts',
+                'filter.hoodie': 'Hoodies',
+                'filter.hat': 'Hats',
+                'filter.bag': 'Bags',
+                'filter.canvastote': 'Canvas Totes',
+                'sort.label': 'Sort By:',
+                'sort.newest': 'Newest',
+                'sort.priceAsc': 'Price: Low to High',
+                'sort.priceDesc': 'Price: High to Low',
+                'size.guide': 'Size Guide',
+                'size.modal.title': 'Size Guide',
+                'size.modal.desc': 'This is a general size chart. Specific sizes may vary by style and fit.',
+                'size.modal.note': 'Model height: 175cm, weight: 60kg, wearing size L',
+                'product1.title': 'Merricano Classic Logo T-shirt',
+                'product1.desc': 'Made from 100% cotton, comfortable and breathable, with the classic Merricano logo on the chest. Simple yet tasteful.',
+                'product1.price': '¥129',
+                'product1.size': 'Sizes: S, M, L, XL',
+                'product1.color': 'Colors: Brown, Cream',
+                'product2.title': 'Merricano City Walk Hoodie',
+                'product2.desc': 'Thick fleece lining, warm and comfortable, perfect for a city walk or a weekend coffee break. Features a cityscape sketch on the back.',
+                'product2.price': '¥299',
+                'product2.size': 'Sizes: S, M, L, XL',
+                'product2.color': 'Colors: Coffee Brown, Dark Green',
+                'product3.title': 'Merricano Barista Cap',
+                'product3.desc': 'Simple design, easy to adjust, and breathable fabric, it\'s the perfect companion for enjoying coffee in the sun.',
+                'product3.price': '¥159',
+                'product3.size': 'Sizes: One Size',
+                'product3.color': 'Colors: Oatmeal White, Brown',
+                'product4.title': 'Latte Drop-Shoulder Hoodie',
+                'product4.desc': 'A warm latte shade with a relaxed drop-shoulder design, perfect for any casual occasion.',
+                'product4.price': '¥269',
+                'product4.size': 'Sizes: M, L, XL',
+                'product4.color': 'Colors: Latte',
+                'product5.title': 'Pour-Over Coffee Print T-shirt',
+                'product5.desc': 'Features a pour-over coffee graphic on the back, a perfect choice for coffee lovers.',
+                'product5.price': '¥139',
+                'product5.size': 'Sizes: S, M, L',
+                'product5.color': 'Colors: Oatmeal',
+                'product6.title': 'Olive Green Bucket Hat',
+                'product6.desc': 'Reversible design, with a solid olive green on one side and a coffee bean print on the other.',
+                'product6.price': '¥179',
+                'product6.size': 'Sizes: One Size',
+                'product6.color': 'Colors: Olive Green',
+                'product7.title': 'Oversized T-shirt',
+                'product7.desc': 'A loose fit that drapes perfectly, great for creating a casual and relaxed style.',
+                'product7.price': '¥149',
+                'product7.size': 'Sizes: L, XL',
+                'product7.color': 'Colors: Charcoal',
+                'product8.title': 'Caramel Zip-Up Hoodie',
+                'product8.desc': 'Soft inner lining and a convenient zip-up design. The caramel color is warm and versatile.',
+                'product8.price': '¥329',
+                'product8.size': 'Sizes: S, M, L',
+                'product8.color': 'Colors: Caramel',
+                'product9.title': 'Coffee Knit Beanie',
+                'product9.desc': 'Soft and skin-friendly with great thermal insulation. A must-have fashion item for winter.',
+                'product9.price': '¥99',
+                'product9.size': 'Sizes: One Size',
+                'product9.color': 'Colors: Coffee',
+                'product10.title': 'Off-White Long-Sleeve T-shirt',
+                'product10.desc': 'Perfect for layering in spring and autumn. Soft fabric and a simple, elegant design.',
+                'product10.price': '¥169',
+                'product10.size': 'Sizes: S, M, L, XL',
+                'product10.color': 'Colors: Off-White',
+                'product11.title': 'Lightweight Hooded Sweatshirt',
+                'product11.desc': 'Light and breathable, perfect for spring and summer. Available in multiple colors for personalized styling.',
+                'product11.price': '¥279',
+                'product11.size': 'Sizes: S, M',
+                'product11.color': 'Colors: Olive Green',
+                'product12.title': 'Minimalist T-shirt',
+                'product12.desc': 'A solid color design without any unnecessary frills. Premium texture and highly versatile.',
+                'product12.price': '¥119',
+                'product12.size': 'Sizes: S, M, L, XL',
+                'product12.color': 'Colors: Black, White',
+                'product13.title': 'Merricano Minimalist Tote Bag',
+                'product13.desc': 'Made of durable canvas with multiple inner pockets. Simple, practical, and a must-have for daily commute.',
+                'product13.price': '¥199',
+                'product13.size': 'Sizes: One Size',
+                'product13.color': 'Colors: Coffee Brown',
+                'product14.title': 'Coffee Bean Print Backpack',
+                'product14.desc': 'Large capacity, suitable for short trips or school. All-over coffee bean print showcases your personality.',
+                'product14.price': '¥359',
+                'product14.size': 'Sizes: One Size',
+                'product14.color': 'Colors: Charcoal',
+                'product15.title': 'City Series Canvas Tote',
+                'product15.desc': 'Lightweight and durable, reusable. Features a city skyline print, both eco-friendly and stylish.',
+                'product15.price': '¥89',
+                'product15.size': 'Sizes: One Size',
+                'product15.color': 'Colors: Off-White',
+                'product16.title': 'Wide-Brim Sun Hat',
+                'product16.desc': 'A vintage design with a wide brim for excellent sun protection. Adds an elegant touch to your summer outfit.',
+                'product16.price': '¥169',
+                'product16.size': 'Sizes: One Size',
+                'product16.color': 'Colors: Caramel',
+                'product.cta': 'Add to Cart',
+                'reviews.title': 'Customer Reviews',
+                'review1.text': '“The T-shirt is super high quality and comfortable. The color is very chic and stylish!”',
+                'review2.text': '“The hoodie is very warm, the design is simple and elegant, a must-have item for this autumn and winter!”',
+                'review3.text': '“The cap has a unique color, very comfortable to wear, and looks great in photos. I\'ve already recommended it to friends!”',
+                'footer.about': 'About us',
+                'footer.about.story': 'Our story',
+                'footer.about.news': 'Newsroom',
+                'footer.about.join': 'Join us',
+                'footer.help': 'Help & support',
+                'footer.help.cs': 'Customer service',
+                'footer.help.feedback': 'Feedback',
+                'footer.help.app': 'Get the App',
+                'footer.business': 'Business',
+                'footer.business.invest': 'Investors',
+                'footer.business.career': 'Careers',
+                'footer.business.franchise': 'Franchise',
+                'footer.follow': 'Follow us',
+                'footer.follow.instagram': 'Instagram',
+                'footer.follow.Facebook': 'Facebook',
+                'footer.follow.douyin': 'Douyin',
+                'footer.bottom.contact': 'Contact us',
+                'footer.bottom.privacy': 'Privacy policy',
+                'footer.bottom.terms': 'Terms of use'
+            }
+        };
+
+        function setLanguage(lang) {
+            const dict = i18n[lang] || i18n.zh;
+            document.querySelectorAll('[data-i18n]').forEach(function (el) {
+                const key = el.getAttribute('data-i18n');
+                if (dict[key]) el.textContent = dict[key];
+            });
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(function (el) {
+                const key = el.getAttribute('data-i18n-placeholder');
+                if (dict[key]) el.placeholder = dict[key];
+            });
+            localStorage.setItem('lang', lang);
+        }
+
+        document.querySelectorAll('[data-lang]').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                const lang = this.getAttribute('data-lang');
+                setLanguage(lang);
+            });
+        });
+
+        setLanguage(localStorage.getItem('lang') || 'zh');
+    </script>
+</body>
+
+</html>

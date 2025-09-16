@@ -1,82 +1,446 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Merricano</title>
-        <link rel="stylesheet" href="css/style.css">
-            <style>
-            /* Banner */
-            .banner 
-            {
-                width: 100%;
-                height: 300px;
-                background-image: url('Images/Banner.png');
-                background-size: cover;
-                background-position: center;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                    color: white;
-                text-align: center;
-                transition: margin-top 0.3s;
-            }
 
-            .banner h1
-            {
-                background-color: rgba(0, 0, 0, 0.5);
-                padding: 10px 20px;
-                border-radius: 10px;
-                font-size: 2.5rem;
-            }
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Merricano - 主页 HomePage </title>
+    <meta name="description" content="Demo page using Bootstrap 5 CDN">
 
-            @media (max-width: 768px) 
-            {
-            .banner {
-                height: 200px;
-                }
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-        .banner h1 
-                {
-                font-size: 1.5rem;
-                }
-            }
-        </style>
-        <script src="JavaScript/script.js" defer></script>
-    </head>
-    <body>
-        <div class="header">
-            <!--header with logo-->
-            <div class="logo">
-                <a href="index.html" class="logo">
-                    <img src="Images/1.png" alt="Logo">
-                        Merricano
-                </a>
-            </div>
-            <div class="hamburger" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+    <!-- Optional: site favicon -->
+    <link rel="icon" type="image/png" href="Images/IconMerricano1.jpg">
+    <style>
+        :root {
+            /* Primary */
+            --brand-primary: #6B4226;
+            /* Coffee Brown */
+            /* Background */
+            --bg-light-cream: #FAF3E7;
+            --bg-dark-brown: #3E2723;
+            /* Accents */
+            --accent-caramel: #D4A373;
+            --accent-olive: #7B8D42;
+            /* Text */
+            --text-main: #2C2C2C;
+            --text-secondary: #5C5C5C;
+            --text-inverse: #FFFFFF;
+            /* Borders */
+            --border-light: #E0D6CC;
+            --border-dark: #8B5E3C;
+        }
 
-            <!-- Navigation Menu-->
-            <div class="menu" id="menu">
-                <a href="History.html">History</a>
-                <a href="Menu.html">Menu</a>
-                <a href="GetOurApp.html">Get Our App</a>
-                <a href="LogInSignUp.html">Log in and Sign up</a>
-                <a href="Countries.html">Countries</a>
-                <a href="ContextUs.html">Context us</a>
-                <a href="NewsRoom.html">Newsroom</a>
-                <a href="Collections.html">Collactions</a>
-                <a href="JoinUs.html">Join Us</a>
-            </div>
-        </div>
-        <!-- Image Banner -->
-        <div class="banner" id="banner">
-            <img src="Images/make an banner of a coffee brand call Mericano..jpg" alt="banner">
-            <h1>Gear Up. Move Forward</h1>
+        /* Base */
+        body {
+            background-color: var(--bg-light-cream);
+            color: var(--text-main);
+        }
+
+        .text-secondary {
+            color: var(--text-secondary) !important;
+        }
+
+        .border-top {
+            border-top-color: var(--border-light) !important;
+        }
+
+        .card {
+            border-color: var(--border-light);
+        }
+
+        /* Navbar */
+        .sbx-navbar {
+            background-color: var(--brand-primary);
+        }
+
+        .sbx-navbar .nav-link,
+        .sbx-navbar .navbar-brand {
+            color: var(--text-inverse);
+        }
+
+        .sbx-navbar .nav-link.active,
+        .sbx-navbar .nav-link:hover {
+            color: var(--text-inverse);
+            opacity: 0.9;
+        }
+
+        /* Hero */
+        .sbx-hero {
+            background-color: var(--bg-light-cream);
+        }
+
+        /* Buttons */
+        .sbx-cta-primary {
+            background-color: var(--brand-primary);
+            color: var(--text-inverse);
+            border-color: var(--brand-primary);
+        }
+
+        .sbx-cta-primary:hover {
+            background-color: var(--accent-caramel);
+            border-color: var(--accent-caramel);
+            color: var(--text-main);
+        }
+
+        .sbx-cta-outline {
+            color: var(--brand-primary);
+            border-color: var(--brand-primary);
+            background-color: transparent;
+        }
+
+        .sbx-cta-outline:hover {
+            background-color: rgba(107, 66, 38, 0.08);
+            color: var(--brand-primary);
+        }
+
+        /* Accent utilities */
+        .text-accent-olive {
+            color: var(--accent-olive);
+        }
+
+        .text-accent-caramel {
+            color: var(--accent-caramel);
+        }
+
+        /* Band */
+        .sbx-band {
+            background-color: var(--bg-dark-brown);
+            color: var(--text-inverse);
+        }
+
+        /* Footer */
+        .sbx-footer {
+            background-color: var(--bg-dark-brown);
+            color: var(--text-inverse);
+        }
+
+        .sbx-footer a {
+            color: var(--text-inverse);
+            text-decoration: none;
+            opacity: 0.9;
+        }
+
+        .sbx-footer a:hover {
+            color: var(--text-inverse);
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar (Starbucks-like) -->
+    <nav class="navbar navbar-expand-lg sbx-navbar">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <img src="Images/IconMerricano.jpg" alt="Merricano" width="36" height="36" class="rounded-circle">
+                <span class="fw-semibold">Merricano</span>
             </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-lg-2">
+                    <li class="nav-item"><a class="nav-link" href="Menu.html" data-i18n="nav.menu">菜单</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Collections.html" data-i18n="nav.collections">臻选</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="Countries.html" data-i18n="nav.stores">门店</a></li>
+                    <li class="nav-item"><a class="nav-link" href="NewsRoom.html" data-i18n="nav.brand">品牌</a></li>
+                    <li class="nav-item"><a class="nav-link" href="LogInSignUp.html" data-i18n="nav.login">登录/注册</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="langDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false" data-i18n="nav.language">语言/EN</a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
+                            <li><button class="dropdown-item" data-lang="zh">中文</button></li>
+                            <li><button class="dropdown-item" data-lang="en">English</button></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </body>
+    </nav>
+
+    <!-- Hero (light green) -->
+    <section class="py-5 sbx-hero">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-6">
+                    <h1 class="display-5 fw-bold mb-3" data-i18n="hero.title">加入MAX享俱乐部</h1>
+                    <p class="lead text-secondary" data-i18n="hero.desc">灵感好礼，尽在此刻。累积星星，兑换好味，悦享会员专属福利。</p>
+                    <div class="d-flex gap-2">
+                        <a href="LogInSignUp.html" class="btn sbx-cta-primary btn-lg" data-i18n="hero.ctaJoin">立即加入</a>
+                        <a href="GetOurApp.html" class="btn sbx-cta-outline btn-lg" data-i18n="hero.ctaLearn">了解更多</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <img src="Images/2.png" class="img-fluid rounded shadow" alt="Coffee illustration">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories grid (menu-like tiles) -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="h3 fw-bold mb-4" data-i18n="section.explore">探索美味</h2>
+            <div class="row g-4">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="Images/Coffee.Cup.webp" class="card-img-top" alt="Card image 1">
+                        <div class="card-body">
+                            <h5 class="card-title" data-i18n="card1.title">手工饮品</h5>
+                            <p class="card-text" data-i18n="card1.text">经典拿铁、美式、冷萃与限定风味，随心之选。</p>
+                            <a href="Menu.html" class="btn btn-outline-dark" data-i18n="card1.cta">查看菜单</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="Images/Coffee.BeanInHand.jpg" class="card-img-top" alt="Card image 2">
+                        <div class="card-body">
+                            <h5 class="card-title" data-i18n="card2.title">甄选咖啡</h5>
+                            <p class="card-text" data-i18n="card2.text">产地限定豆，细腻风味层次，为你呈现。</p>
+                            <a href="Collections.html" class="btn btn-outline-dark" data-i18n="card2.cta">了解甄选</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="Images/Coffee.Containers.jpg" class="card-img-top" alt="Card image 3">
+                        <div class="card-body">
+                            <h5 class="card-title" data-i18n="card3.title">咖啡好物</h5>
+                            <p class="card-text" data-i18n="card3.text">随行杯与冲煮器具，陪你记录每一口好时光。</p>
+                            <a href="Collections.html" class="btn btn-outline-dark" data-i18n="card3.cta">选购好物</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rewards band -->
+    <section class="sbx-band py-5">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-8">
+                    <h2 class="h3 fw-bold mb-2" data-i18n="band.title">MAX享好礼 · 积星有礼</h2>
+                    <p class="mb-0" data-i18n="band.text">下单累积星星，解锁会员等级，兑换专属好礼与优惠券。</p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a href="LogInSignUp.html" class="btn btn-light" data-i18n="band.cta">立即登录</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Store locator CTA -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-6 order-lg-2">
+                    <div
+                        class="ratio ratio-16x9 bg-light border rounded d-flex align-items-center justify-content-center text-secondary store-map-placeholder">
+                        <img src="Images/Map.png" alt="Merricano Store Map" class="img-fluid rounded-lg">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="h3 fw-bold mb-3" data-i18n="store.title">查找附近门店</h2>
+                    <p class="text-secondary" data-i18n="store.text">探索你附近的 Merricano 门店，堂食或外带皆可。开启你的咖啡之旅。</p>
+                    <a href="Countries.html" class="btn btn-dark" data-i18n="store.cta">查找门店</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (multi-column links) -->
+    <footer class="sbx-footer border-top pt-5 pb-4">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-6 col-md-3">
+                    <h6 class="fw-bold mb-3" data-i18n="footer.about">关于我们</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="History.html" data-i18n="footer.about.story">品牌故事</a></li>
+                        <li class="mb-2"><a href="NewsRoom.html" data-i18n="footer.about.news">新闻中心</a></li>
+                        <li class="mb-2"><a href="JoinUs.html" data-i18n="footer.about.join">加入我们</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h6 class="fw-bold mb-3" data-i18n="footer.help">帮助与支持</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="ContextUs.CustomerService.html" data-i18n="footer.help.cs">客户服务</a>
+                        </li>
+                        <li class="mb-2"><a href="ContextUs.Feedback.html" data-i18n="footer.help.feedback">意见反馈</a>
+                        </li>
+                        <li class="mb-2"><a href="GetOurApp.html" data-i18n="footer.help.app">下载 App</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h6 class="fw-bold mb-3" data-i18n="footer.business">商务合作</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="JoinUs.Inverstor.html" data-i18n="footer.business.invest">投资者关系</a>
+                        </li>
+                        <li class="mb-2"><a href="JoinUs.Career.html" data-i18n="footer.business.career">人才招聘</a></li>
+                        <li class="mb-2"><a href="JoinUs.Franchisees.html"
+                                data-i18n="footer.business.franchise">加盟合作</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h6 class="fw-bold mb-3" data-i18n="footer.follow">关注我们</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="https://www.instagram.com/shylie_gj/"
+                                data-i18n="footer.follow.instagram">Instagram</a></li>
+                        <li class="mb-2"><a href="https://www.facebook.com/profile.php?id=61577266087614"
+                                data-i18n="footer.follow.Facebook">脸书</a></li>
+                        <li class="mb-2"><a href="https://www.tiktok.com/@merricano_"
+                                data-i18n="footer.follow.douyin">抖音</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-flex flex-column flex-md-row align-items-center justify-content-between pt-4 mt-4 border-top">
+                <span class="text-secondary small">© <span id="year"></span> Merricano Promax</span>
+                <div class="d-flex gap-3 small">
+                    <a href="ContextUs.html" data-i18n="footer.bottom.contact">联系我们</a>
+                    <a href="#" data-i18n="footer.bottom.privacy">隐私政策</a>
+                    <a href="#" data-i18n="footer.bottom.terms">使用条款</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS (bundle includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- Small helper script with i18n -->
+    <script>
+        const yearEl = document.getElementById('year');
+        if (yearEl) {
+            yearEl.textContent = new Date().getFullYear();
+        }
+
+        const translations = {
+            zh: {
+                'nav.menu': '菜单',
+                'nav.collections': '臻选',
+                'nav.stores': '门店',
+                'nav.brand': '品牌',
+                'nav.login': '登录/注册',
+                'nav.language': '语言/EN',
+                'hero.title': '加入MAX享俱乐部',
+                'hero.desc': '灵感好礼，尽在此刻。累积星星，兑换好味，悦享会员专属福利。',
+                'hero.ctaJoin': '立即加入',
+                'hero.ctaLearn': '了解更多',
+                'section.explore': '探索美味',
+                'card1.title': '手工饮品',
+                'card1.text': '经典拿铁、美式、冷萃与限定风味，随心之选。',
+                'card1.cta': '查看菜单',
+                'card2.title': '甄选咖啡',
+                'card2.text': '产地限定豆，细腻风味层次，为你呈现。',
+                'card2.cta': '了解甄选',
+                'card3.title': '咖啡好物',
+                'card3.text': '随行杯与冲煮器具，陪你记录每一口好时光。',
+                'card3.cta': '选购好物',
+                'band.title': 'MAX享好礼 · 积星有礼',
+                'band.text': '下单累积MAX豆，解锁会员等级，兑换专属好礼与优惠券。',
+                'band.cta': '立即登录',
+                'store.title': '查找附近门店',
+                'store.text': '探索你附近的 Merricano 门店，堂食或外带皆可。开启你的咖啡之旅。',
+                'store.cta': '查找门店',
+                'footer.about': '关于我们',
+                'footer.about.story': '品牌故事',
+                'footer.about.news': '新闻中心',
+                'footer.about.join': '加入我们',
+                'footer.help': '帮助与支持',
+                'footer.help.cs': '客户服务',
+                'footer.help.feedback': '意见反馈',
+                'footer.help.app': '下载 App',
+                'footer.business': '商务合作',
+                'footer.business.invest': '投资者关系',
+                'footer.business.career': '人才招聘',
+                'footer.business.franchise': '加盟合作',
+                'footer.follow': '关注我们',
+                'footer.follow.weibo': '微博',
+                'footer.follow.Facebook': '脸书',
+                'footer.follow.douyin': '抖音',
+                'footer.bottom.contact': '联系我们',
+                'footer.bottom.privacy': '隐私政策',
+                'footer.bottom.terms': '使用条款'
+            },
+            en: {
+                'nav.menu': 'Menu',
+                'nav.collections': 'Collections',
+                'nav.stores': 'Stores',
+                'nav.brand': 'Brand',
+                'nav.login': 'Sign In / Join',
+                'nav.language': 'Language/语言',
+                'hero.title': 'Join Rewards',
+                'hero.desc': 'Collect stars and unlock member-exclusive offers and delightful surprises.',
+                'hero.ctaJoin': 'Join now',
+                'hero.ctaLearn': 'Learn more',
+                'section.explore': 'Explore Flavors',
+                'card1.title': 'Handcrafted Beverages',
+                'card1.text': 'Classics like Latte, Americano, Cold Brew, plus seasonal favorites.',
+                'card1.cta': 'See menu',
+                'card2.title': 'Reserve Coffee',
+                'card2.text': 'Limited-origin beans with layered tasting notes, curated for you.',
+                'card2.cta': 'Discover Reserve',
+                'card3.title': 'Coffee Gear',
+                'card3.text': 'Tumblers and brew tools to savor every sip along the way.',
+                'card3.cta': 'Shop gear',
+                'band.title': 'Rewards Perks · MAXs Add Up',
+                'band.text': 'Earn MAXs with every order to unlock levels, gifts, and coupons.',
+                'band.cta': 'Sign in now',
+                'store.title': 'Find a store nearby',
+                'store.text': 'Discover Merricano stores near you for dine-in or to-go. Start your journey.',
+                'store.cta': 'Find stores',
+                'footer.about': 'About us',
+                'footer.about.story': 'Our story',
+                'footer.about.news': 'Newsroom',
+                'footer.about.join': 'Join us',
+                'footer.help': 'Help & support',
+                'footer.help.cs': 'Customer service',
+                'footer.help.feedback': 'Feedback',
+                'footer.help.app': 'Get the app',
+                'footer.business': 'Business',
+                'footer.business.invest': 'Investors',
+                'footer.business.career': 'Careers',
+                'footer.business.franchise': 'Franchise',
+                'footer.follow': 'Follow us',
+                'footer.follow.weibo': 'Weibo',
+                'footer.follow.Facebook': 'Facebook',
+                'footer.follow.douyin': 'Douyin',
+                'footer.bottom.contact': 'Contact us',
+                'footer.bottom.privacy': 'Privacy policy',
+                'footer.bottom.terms': 'Terms of use'
+            }
+        };
+
+        function setLanguage(lang) {
+            const dict = translations[lang] || translations.zh;
+            document.querySelectorAll('[data-i18n]').forEach(function (el) {
+                const key = el.getAttribute('data-i18n');
+                if (dict[key]) {
+                    el.textContent = dict[key];
+                }
+            });
+            localStorage.setItem('lang', lang);
+        }
+
+        document.querySelectorAll('[data-lang]')?.forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                const lang = this.getAttribute('data-lang');
+                setLanguage(lang);
+            });
+        });
+
+        setLanguage(localStorage.getItem('lang') || 'zh');
+    </script>
+</body>
+
 </html>

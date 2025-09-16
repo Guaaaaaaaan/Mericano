@@ -4,13 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Merricano - Our Story</title>
-    <meta name="description"
-        content="Discover the rich history and journey of Merricano Coffee, from its origins to its current mission.">
+    <title>Merricano - Our Stores</title>
+    <meta name="description" content="Merricano coffee store locator page using Bootstrap 5 CDN">
 
     <!-- Bootstrap 5.3 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <!-- Optional: site favicon -->
     <link rel="icon" type="image/png" href="Images/IconMerricano1.jpg">
@@ -51,6 +50,7 @@
         .card {
             border-color: var(--border-light);
             border-radius: 0.75rem;
+            /* Added border-radius to cards for consistency */
         }
 
         /* Navbar */
@@ -69,7 +69,7 @@
             opacity: 0.9;
         }
 
-        /* Hero */
+        /* Hero - Not used on this page, but keeping styles for consistency */
         .sbx-hero {
             background-color: var(--bg-light-cream);
         }
@@ -80,6 +80,7 @@
             color: var(--text-inverse);
             border-color: var(--brand-primary);
             border-radius: 0.5rem;
+            /* Added border-radius to buttons for consistency */
         }
 
         .sbx-cta-primary:hover {
@@ -93,6 +94,7 @@
             border-color: var(--brand-primary);
             background-color: transparent;
             border-radius: 0.5rem;
+            /* Added border-radius to buttons for consistency */
         }
 
         .sbx-cta-outline:hover {
@@ -132,12 +134,27 @@
             opacity: 1;
         }
 
-        /* Custom styles for history page */
-        .history-image {
-            max-width: 100%;
-            height: auto;
+        /* Custom styles for store locator map placeholder */
+        .store-map-placeholder {
+            min-height: 400px;
+            /* Ensure placeholder has a visible height */
+            background-color: var(--border-light);
+            border: 1px solid var(--border-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
             border-radius: 0.75rem;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Ensure the image inside the placeholder is responsive */
+        .store-map-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Cover the container, cropping if necessary */
+            border-radius: 0.75rem;
+            /* Match parent's border-radius */
         }
     </style>
 </head>
@@ -160,9 +177,12 @@
                     <li class="nav-item"><a class="nav-link" href="Menu.html" data-i18n="nav.menu">菜单</a></li>
                     <li class="nav-item"><a class="nav-link" href="Collections.html" data-i18n="nav.collections">臻选</a>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="Countries.html" data-i18n="nav.stores">门店</a></li>
+                    <!-- Set "Countries.html" as active for this store demo page -->
+                    <li class="nav-item"><a class="nav-link active" href="Countries.html" data-i18n="nav.stores">门店</a>
+                    </li>
                     <li class="nav-item"><a class="nav-link" href="NewsRoom.html" data-i18n="nav.brand">品牌</a></li>
-                    <li class="nav-item"><a class="nav-link" href="LogInSignUp.html" data-i18n="nav.login">登录/注册</a>
+                    <li class="nav-item d-none d-lg-block"><a class="btn btn-sm sbx-cta-primary ms-lg-3"
+                            href="LogInSignUp.html" data-i18n="nav.login">登录/注册</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="langDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false" data-i18n="nav.language">语言/EN</a>
@@ -176,44 +196,47 @@
         </div>
     </nav>
 
-    <!-- Main Content Area - Our Story -->
+    <!-- Main Content Area - Store Locator -->
     <main class="py-5">
         <div class="container">
-            <h1 class="display-5 fw-bold text-center mb-5" data-i18n="history.pageTitle">品牌故事</h1>
+            <!-- Page Title -->
+            <h1 class="display-5 fw-bold text-center mb-5" data-i18n="store.pageTitle">查找附近门店</h1>
 
-            <div class="row align-items-center g-5">
-                <div class="col-lg-6">
-                    <img src="Images/IconMerricano1.jpg" alt="Merricano History Image" class="history-image img-fluid">
-                </div>
-                <div class="col-lg-6">
-                    <h2 class="h3 fw-bold mb-3" data-i18n="history.section1.title">起源与愿景</h2>
-                    <p class="text-secondary mb-3" data-i18n="history.section1.paragraph1">
-                        Merricano 的故事始于对完美咖啡体验的简单愿景：在每一次冲泡中捕捉世界的精髓。
-                        从一个小小的梦想萌芽，我们踏上了一段环球之旅，寻找最优质的咖啡豆和最独特的风味。
-                    </p>
-                    <p class="text-secondary mb-0" data-i18n="history.section1.paragraph2">
-                        我们的创始人，一群热爱咖啡的鉴赏家，相信一杯卓越的咖啡不仅仅是饮品，
-                        更是一种联结人心的艺术。正是这份信念，塑造了 Merricano 的灵魂。
+            <div class="row g-5">
+                <!-- Store Locator Map Section -->
+                <div class="col-lg-8">
+                    <h2 class="h4 fw-bold mb-3" data-i18n="store.mapTitle">门店地图</h2>
+                    <div
+                        class="ratio ratio-16x9 bg-light border rounded d-flex align-items-center justify-content-center text-secondary store-map-placeholder">
+                        <img src="image_4efe7b.jpg" alt="Merricano Store Map" class="img-fluid rounded-lg">
+                    </div>
+                    <p class="text-secondary mt-3" data-i18n="store.mapDescription">
+                        使用地图探索你附近的 Merricano 门店。
                     </p>
                 </div>
-            </div>
 
-            <hr class="my-5">
-
-            <div class="row align-items-center g-5 flex-lg-row-reverse">
-                <div class="col-lg-6">
-                    <img src="Images/IconMerricano1.jpg" alt="Merricano Coffee Making" class="history-image img-fluid">
-                </div>
-                <div class="col-lg-6">
-                    <h2 class="h3 fw-bold mb-3" data-i18n="history.section2.title">创新与未来</h2>
-                    <p class="text-secondary mb-3" data-i18n="history.section2.paragraph1">
-                        多年来，Merricano 始终致力于创新，将传统工艺与现代技术完美融合。
-                        我们不断探索新的烘焙方法和饮品配方，只为给您带来前所未有的味蕾享受。
-                    </p>
-                    <p class="text-secondary mb-0" data-i18n="history.section2.paragraph2">
-                        展望未来，Merricano 将继续秉承对卓越品质的追求，
-                        与全球社区紧密合作，共同创造更多可持续的咖啡文化，将 Merricano 的独特风味带给更多人。
-                    </p>
+                <!-- Store List/Filters Section -->
+                <div class="col-lg-4">
+                    <h2 class="h4 fw-bold mb-3" data-i18n="store.listTitle">门店列表</h2>
+                    <div class="card p-3 mb-3 shadow-sm">
+                        <h5 class="fw-semibold mb-2" data-i18n="store.location1.name">Merricano 旗舰店</h5>
+                        <p class="mb-1 small text-secondary" data-i18n="store.location1.address">北京市朝阳区国贸街道建国门外大街1号</p>
+                        <p class="mb-1 small text-secondary" data-i18n="store.location1.hours">营业时间: 08:00 - 22:00</p>
+                        <a href="#" class="btn btn-sm sbx-cta-primary mt-2" data-i18n="store.location1.cta">查看详情</a>
+                    </div>
+                    <div class="card p-3 mb-3 shadow-sm">
+                        <h5 class="fw-semibold mb-2" data-i18n="store.location2.name">Merricano 上海静安店</h5>
+                        <p class="mb-1 small text-secondary" data-i18n="store.location2.address">上海市静安区南京西路1539号</p>
+                        <p class="mb-1 small text-secondary" data-i18n="store.location2.hours">营业时间: 07:30 - 23:00</p>
+                        <a href="#" class="btn btn-sm sbx-cta-primary mt-2" data-i18n="store.location2.cta">查看详情</a>
+                    </div>
+                    <div class="card p-3 mb-3 shadow-sm">
+                        <h5 class="fw-semibold mb-2" data-i18n="store.location3.name">Merricano 广州天河店</h5>
+                        <p class="mb-1 small text-secondary" data-i18n="store.location3.address">广州市天河区天河路208号</p>
+                        <p class="mb-1 small text-secondary" data-i18n="store.location3.hours">营业时间: 09:00 - 21:00</p>
+                        <a href="#" class="btn btn-sm sbx-cta-primary mt-2" data-i18n="store.location3.cta">查看详情</a>
+                    </div>
+                    <!-- More stores can be added here -->
                 </div>
             </div>
         </div>
@@ -224,8 +247,8 @@
         <div class="container">
             <div class="row align-items-center g-4">
                 <div class="col-lg-8">
-                    <h2 class="h3 fw-bold mb-2" data-i18n="band.title">MAX享好礼 · 积星有礼</h2>
-                    <p class="mb-0" data-i18n="band.text">下单累积MAX豆，解锁会员等级，兑换专属好礼与优惠券。</p>
+                    <h2 class="h3 fw-bold mb-2" data-i18n="band.title">星享好礼 · 积星有礼</h2>
+                    <p class="mb-0" data-i18n="band.text">下单累积星星，解锁会员等级，兑换专属好礼与优惠券。</p>
                 </div>
                 <div class="col-lg-4 text-lg-end">
                     <a href="LogInSignUp.html" class="btn btn-light" data-i18n="band.cta">立即登录</a>
@@ -249,9 +272,9 @@
                 <div class="col-6 col-md-3">
                     <h6 class="fw-bold mb-3" data-i18n="footer.help">帮助与支持</h6>
                     <ul class="list-unstyled small">
-                        <li class="mb-2"><a href="ContextUs.CustomerService.html" data-i18n="footer.help.cs">客户服务</a>
+                        <li class="mb-2"><a href="ContextUs.html" data-i18n="footer.help.cs">客户服务</a>
                         </li>
-                        <li class="mb-2"><a href="ContextUs.Feedback.html" data-i18n="footer.help.feedback">意见反馈</a>
+                        <li class="mb-2"><a href="ContextUs.html" data-i18n="footer.help.feedback">意见反馈</a>
                         </li>
                         <li class="mb-2"><a href="GetOurApp.html" data-i18n="footer.help.app">下载 App</a></li>
                     </ul>
@@ -259,22 +282,20 @@
                 <div class="col-6 col-md-3">
                     <h6 class="fw-bold mb-3" data-i18n="footer.business">商务合作</h6>
                     <ul class="list-unstyled small">
-                        <li class="mb-2"><a href="JoinUs.Inverstor.html" data-i18n="footer.business.invest">投资者关系</a>
+                        <li class="mb-2"><a href="JoinUs/Investor.html" data-i18n="footer.business.invest">投资者关系</a>
                         </li>
-                        <li class="mb-2"><a href="JoinUs.Career.html" data-i18n="footer.business.career">人才招聘</a></li>
-                        <li class="mb-2"><a href="JoinUs.Franchisees.html"
-                                data-i18n="footer.business.franchise">加盟合作</a></li>
+                        <li class="mb-2"><a href="JoinUs/Career.html" data-i18n="footer.business.career">人才招聘</a></li>
+                        <li class="mb-2"><a href="ContextUs/Franchisees.html"
+                                data-i18n="footer.business.franchise">加盟合作</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="col-6 col-md-3">
                     <h6 class="fw-bold mb-3" data-i18n="footer.follow">关注我们</h6>
                     <ul class="list-unstyled small">
-                        <li class="mb-2"><a href="https://www.instagram.com/shylie_gj/"
-                                data-i18n="footer.follow.instagram">Instagram</a></li>
-                        <li class="mb-2"><a href="https://www.facebook.com/profile.php?id=61577266087614"
-                                data-i18n="footer.follow.Facebook">脸书</a></li>
-                        <li class="mb-2"><a href="https://www.tiktok.com/@merricano_"
-                                data-i18n="footer.follow.douyin">抖音</a></li>
+                        <li class="mb-2"><a href="#" data-i18n="footer.follow.weibo">微博</a></li>
+                        <li class="mb-2"><a href="#" data-i18n="footer.follow.wechat">微信</a></li>
+                        <li class="mb-2"><a href="#" data-i18n="footer.follow.douyin">抖音</a></li>
                     </ul>
                 </div>
             </div>
@@ -291,7 +312,7 @@
 
     <!-- Bootstrap JS (bundle includes Popper) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 
     <!-- Small helper script with i18n -->
@@ -307,18 +328,26 @@
                 'nav.collections': '臻选',
                 'nav.stores': '门店',
                 'nav.brand': '品牌',
-                'nav.history': '历史',
                 'nav.login': '登录/注册',
                 'nav.language': '语言/Language',
-                'history.pageTitle': '品牌故事',
-                'history.section1.title': '起源与愿景',
-                'history.section1.paragraph1': 'Merricano 的故事始于对完美咖啡体验的简单愿景：在每一次冲泡中捕捉世界的精髓。从一个小小的梦想萌芽，我们踏上了一段环球之旅，寻找最优质的咖啡豆和最独特的风味。',
-                'history.section1.paragraph2': '我们的创始人，一群热爱咖啡的鉴赏家，相信一杯卓越的咖啡不仅仅是饮品，更是一种联结人心的艺术。正是这份信念，塑造了 Merricano 的灵魂。',
-                'history.section2.title': '创新与未来',
-                'history.section2.paragraph1': '多年来，Merricano 始终致力于创新，将传统工艺与现代技术完美融合。我们不断探索新的烘焙方法和饮品配方，只为给您带来前所未有的味蕾享受。',
-                'history.section2.paragraph2': '展望未来，Merricano 将继续秉承对卓越品质的追求，与全球社区紧密合作，共同创造更多可持续的咖啡文化，将 Merricano 的独特风味带给更多人。',
-                'band.title': 'MAX享好礼 · 积星有礼',
-                'band.text': '下单累积MAX豆，解锁会员等级，兑换专属好礼与优惠券。',
+                'store.pageTitle': '查找附近门店',
+                'store.mapTitle': '门店地图',
+                'store.mapDescription': '使用地图探索你附近的 Merricano 门店。',
+                'store.listTitle': '门店列表',
+                'store.location1.name': 'Merricano 旗舰店',
+                'store.location1.address': '北京市朝阳区国贸街道建国门外大街1号',
+                'store.location1.hours': '营业时间: 08:00 - 22:00',
+                'store.location1.cta': '查看详情',
+                'store.location2.name': 'Merricano 上海静安店',
+                'store.location2.address': '上海市静安区南京西路1539号',
+                'store.location2.hours': '营业时间: 07:30 - 23:00',
+                'store.location2.cta': '查看详情',
+                'store.location3.name': 'Merricano 广州天河店',
+                'store.location3.address': '广州市天河区天河路208号',
+                'store.location3.hours': '营业时间: 09:00 - 21:00',
+                'store.location3.cta': '查看详情',
+                'band.title': '星享好礼 · 积星有礼',
+                'band.text': '下单累积星星，解锁会员等级，兑换专属好礼与优惠券。',
                 'band.cta': '立即登录',
                 'footer.about': '关于我们',
                 'footer.about.story': '品牌故事',
@@ -335,7 +364,6 @@
                 'footer.follow': '关注我们',
                 'footer.follow.weibo': '微博',
                 'footer.follow.wechat': '微信',
-                'footer.follow.Facebook': '脸书',
                 'footer.follow.douyin': '抖音',
                 'footer.bottom.contact': '联系我们',
                 'footer.bottom.privacy': '隐私政策',
@@ -348,15 +376,24 @@
                 'nav.brand': 'Brand',
                 'nav.login': 'Sign In / Join',
                 'nav.language': 'Language/语言',
-                'history.pageTitle': 'Our Story',
-                'history.section1.title': 'Origins and Vision',
-                'history.section1.paragraph1': 'The Merricano story began with a simple vision for the perfect coffee experience: capturing the essence of the world in every brew. From a small dream, we embarked on a global journey to find the finest coffee beans and most unique flavors.',
-                'history.section1.paragraph2': 'Our founders, a group of passionate coffee connoisseurs, believe that an exceptional cup of coffee is more than just a drink; it\'s an art that connects people. This belief shaped the soul of Merricano.',
-                'history.section2.title': 'Innovation and Future',
-                'history.section2.paragraph1': 'Over the years, Merricano has been committed to innovation, perfectly blending traditional craftsmanship with modern technology. We continuously explore new roasting methods and beverage recipes to bring you an unprecedented taste experience.',
-                'history.section2.paragraph2': 'Looking ahead, Merricano will continue to uphold its pursuit of excellence, working closely with global communities to create more sustainable coffee culture and bring Merricano\'s unique flavors to more people.',
-                'band.title': 'Rewards Perks · MAXs Add Up',
-                'band.text': 'Earn MAXs with every order to unlock levels, gifts, and coupons.',
+                'store.pageTitle': 'Find Our Stores',
+                'store.mapTitle': 'Store Map',
+                'store.mapDescription': 'Use the map to explore Merricano stores near you.',
+                'store.listTitle': 'Store List',
+                'store.location1.name': 'Merricano Flagship Store',
+                'store.location1.address': 'No. 1 Jianguomen Outer Street, Chaoyang District, Beijing',
+                'store.location1.hours': 'Opening Hours: 08:00 - 22:00',
+                'store.location1.cta': 'View Details',
+                'store.location2.name': 'Merricano Jing\'an Store, Shanghai',
+                'store.location2.address': 'No. 1539 Nanjing West Road, Jing\'an District, Shanghai',
+                'store.location2.hours': 'Opening Hours: 07:30 - 23:00',
+                'store.location2.cta': 'View Details',
+                'store.location3.name': 'Merricano Tianhe Store, Guangzhou',
+                'store.location3.address': 'No. 208 Tianhe Road, Tianhe District, Guangzhou',
+                'store.location3.hours': 'Opening Hours: 09:00 - 21:00',
+                'store.location3.cta': 'View Details',
+                'band.title': 'Rewards Perks · Stars Add Up',
+                'band.text': 'Earn stars with every order to unlock levels, gifts, and coupons.',
                 'band.cta': 'Sign in now',
                 'footer.about': 'About us',
                 'footer.about.story': 'Our story',
@@ -373,7 +410,6 @@
                 'footer.follow': 'Follow us',
                 'footer.follow.weibo': 'Weibo',
                 'footer.follow.wechat': 'WeChat',
-                'footer.follow.Facebook': 'Facebook',
                 'footer.follow.douyin': 'Douyin',
                 'footer.bottom.contact': 'Contact us',
                 'footer.bottom.privacy': 'Privacy policy',

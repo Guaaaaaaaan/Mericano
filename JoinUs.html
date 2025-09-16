@@ -1,15 +1,438 @@
 <!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=\, initial-scale=1.0">
-    <title>Join Us</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Merricano - Join Us</title>
+    <meta name="description" content="Explore career opportunities and learn about the culture at Merricano Coffee.">
+
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Optional: site favicon -->
+    <link rel="icon" type="image/png" href="Images/IconMerricano1.jpg">
+    <style>
+        :root {
+            /* Primary */
+            --brand-primary: #6B4226;
+            /* Coffee Brown */
+            /* Background */
+            --bg-light-cream: #FAF3E7;
+            --bg-dark-brown: #3E2723;
+            /* Accents */
+            --accent-caramel: #D4A373;
+            --accent-olive: #7B8D42;
+            /* Text */
+            --text-main: #2C2C2C;
+            --text-secondary: #5C5C5C;
+            --text-inverse: #FFFFFF;
+            /* Borders */
+            --border-light: #E0D6CC;
+            --border-dark: #8B5E3C;
+        }
+
+        /* Base styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-light-cream);
+            color: var(--text-main);
+        }
+
+        .text-secondary {
+            color: var(--text-secondary) !important;
+        }
+
+        .border-top {
+            border-top-color: var(--border-light) !important;
+        }
+
+        .card {
+            border-color: var(--border-light);
+            border-radius: 0.75rem;
+        }
+
+        /* Navbar styles */
+        .sbx-navbar {
+            background-color: var(--brand-primary);
+        }
+
+        .sbx-navbar .nav-link,
+        .sbx-navbar .navbar-brand {
+            color: var(--text-inverse);
+        }
+
+        .sbx-navbar .nav-link.active,
+        .sbx-navbar .nav-link:hover {
+            color: var(--text-inverse);
+            opacity: 0.9;
+        }
+
+        /* Hero styles */
+        .sbx-hero {
+            background-color: var(--bg-light-cream);
+        }
+
+        /* Button styles */
+        .sbx-cta-primary {
+            background-color: var(--brand-primary);
+            color: var(--text-inverse);
+            border-color: var(--brand-primary);
+            border-radius: 0.5rem;
+        }
+
+        .sbx-cta-primary:hover {
+            background-color: var(--accent-caramel);
+            border-color: var(--accent-caramel);
+            color: var(--text-main);
+        }
+
+        .sbx-cta-outline {
+            color: var(--brand-primary);
+            border-color: var(--brand-primary);
+            background-color: transparent;
+            border-radius: 0.5rem;
+        }
+
+        .sbx-cta-outline:hover {
+            background-color: rgba(107, 66, 38, 0.08);
+            color: var(--brand-primary);
+        }
+
+        /* Accent utilities */
+        .text-accent-olive {
+            color: var(--accent-olive);
+        }
+
+        .text-accent-caramel {
+            color: var(--accent-caramel);
+        }
+
+        /* Band styles */
+        .sbx-band {
+            background-color: var(--bg-dark-brown);
+            color: var(--text-inverse);
+        }
+
+        /* Footer styles */
+        .sbx-footer {
+            background-color: var(--bg-dark-brown);
+            color: var(--text-inverse);
+        }
+
+        .sbx-footer a {
+            color: var(--text-inverse);
+            text-decoration: none;
+            opacity: 0.9;
+        }
+
+        .sbx-footer a:hover {
+            color: var(--text-inverse);
+            opacity: 1;
+        }
+
+        /* Specific styles for Join Us page */
+        .join-us-banner {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(Images/make\ an\ banner\ of\ a\ coffee\ brand\ call\ Mericano..jpg);
+            /* Placeholder image with brand primary color */
+            background-size: cover;
+            background-position: center;
+            color: var(--text-inverse);
+            padding: 80px 0;
+            border-radius: 0.75rem;
+        }
+
+        .section-image {
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
+
 <body>
-    <br>
-    <br>
-    <a href="JoinUs/Career.html">Career</a>
-    <br>
-    <br>
-    <a href="JoinUs/Investor.html">Investor</a>    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sbx-navbar">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <img src="Images/IconMerricano.jpg" alt="Merricano Logo" width="36" height="36" class="rounded-circle">
+                <span class="fw-semibold">Merricano</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-lg-2">
+                    <li class="nav-item"><a class="nav-link" href="Menu.html" data-i18n="nav.menu">菜单</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Collections.html" data-i18n="nav.collections">臻选</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="Countries.html" data-i18n="nav.stores">门店</a></li>
+                    <li class="nav-item"><a class="nav-link" href="NewsRoom.html" data-i18n="nav.brand">品牌</a></li>
+                    <li class="nav-item"><a class="nav-link" href="LogInSignUp.html" data-i18n="nav.login">登录/注册</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="langDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false" data-i18n="nav.language">语言/EN</a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
+                            <li><button class="dropdown-item" data-lang="zh">中文</button></li>
+                            <li><button class="dropdown-item" data-lang="en">English</button></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Area - Join Us -->
+    <main class="py-5">
+        <div class="container">
+            <!-- Hero Banner -->
+            <div class="join-us-banner text-center mb-5">
+                <h1 class="display-4 fw-bold mb-3" data-i18n="joinus.hero.title">在 Merricano 开启你的职业生涯</h1>
+                <p class="lead" data-i18n="joinus.hero.subtitle">我们致力于为员工创造一个充满活力和支持性的环境。</p>
+            </div>
+
+            <div class="row align-items-center g-5 mb-5">
+                <div class="col-lg-6">
+                    <img src="Images/IconMerricano.jpg" alt="Merricano Team Culture" class="img-fluid section-image">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="h3 fw-bold mb-3" data-i18n="joinus.section1.title">我们的文化与价值观</h2>
+                    <p class="text-secondary mb-3" data-i18n="joinus.section1.paragraph1">
+                        在 Merricano，我们相信卓越的咖啡体验源于卓越的团队。我们倡导创新、协作和相互尊重，
+                        致力于打造一个多元化和包容性的工作环境，让每一位伙伴都能发挥最大的潜能。
+                    </p>
+                    <p class="text-secondary mb-0" data-i18n="joinus.section1.paragraph2">
+                        我们珍视激情、诚信和对品质的承诺。如果你也怀揣着对咖啡的热爱，并渴望与我们一同成长，
+                        那么 Merricano 就是你施展才华的理想平台。
+                    </p>
+                </div>
+            </div>
+
+            <hr class="my-5">
+
+            <div class="row align-items-center g-5 flex-lg-row-reverse mb-5">
+                <div class="col-lg-6">
+                    <img src="Images/IconMerricano.jpg" alt="Employee Benefits" class="img-fluid section-image">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="h3 fw-bold mb-3" data-i18n="joinus.section2.title">福利与发展</h2>
+                    <p class="text-secondary mb-3" data-i18n="joinus.section2.paragraph1">
+                        我们为员工提供全面的福利计划，包括竞争力的薪酬、健康保险、带薪假期以及咖啡师培训和职业发展机会。
+                        我们深知，员工的成长是公司成功的基石。
+                    </p>
+                    <p class="text-secondary mb-0" data-i18n="joinus.section2.paragraph2">
+                        无论你是在咖啡行业初出茅庐，还是经验丰富的专业人士，Merricano 都将为你提供广阔的发展空间，
+                        帮助你实现职业抱负。我们相信，最好的咖啡师，都在 Merricano。
+                    </p>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <h2 class="h3 fw-bold mb-4" data-i18n="joinus.cta.title">立即加入我们！</h2>
+                <a href="JoinUs.Career.html" class="btn sbx-cta-primary btn-lg me-3"
+                    data-i18n="joinus.cta.careers">查看空缺职位</a>
+                <a href="JoinUs.Inverstor.html" class="btn sbx-cta-outline btn-lg"
+                    data-i18n="joinus.cta.investors">投资者关系</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Rewards band (Optional, keeping for consistency) -->
+    <section class="sbx-band py-5">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-8">
+                    <h2 class="h3 fw-bold mb-2" data-i18n="band.title">MAX享好礼 · 积星有礼</h2>
+                    <p class="mb-0" data-i18n="band.text">下单累积MAX豆，解锁会员等级，兑换专属好礼与优惠券。</p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a href="LogInSignUp.html" class="btn btn-light" data-i18n="band.cta">立即登录</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="sbx-footer border-top pt-5 pb-4">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-6 col-md-3">
+                    <h6 class="fw-bold mb-3" data-i18n="footer.about">关于我们</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="History.html" data-i18n="footer.about.story">品牌故事</a></li>
+                        <li class="mb-2"><a href="NewsRoom.html" data-i18n="footer.about.news">新闻中心</a></li>
+                        <li class="mb-2"><a href="JoinUs.html" data-i18n="footer.about.join">加入我们</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h6 class="fw-bold mb-3" data-i18n="footer.help">帮助与支持</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="ContextUs.CustomerService.html" data-i18n="footer.help.cs">客户服务</a>
+                        </li>
+                        <li class="mb-2"><a href="ContextUs.Feedback.html" data-i18n="footer.help.feedback">意见反馈</a>
+                        </li>
+                        <li class="mb-2"><a href="GetOurApp.html" data-i18n="footer.help.app">下载 App</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h6 class="fw-bold mb-3" data-i18n="footer.business">商务合作</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="JoinUs.Inverstor.html" data-i18n="footer.business.invest">投资者关系</a>
+                        </li>
+                        <li class="mb-2"><a href="JoinUs.Career.html" data-i18n="footer.business.career">人才招聘</a></li>
+                        <li class="mb-2"><a href="JoinUs.Franchisees.html"
+                                data-i18n="footer.business.franchise">加盟合作</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h6 class="fw-bold mb-3" data-i18n="footer.follow">关注我们</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="https://www.instagram.com/shylie_gj/"
+                                data-i18n="footer.follow.instagram">Instagram</a></li>
+                        <li class="mb-2"><a href="https://www.facebook.com/profile.php?id=61577266087614"
+                                data-i18n="footer.follow.Facebook">脸书</a></li>
+                        <li class="mb-2"><a href="https://www.tiktok.com/@merricano_"
+                                data-i18n="footer.follow.douyin">抖音</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-flex flex-column flex-md-row align-items-center justify-content-between pt-4 mt-4 border-top">
+                <span class="text-secondary small">© <span id="year"></span> Merricano Promax</span>
+                <div class="d-flex gap-3 small">
+                    <a href="ContextUs.html" data-i18n="footer.bottom.contact">联系我们</a>
+                    <a href="#" data-i18n="footer.bottom.privacy">隐私政策</a>
+                    <a href="#" data-i18n="footer.bottom.terms">使用条款</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS (bundle includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- Small helper script with i18n -->
+    <script>
+        const yearEl = document.getElementById('year');
+        if (yearEl) {
+            yearEl.textContent = new Date().getFullYear();
+        }
+
+        const translations = {
+            zh: {
+                'nav.menu': '菜单',
+                'nav.collections': '臻选',
+                'nav.stores': '门店',
+                'nav.brand': '品牌',
+                'nav.login': '登录/注册',
+                'nav.language': '语言/Language',
+                'joinus.hero.title': '在 Merricano 开启你的职业生涯',
+                'joinus.hero.subtitle': '我们致力于为员工创造一个充满活力和支持性的环境。',
+                'joinus.section1.title': '我们的文化与价值观',
+                'joinus.section1.paragraph1': '在 Merricano，我们相信卓越的咖啡体验源于卓越的团队。我们倡导创新、协作和相互尊重，致力于打造一个多元化和包容性的工作环境，让每一位伙伴都能发挥最大的潜能。',
+                'joinus.section1.paragraph2': '我们珍视激情、诚信和对品质的承诺。如果你也怀揣着对咖啡的热爱，并渴望与我们一同成长，那么 Merricano 就是你施展才华的理想平台。',
+                'joinus.section2.title': '福利与发展',
+                'joinus.section2.paragraph1': '我们为员工提供全面的福利计划，包括竞争力的薪酬、健康保险、带薪假期以及咖啡师培训和职业发展机会。我们深知，员工的成长是公司成功的基石。',
+                'joinus.section2.paragraph2': '无论你是在咖啡行业初出茅庐，还是经验丰富的专业人士，Merricano 都将为你提供广阔的发展空间，帮助你实现职业抱负。我们相信，最好的咖啡师，都在 Merricano。',
+                'joinus.cta.title': '立即加入我们！',
+                'joinus.cta.careers': '查看空缺职位',
+                'joinus.cta.investors': '投资者关系',
+                'band.title': 'MAX享好礼 · 积星有礼',
+                'band.text': '下单累积MAX豆，解锁会员等级，兑换专属好礼与优惠券。',
+                'band.cta': '立即登录',
+                'footer.about': '关于我们',
+                'footer.about.story': '品牌故事',
+                'footer.about.news': '新闻中心',
+                'footer.about.join': '加入我们',
+                'footer.help': '帮助与支持',
+                'footer.help.cs': '客户服务',
+                'footer.help.feedback': '意见反馈',
+                'footer.help.app': '下载 App',
+                'footer.business': '商务合作',
+                'footer.business.invest': '投资者关系',
+                'footer.business.career': '人才招聘',
+                'footer.business.franchise': '加盟合作',
+                'footer.follow': '关注我们',
+                'footer.follow.weibo': '微博',
+                'footer.follow.wechat': '微信',
+                'footer.follow.Facebook': '脸书',
+                'footer.follow.douyin': '抖音',
+                'footer.bottom.contact': '联系我们',
+                'footer.bottom.privacy': '隐私政策',
+                'footer.bottom.terms': '使用条款'
+            },
+            en: {
+                'nav.menu': 'Menu',
+                'nav.collections': 'Collections',
+                'nav.stores': 'Stores',
+                'nav.brand': 'Brand',
+                'nav.login': 'Sign In / Join',
+                'nav.language': 'Language/语言',
+                'joinus.hero.title': 'Start Your Career at Merricano',
+                'joinus.hero.subtitle': 'We are committed to creating a vibrant and supportive environment for our employees.',
+                'joinus.section1.title': 'Our Culture & Values',
+                'joinus.section1.paragraph1': 'At Merricano, we believe that an exceptional coffee experience stems from an exceptional team. We champion innovation, collaboration, and mutual respect, striving to cultivate a diverse and inclusive work environment where every partner can reach their fullest potential.',
+                'joinus.section1.paragraph2': 'We value passion, integrity, and a commitment to quality. If you share a love for coffee and aspire to grow with us, Merricano is the ideal platform to showcase your talents.',
+                'joinus.section2.title': 'Benefits & Development',
+                'joinus.section2.paragraph1': 'We offer comprehensive benefits packages to our employees, including competitive compensation, health insurance, paid time off, as well as barista training and career development opportunities. We understand that employee growth is the cornerstone of company success.',
+                'joinus.section2.paragraph2': 'Whether you are new to the coffee industry or an experienced professional, Merricano will provide you with ample room for growth and help you achieve your career aspirations. We believe the best baristas are at Merricano.',
+                'joinus.cta.title': 'Join Us Today!',
+                'joinus.cta.careers': 'View Open Positions',
+                'joinus.cta.investors': 'Investor Relations',
+                'band.title': 'Rewards Perks · MAXs Add Up',
+                'band.text': 'Earn MAXs with every order to unlock levels, gifts, and coupons.',
+                'band.cta': 'Sign in now',
+                'footer.about': 'About us',
+                'footer.about.story': 'Our story',
+                'footer.about.news': 'Newsroom',
+                'footer.about.join': 'Join us',
+                'footer.help': 'Help & support',
+                'footer.help.cs': 'Customer service',
+                'footer.help.feedback': 'Feedback',
+                'footer.help.app': 'Get the app',
+                'footer.business': 'Business',
+                'footer.business.invest': 'Investors',
+                'footer.business.career': 'Careers',
+                'footer.business.franchise': 'Franchise',
+                'footer.follow': 'Follow us',
+                'footer.follow.weibo': 'Weibo',
+                'footer.follow.wechat': 'WeChat',
+                'footer.follow.Facebook': 'Facebook',
+                'footer.follow.douyin': 'Douyin',
+                'footer.bottom.contact': 'Contact us',
+                'footer.bottom.privacy': 'Privacy policy',
+                'footer.bottom.terms': 'Terms of use'
+            }
+        };
+
+        function setLanguage(lang) {
+            const dict = translations[lang] || translations.zh;
+            document.querySelectorAll('[data-i18n]').forEach(function (el) {
+                const key = el.getAttribute('data-i18n');
+                if (dict[key]) {
+                    el.textContent = dict[key];
+                }
+            });
+            localStorage.setItem('lang', lang);
+            const langDropdown = document.getElementById('langDropdown');
+            if (langDropdown) {
+                langDropdown.textContent = lang === 'en' ? 'Language/语言' : '语言/EN';
+            }
+        }
+
+        document.querySelectorAll('[data-lang]')?.forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                const lang = this.getAttribute('data-lang');
+                setLanguage(lang);
+            });
+        });
+
+        setLanguage(localStorage.getItem('lang') || 'zh');
+    </script>
 </body>
+
 </html>

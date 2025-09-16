@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Merricano - 职业发展 Careers</title>
+    <meta name="description" content="Careers page for Merricano, career opportunities and company culture">
+
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Optional: site favicon -->
+    <link rel="icon" type="image/png" href="Images/IconMerricano1.jpg">
+    <style>
+        :root {
+            /* Primary */
+            --brand-primary: #6B4226;
+            /* Coffee Brown */
+            /* Background */
+            --bg-light-cream: #FAF3E7;
+            --bg-dark-brown: #3E2723;
+            /* Accents */
+            --accent-caramel: #D4A373;
+            --accent-olive: #7B8D42;
+            /* Text */
+            --text-main: #2C2C2C;
+            --text-secondary: #5C5C5C;
+            --text-inverse: #FFFFFF;
+            /* Borders */
+            --border-light: #E0D6CC;
+            --border-dark: #8B5E3C;
+        }
+
+        /* Base */
+        body {
+            background-color: var(--bg-light-cream);
+            color: var(--text-main);
+        }
+
+        .text-secondary {
+            color: var(--text-secondary) !important;
+        }
+
+        .border-top {
+            border-top-color: var(--border-light) !important;
+        }
+
+        .card {
+            border-color: var(--border-light);
+        }
+
+        /* Navbar */
+        .sbx-navbar {
+            background-color: var(--brand-primary);
+        }
+
+        .sbx-navbar .nav-link,
+        .sbx-navbar .navbar-brand {
+            color: var(--text-inverse);
+        }
+
+        .sbx-navbar .nav-link.active,
+        .sbx-navbar .nav-link:hover {
+            color: var(--text-inverse);
+            opacity: 0.9;
+        }
+
+        /* Hero */
+        .sbx-hero {
+            background-color: var(--bg-light-cream);
+        }
+
+        /* Buttons */
+        .sbx-cta-primary {
+            background-color: var(--brand-primary);
+            color: var(--text-inverse);
+            border-color: var(--brand-primary);
+        }
+
+        .sbx-cta-primary:hover {
+            background-color: var(--accent-caramel);
+            border-color: var(--accent-caramel);
+            color: var(--text-main);
+        }
+
+        .sbx-cta-outline {
+            color: var(--brand-primary);
+            border-color: var(--brand-primary);
+            background-color: transparent;
+        }
+
+        .sbx-cta-outline:hover {
+            background-color: rgba(107, 66, 38, 0.08);
+            color: var(--brand-primary);
+        }
+
+        /* Accent utilities */
+        .text-accent-olive {
+            color: var(--accent-olive);
+        }
+
+        .text-accent-caramel {
+            color: var(--accent-caramel);
+        }
+
+        /* Band */
+        .sbx-band {
+            background-color: var(--bg-dark-brown);
+            color: var(--text-inverse);
+        }
+
+        /* Footer */
+        .sbx-footer {
+            background-color: var(--bg-dark-brown);
+            color: var(--text-inverse);
+        }
+
+        .sbx-footer a {
+            color: var(--text-inverse);
+            text-decoration: none;
+            opacity: 0.9;
+        }
+
+        .sbx-footer a:hover {
+            color: var(--text-inverse);
+            opacity: 1;
+        }
+
+        /* New class for the form background */
+        .sbx-form-bg {
+            background-color: #F3EFE9;
+        }
+
+        /* New styles for images */
+        .job-card-img {
+            height: 150px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sbx-navbar">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <img src="Images/IconMerricano.jpg" alt="Merricano" width="36" height="36" class="rounded-circle">
+                <span class="fw-semibold">Merricano</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-lg-2">
+                    <li class="nav-item"><a class="nav-link" href="Menu.html" data-i18n="nav.menu">菜单</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Collections.html" data-i18n="nav.collections">臻选</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="Countries.html" data-i18n="nav.stores">门店</a></li>
+                    <li class="nav-item"><a class="nav-link" href="NewsRoom.html" data-i18n="nav.brand">品牌</a></li>
+                    <li class="nav-item"><a class="nav-link" href="LogInSignUp.html" data-i18n="nav.login">登录/注册</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="langDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false" data-i18n="nav.language">语言/EN</a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
+                            <li><button class="dropdown-item" data-lang="zh">中文</button></li>
+                            <li><button class="dropdown-item" data-lang="en">English</button></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-5 sbx-hero">
+        <div class="container text-center">
+            <h1 class="display-5 fw-bold mb-3" data-i18n="career.title">在Merricano开启您的职业生涯</h1>
+            <p class="lead text-secondary" data-i18n="career.subtitle">加入一个充满激情、创新和成长的团队。</p>
+            <a href="#benefits" class="btn sbx-cta-primary btn-lg mt-3" data-i18n="career.cta">了解更多</a>
+        </div>
+    </section>
+
+    <!-- Banner Image 1 -->
+    <section class="py-5">
+        <div class="container">
+            <img src="https://placehold.co/1200x400/D4A373/3E2723?text=Merricano+Talent"
+                class="img-fluid rounded shadow-sm" alt="Merricano Talent Banner">
+        </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="h3 fw-bold mb-4 text-center" data-i18n="why.title">为什么选择我们？</h2>
+            <div class="row g-4 text-center">
+                <div class="col-md-4">
+                    <img src="https://placehold.co/400x250/FAF3E7/6B4226?text=Professional+Growth"
+                        class="img-fluid rounded-circle mb-3 shadow-sm" alt="Professional Growth">
+                    <h3 class="h5 fw-bold" data-i18n="why.card1.title">专业成长</h3>
+                    <p class="text-secondary" data-i18n="why.card1.text">我们提供全面的培训和发展计划，帮助您在咖啡行业内建立专业知识和技能。</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="https://placehold.co/400x250/FAF3E7/6B4226?text=Innovation"
+                        class="img-fluid rounded-circle mb-3 shadow-sm" alt="Innovation">
+                    <h3 class="h5 fw-bold" data-i18n="why.card2.title">创新环境</h3>
+                    <p class="text-secondary" data-i18n="why.card2.text">鼓励新想法，挑战现状。我们相信每位员工的贡献都能推动公司的创新。</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="https://placehold.co/400x250/FAF3E7/6B4226?text=Benefits"
+                        class="img-fluid rounded-circle mb-3 shadow-sm" alt="Employee Benefits">
+                    <h3 class="h5 fw-bold" data-i18n="why.card3.title">员工福利</h3>
+                    <p class="text-secondary" data-i18n="why.card3.text">具有竞争力的薪酬、灵活的工作安排以及特别的员工咖啡福利。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner Image 2 -->
+    <section class="py-5">
+        <div class="container">
+            <img src="https://placehold.co/1200x400/7B8D42/FFFFFF?text=Team+Merricano"
+                class="img-fluid rounded shadow-sm" alt="Team Merricano Banner">
+        </div>
+    </section>
+
+    <!-- Job Positions Section -->
+    <section id="positions" class="py-5 bg-light-brown">
+        <div class="container">
+            <h2 class="h3 fw-bold mb-4 text-center" data-i18n="positions.title">开放职位</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://placehold.co/600x400/D4A373/3E2723?text=Barista"
+                            class="card-img-top job-card-img rounded-top" alt="Barista">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold" data-i18n="pos1.title">咖啡师</h5>
+                            <p class="card-text text-secondary" data-i18n="pos1.desc">创造艺术般的咖啡饮品，为顾客提供优质服务，分享咖啡知识。</p>
+                            <span class="badge rounded-pill bg-caramel" data-i18n="pos1.loc">北京，上海</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://placehold.co/600x400/D4A373/3E2723?text=Store+Manager"
+                            class="card-img-top job-card-img rounded-top" alt="Store Manager">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold" data-i18n="pos2.title">门店经理</h5>
+                            <p class="card-text text-secondary" data-i18n="pos2.desc">负责门店日常运营管理，团队建设与培训，确保服务质量。</p>
+                            <span class="badge rounded-pill bg-caramel" data-i18n="pos2.loc">全国</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://placehold.co/600x400/D4A373/3E2723?text=Marketing+Specialist"
+                            class="card-img-top job-card-img rounded-top" alt="Marketing Specialist">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold" data-i18n="pos3.title">市场营销专员</h5>
+                            <p class="card-text text-secondary" data-i18n="pos3.desc">负责品牌推广活动策划与执行，社交媒体运营与内容创作。</p>
+                            <span class="badge rounded-pill bg-caramel" data-i18n="pos3.loc">上海</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://placehold.co/600x400/D4A373/3E2723?text=Product+Researcher"
+                            class="card-img-top job-card-img rounded-top" alt="Product Development Researcher">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold" data-i18n="pos4.title">产品开发研究员</h5>
+                            <p class="card-text text-secondary" data-i18n="pos4.desc">研究咖啡豆与饮品配方，开发新产品，确保产品质量与创新。</p>
+                            <span class="badge rounded-pill bg-caramel" data-i18n="pos4.loc">北京</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://placehold.co/600x400/D4A373/3E2723?text=Sales+Manager"
+                            class="card-img-top job-card-img rounded-top" alt="Regional Sales Manager">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold" data-i18n="pos5.title">区域销售经理</h5>
+                            <p class="card-text text-secondary" data-i18n="pos5.desc">拓展并维护合作渠道，执行销售策略，完成区域业绩目标。</p>
+                            <span class="badge rounded-pill bg-caramel" data-i18n="pos5.loc">全国</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://placehold.co/600x400/D4A373/3E2723?text=HR+Specialist"
+                            class="card-img-top job-card-img rounded-top" alt="HR Specialist">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold" data-i18n="pos6.title">人力资源专员</h5>
+                            <p class="card-text text-secondary" data-i18n="pos6.desc">负责招聘、员工关系、薪酬福利等日常人力资源工作。</p>
+                            <span class="badge rounded-pill bg-caramel" data-i18n="pos6.loc">上海</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner Image 3 -->
+    <section class="py-5">
+        <div class="container">
+            <img src="https://placehold.co/1200x400/6B4226/FFFFFF?text=Your+Future+Starts+Here"
+                class="img-fluid rounded shadow-sm" alt="Your Future Starts Here Banner">
+        </div>
+    </section>
+
+    <!-- Application Form Section -->
+    <section class="py-5 sbx-form-bg">
+        <div class="container">
+            <h2 class="h3 fw-bold mb-3 text-center" data-i18n="apply.title">准备好加入我们了吗？</h2>
+            <p class="text-secondary mb-4 text-center" data-i18n="apply.text">请填写以下信息，期待与你相遇！</p>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label" data-i18n="form.name">姓名</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" data-i18n="form.gender">性别</label>
+                            <div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="male" value="male"
+                                        required>
+                                    <label class="form-check-label" for="male" data-i18n="form.gender.male">男</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="female"
+                                        value="female">
+                                    <label class="form-check-label" for="female"
+                                        data-i18n="form.gender.female">女</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="other" value="other">
+                                    <label class="form-check-label" for="other" data-i18n="form.gender.other">其他</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label" data-i18n="form.email">邮箱</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="position" class="form-label" data-i18n="form.position">感兴趣的岗位</label>
+                            <select class="form-select" id="position" required>
+                                <option value="" data-i18n="form.position.select">请选择一个岗位...</option>
+                                <option value="barista" data-i18n="pos1.title">咖啡师</option>
+                                <option value="store_manager" data-i18n="pos2.title">门店经理</option>
+                                <option value="marketing_specialist" data-i18n="pos3.title">市场营销专员</option>
+                                <option value="product_researcher" data-i18n="pos4.title">产品开发研究员</option>
+                                <option value="regional_sales" data-i18n="pos5.title">区域销售经理</option>
+                                <option value="hr_specialist" data-i18n="pos6.title">人力资源专员</option>
+                            </select>
+                        </div>
+                        <div class="d-grid mt-4">
+                            <button type="submit" class="btn sbx-cta-primary btn-lg"
+                                data-i18n="form.submit">提交申请</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (multi-column links) -->
+    <footer class="sbx-footer border-top pt-5 pb-4">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-6 col-md-3">
+                    <h6 class="fw-bold mb-3" data-i18n="footer.about">关于我们</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="History.html" data-i18n="footer.about.story">品牌故事</a></li>
+                        <li class="mb-2"><a href="NewsRoom.html" data-i18n="footer.about.news">新闻中心</a></li>
+                        <li class="mb-2"><a href="JoinUs.html" data-i18n="footer.about.join">加入我们</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h6 class="fw-bold mb-3" data-i18n="footer.help">帮助与支持</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="ContextUs.CustomerService.html" data-i18n="footer.help.cs">客户服务</a>
+                        </li>
+                        <li class="mb-2"><a href="ContextUs.Feedback.html" data-i18n="footer.help.feedback">意见反馈</a>
+                        </li>
+                        <li class="mb-2"><a href="GetOurApp.html" data-i18n="footer.help.app">下载 App</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h6 class="fw-bold mb-3" data-i18n="footer.business">商务合作</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="JoinUs.Inverstor.html" data-i18n="footer.business.invest">投资者关系</a>
+                        </li>
+                        <li class="mb-2"><a href="JoinUs.Career.html" data-i18n="footer.business.career">人才招聘</a></li>
+                        <li class="mb-2"><a href="JoinUs.Franchisees.html"
+                                data-i18n="footer.business.franchise">加盟合作</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h6 class="fw-bold mb-3" data-i18n="footer.follow">关注我们</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="https://www.instagram.com/shylie_gj/"
+                                data-i18n="footer.follow.instagram">Instagram</a></li>
+                        <li class="mb-2"><a href="https://www.facebook.com/profile.php?id=61577266087614"
+                                data-i18n="footer.follow.Facebook">脸书</a></li>
+                        <li class="mb-2"><a href="https://www.tiktok.com/@merricano_"
+                                data-i18n="footer.follow.douyin">抖音</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-flex flex-column flex-md-row align-items-center justify-content-between pt-4 mt-4 border-top">
+                <span class="text-secondary small">© <span id="year"></span> Merricano Promax</span>
+                <div class="d-flex gap-3 small">
+                    <a href="ContextUs.html" data-i18n="footer.bottom.contact">联系我们</a>
+                    <a href="#" data-i18n="footer.bottom.privacy">隐私政策</a>
+                    <a href="#" data-i18n="footer.bottom.terms">使用条款</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS (bundle includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- Small helper script with i18n -->
+    <script>
+        const yearEl = document.getElementById('year');
+        if (yearEl) {
+            yearEl.textContent = new Date().getFullYear();
+        }
+
+        const translations = {
+            zh: {
+                'nav.menu': '菜单',
+                'nav.collections': '臻选',
+                'nav.stores': '门店',
+                'nav.brand': '品牌',
+                'nav.login': '登录/注册',
+                'nav.language': '语言/EN',
+                'footer.about': '关于我们',
+                'footer.about.story': '品牌故事',
+                'footer.about.news': '新闻中心',
+                'footer.about.join': '加入我们',
+                'footer.help': '帮助与支持',
+                'footer.help.cs': '客户服务',
+                'footer.help.feedback': '意见反馈',
+                'footer.help.app': '下载 App',
+                'footer.business': '商务合作',
+                'footer.business.invest': '投资者关系',
+                'footer.business.career': '人才招聘',
+                'footer.business.franchise': '加盟合作',
+                'footer.follow': '关注我们',
+                'footer.follow.weibo': '微博',
+                'footer.follow.wechat': '微信',
+                'footer.follow.Facebook': '脸书',
+                'footer.follow.douyin': '抖音',
+                'footer.bottom.contact': '联系我们',
+                'footer.bottom.privacy': '隐私政策',
+                'footer.bottom.terms': '使用条款',
+                // Career page specific translations
+                'career.title': '在Merricano开启您的职业生涯',
+                'career.subtitle': '加入一个充满激情、创新和成长的团队。',
+                'career.cta': '了解更多',
+                'why.title': '为什么选择我们？',
+                'why.card1.title': '专业成长',
+                'why.card1.text': '我们提供全面的培训和发展计划，帮助您在咖啡行业内建立专业知识和技能。',
+                'why.card2.title': '创新环境',
+                'why.card2.text': '鼓励新想法，挑战现状。我们相信每位员工的贡献都能推动公司的创新。',
+                'why.card3.title': '员工福利',
+                'why.card3.text': '具有竞争力的薪酬、灵活的工作安排以及特别的员工咖啡福利。',
+                'positions.title': '开放职位',
+                'pos1.title': '咖啡师',
+                'pos1.desc': '创造艺术般的咖啡饮品，为顾客提供优质服务，分享咖啡知识。',
+                'pos1.loc': '北京，上海',
+                'pos2.title': '门店经理',
+                'pos2.desc': '负责门店日常运营管理，团队建设与培训，确保服务质量。',
+                'pos2.loc': '全国',
+                'pos3.title': '市场营销专员',
+                'pos3.desc': '负责品牌推广活动策划与执行，社交媒体运营与内容创作。',
+                'pos3.loc': '上海',
+                'pos4.title': '产品开发研究员',
+                'pos4.desc': '研究咖啡豆与饮品配方，开发新产品，确保产品质量与创新。',
+                'pos4.loc': '北京',
+                'pos5.title': '区域销售经理',
+                'pos5.desc': '拓展并维护合作渠道，执行销售策略，完成区域业绩目标。',
+                'pos5.loc': '全国',
+                'pos6.title': '人力资源专员',
+                'pos6.desc': '负责招聘、员工关系、薪酬福利等日常人力资源工作。',
+                'pos6.loc': '上海',
+                'apply.title': '准备好加入我们了吗？',
+                'apply.text': '请填写以下信息，期待与你相遇！',
+                'form.name': '姓名',
+                'form.gender': '性别',
+                'form.gender.male': '男',
+                'form.gender.female': '女',
+                'form.gender.other': '其他',
+                'form.email': '邮箱',
+                'form.position': '感兴趣的岗位',
+                'form.position.select': '请选择一个岗位...',
+                'form.submit': '提交申请'
+            },
+            en: {
+                'nav.menu': 'Menu',
+                'nav.collections': 'Collections',
+                'nav.stores': 'Stores',
+                'nav.brand': 'Brand',
+                'nav.login': 'Sign In / Join',
+                'nav.language': 'Language/语言',
+                'footer.about': 'About us',
+                'footer.about.story': 'Our story',
+                'footer.about.news': 'Newsroom',
+                'footer.about.join': 'Join us',
+                'footer.help': 'Help & support',
+                'footer.help.cs': 'Customer service',
+                'footer.help.feedback': 'Feedback',
+                'footer.help.app': 'Get the app',
+                'footer.business': 'Business',
+                'footer.business.invest': 'Investors',
+                'footer.business.career': 'Careers',
+                'footer.business.franchise': 'Franchise',
+                'footer.follow': 'Follow us',
+                'footer.follow.weibo': 'Weibo',
+                'footer.follow.wechat': 'WeChat',
+                'footer.follow.Facebook': 'Facebook',
+                'footer.follow.douyin': 'Douyin',
+                'footer.bottom.contact': 'Contact us',
+                'footer.bottom.privacy': 'Privacy policy',
+                'footer.bottom.terms': 'Terms of use',
+                // Career page specific translations
+                'career.title': 'Start Your Career at Merricano',
+                'career.subtitle': 'Join a team full of passion, innovation, and growth.',
+                'career.cta': 'Learn More',
+                'why.title': 'Why Choose Us?',
+                'why.card1.title': 'Professional Growth',
+                'why.card1.text': 'We offer comprehensive training and development programs to help you build professional knowledge and skills in the coffee industry.',
+                'why.card2.title': 'Innovative Environment',
+                'why.card2.text': 'We encourage new ideas and challenge the status quo. We believe that every employee\'s contribution drives the company\'s innovation.',
+                'why.card3.title': 'Employee Benefits',
+                'why.card3.text': 'Competitive compensation, flexible working arrangements, and special employee coffee benefits.',
+                'positions.title': 'Open Positions',
+                'pos1.title': 'Barista',
+                'pos1.desc': 'Create artful coffee beverages, provide excellent customer service, and share coffee knowledge.',
+                'pos1.loc': 'Beijing, Shanghai',
+                'pos2.title': 'Store Manager',
+                'pos2.desc': 'Responsible for daily store operations, team building and training, and ensuring service quality.',
+                'pos2.loc': 'Nationwide',
+                'pos3.title': 'Marketing Specialist',
+                'pos3.desc': 'Responsible for brand promotion campaign planning and execution, social media operation and content creation.',
+                'pos3.loc': 'Shanghai',
+                'pos4.title': 'Product Development Researcher',
+                'pos4.desc': 'Research coffee beans and beverage recipes, develop new products, and ensure product quality and innovation.',
+                'pos4.loc': 'Beijing',
+                'pos5.title': 'Regional Sales Manager',
+                'pos5.desc': 'Expand and maintain partnerships, execute sales strategies, and achieve regional performance goals.',
+                'pos5.loc': 'Nationwide',
+                'pos6.title': 'Human Resources Specialist',
+                'pos6.desc': 'Responsible for daily HR tasks such as recruitment, employee relations, and compensation and benefits.',
+                'pos6.loc': 'Shanghai',
+                'apply.title': 'Ready to Join Us?',
+                'apply.text': 'Please fill out the form below. We look forward to meeting you!',
+                'form.name': 'Name',
+                'form.gender': 'Gender',
+                'form.gender.male': 'Male',
+                'form.gender.female': 'Female',
+                'form.gender.other': 'Other',
+                'form.email': 'Email',
+                'form.position': 'Interested Position',
+                'form.position.select': 'Select a position...',
+                'form.submit': 'Submit Application'
+            }
+        };
+
+        function setLanguage(lang) {
+            const dict = translations[lang] || translations.zh;
+            document.querySelectorAll('[data-i18n]').forEach(function (el) {
+                const key = el.getAttribute('data-i18n');
+                if (dict[key]) {
+                    el.textContent = dict[key];
+                }
+            });
+            // Update form labels and options
+            document.getElementById('name').previousElementSibling.textContent = dict['form.name'];
+            document.getElementById('email').previousElementSibling.textContent = dict['form.email'];
+            document.getElementById('position').previousElementSibling.textContent = dict['form.position'];
+            document.getElementById('male').nextElementSibling.textContent = dict['form.gender.male'];
+            document.getElementById('female').nextElementSibling.textContent = dict['form.gender.female'];
+            document.getElementById('other').nextElementSibling.textContent = dict['form.gender.other'];
+            document.querySelector('option[value=""]').textContent = dict['form.position.select'];
+            document.querySelector('option[value="barista"]').textContent = dict['pos1.title'];
+            document.querySelector('option[value="store_manager"]').textContent = dict['pos2.title'];
+            document.querySelector('option[value="marketing_specialist"]').textContent = dict['pos3.title'];
+            document.querySelector('option[value="product_researcher"]').textContent = dict['pos4.title'];
+            document.querySelector('option[value="regional_sales"]').textContent = dict['pos5.title'];
+            document.querySelector('option[value="hr_specialist"]').textContent = dict['pos6.title'];
+            document.querySelector('button[type="submit"]').textContent = dict['form.submit'];
+
+            localStorage.setItem('lang', lang);
+        }
+
+        document.querySelectorAll('[data-lang]')?.forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                const lang = this.getAttribute('data-lang');
+                setLanguage(lang);
+            });
+        });
+
+        setLanguage(localStorage.getItem('lang') || 'zh');
+    </script>
+</body>
+
+</html>

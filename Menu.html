@@ -1,11 +1,910 @@
 <!DOCTYPE html>
+<html lang="zh">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=\, initial-scale=1.0">
-    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Merricano - 菜单 Menu</title>
+    <meta name="description" content="Merricano 菜单页面（Starbucks 风格排版 + 品牌配色）">
+
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="Images/IconMerricano1.jpg">
+
+    <style>
+        :root {
+            /* Primary */
+            --brand-primary: #6B4226;
+            /* Background */
+            --bg-light-cream: #FAF3E7;
+            --bg-dark-brown: #3E2723;
+            /* Accents */
+            --accent-caramel: #D4A373;
+            --accent-olive: #7B8D42;
+            /* Text */
+            --text-main: #2C2C2C;
+            --text-secondary: #5C5C5C;
+            --text-inverse: #FFFFFF;
+            /* Borders */
+            --border-light: #E0D6CC;
+            --border-dark: #8B5E3C;
+        }
+
+        body {
+            background-color: var(--bg-light-cream);
+            color: var(--text-main);
+        }
+
+        .text-secondary {
+            color: var(--text-secondary) !important;
+        }
+
+        .border-top {
+            border-top-color: var(--border-light) !important;
+        }
+
+        .border-bottom {
+            border-bottom-color: var(--border-light) !important;
+        }
+
+        .card {
+            border-color: var(--border-light);
+        }
+
+        /* Navbar */
+        .nav-brandbar {
+            background-color: var(--brand-primary);
+        }
+
+        .nav-brandbar .navbar-brand,
+        .nav-brandbar .nav-link {
+            color: var(--text-inverse);
+        }
+
+        .nav-brandbar .nav-link:hover {
+            color: var(--text-inverse);
+            opacity: .9;
+        }
+
+        /* Buttons (brand palette) */
+        .sbx-cta-primary {
+            background-color: var(--brand-primary);
+            color: var(--text-inverse);
+            border-color: var(--brand-primary);
+        }
+
+        .sbx-cta-primary:hover {
+            background-color: var(--accent-caramel);
+            border-color: var(--accent-caramel);
+            color: var(--text-main);
+        }
+
+        /* Hero */
+        .menu-hero {
+            background-color: var(--bg-light-cream);
+        }
+
+        /* Pills */
+        .menu-pills .nav-link {
+            color: var(--text-main);
+            border: 1px solid var(--border-light);
+        }
+
+        .menu-pills .nav-link.active {
+            background-color: var(--brand-primary);
+            color: var(--text-inverse);
+            border-color: var(--brand-primary);
+        }
+
+        .menu-pills .nav-link:hover {
+            border-color: var(--accent-caramel);
+        }
+
+        /* Product cards */
+        .product-card .card-title {
+            font-weight: 600;
+        }
+
+        .product-card .price {
+            color: var(--brand-primary);
+            font-weight: 600;
+        }
+
+        .product-card .badge-flavor {
+            background-color: var(--accent-olive);
+        }
+
+        .product-card .badge-new {
+            background-color: var(--accent-caramel);
+            color: var(--text-main);
+        }
+
+        /* Sidebar */
+        .sticky-sidebar {
+            position: sticky;
+            top: 80px;
+        }
+
+        .filter-title {
+            color: var(--text-secondary);
+            font-size: .95rem;
+        }
+
+        .form-check-input:checked {
+            background-color: var(--brand-primary);
+            border-color: var(--brand-primary);
+        }
+
+        /* Footer */
+        .site-footer {
+            background-color: var(--bg-dark-brown);
+            color: var(--text-inverse);
+        }
+
+        .site-footer a {
+            color: var(--text-inverse);
+            text-decoration: none;
+            opacity: .9;
+        }
+
+        .site-footer a:hover {
+            opacity: 1;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Menu</h1>
+    <!-- Navbar（对齐 Starbucks 结构，含菜单入口与门店入口） -->
+    <nav class="navbar navbar-expand-lg nav-brandbar">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <img src="Images/IconMerricano.jpg" alt="Merricano" width="36" height="36" class="rounded-circle">
+                <span class="fw-semibold">Merricano</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+                aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-lg-2">
+                    <li class="nav-item"><a class="nav-link" href="Menu.html" data-i18n="nav.menu">菜单</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Collections.html" data-i18n="nav.collections">臻选</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="Countries.html" data-i18n="nav.stores">门店</a></li>
+                    <li class="nav-item"><a class="nav-link" href="NewsRoom.html" data-i18n="nav.brand">品牌</a></li>
+                    <li class="nav-item"><a class="nav-link" href="LogInSignUp.html" data-i18n="nav.login">登录/注册</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="langDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false" data-i18n="nav.language">语言</a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
+                            <li><button class="dropdown-item" data-lang="zh">中文</button></li>
+                            <li><button class="dropdown-item" data-lang="en">English</button></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero（菜单头部横幅） -->
+    <section class="menu-hero py-5 border-bottom">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-7">
+                    <h1 class="display-6 fw-bold mb-3" data-i18n="hero.title">菜单</h1>
+                    <p class="lead text-secondary mb-0" data-i18n="hero.desc">从经典咖啡到季节风味、轻食甜点与甄选咖啡豆，探索你的每日灵感。</p>
+                </div>
+                <div class="col-lg-5 text-lg-end">
+                    <!-- <a href="Countries/Outlets.html" class="btn btn-outline-dark" data-i18n="hero.ctaStores">查找附近门店</a> -->
+                    <a href="GetOurApp.html" class="btn sbx-cta-primary ms-2" data-i18n="hero.ctaApp">下载 App 点单</a>
+                    <!-- 说明：如需与 demo.html 共用按钮样式，可抽取到公共 CSS。 -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 分类 Pills（常见大类，仿 Starbucks 顶部分类） -->
+    <section class="py-3">
+        <div class="container menu-pills">
+            <ul class="nav nav-pills flex-wrap gap-2">
+                <li class="nav-item"><a class="nav-link active" href="#hot-coffee" data-i18n="tabs.hot">热咖啡</a></li>
+                <li class="nav-item"><a class="nav-link" href="#cold-coffee" data-i18n="tabs.cold">冷咖啡</a></li>
+                <li class="nav-item"><a class="nav-link" href="#teavana" data-i18n="tabs.tea">茶饮</a></li>
+                <li class="nav-item"><a class="nav-link" href="#bakery" data-i18n="tabs.bakery">烘焙&甜点</a></li>
+                <li class="nav-item"><a class="nav-link" href="#food" data-i18n="tabs.food">轻食</a></li>
+                <li class="nav-item"><a class="nav-link" href="#beans" data-i18n="tabs.beans">咖啡豆&冲煮</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <main class="py-4">
+        <div class="container">
+            <div class="row g-4">
+                <!-- 左侧筛选（仿 Starbucks 左侧过滤功能） -->
+                <aside class="col-lg-3">
+                    <div class="sticky-sidebar">
+                        <div class="p-3 bg-white rounded border">
+                            <div class="mb-2 filter-title" data-i18n="filter.filter">筛选</div>
+                            <div class="mb-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="filterNew">
+                                    <label class="form-check-label" for="filterNew" data-i18n="filter.new">
+                                        新品推荐
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="filterNoMilk">
+                                    <label class="form-check-label" for="filterNoMilk" data-i18n="filter.nomilk">
+                                        无乳制品可选
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="filterLowSugar">
+                                    <label class="form-check-label" for="filterLowSugar" data-i18n="filter.lowsugar">
+                                        低糖/无糖
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="mb-2 filter-title" data-i18n="filter.flavor">风味</div>
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="badge rounded-pill bg-light text-dark border" role="button" tabindex="0"
+                                    data-flavor="nut" data-i18n="filter.nut">坚果</span>
+                                <span class="badge rounded-pill bg-light text-dark border" role="button" tabindex="0"
+                                    data-flavor="caramel" data-i18n="filter.caramel">焦糖</span>
+                                <span class="badge rounded-pill bg-light text-dark border" role="button" tabindex="0"
+                                    data-flavor="chocolate" data-i18n="filter.chocolate">巧克力</span>
+                                <span class="badge rounded-pill bg-light text-dark border" role="button" tabindex="0"
+                                    data-flavor="fruit" data-i18n="filter.fruit">果香</span>
+                            </div>
+                            <!-- TODO：实际筛选逻辑可在后续用 JS 绑定 -->
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- 右侧菜单内容区域 -->
+                <section class="col-lg-9">
+                    <!-- 热咖啡 -->
+                    <div id="hot-coffee" class="mb-5">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <h2 class="h4 mb-0" data-i18n="sec.hot">热咖啡</h2>
+                            <!-- <a href="#" class="link-dark" data-i18n="sec.seeAll">查看全部</a> -->
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-6 col-md-4">
+                                <div class="card product-card h-100" data-new="false" data-dairy-free="false"
+                                    data-low-sugar="false" data-flavors="nut">
+                                    <img src="Images/Latte.jpg" class="card-img-top" alt="拿铁">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center justify-content-between mb-1">
+                                            <h3 class="h6 card-title mb-0" data-i18n="item.latte">拿铁</h3>
+                                            <span class="badge badge-flavor" data-i18n="item.smooth">顺滑</span>
+                                        </div>
+                                        <p class="text-secondary mb-2" data-i18n="item.latte.desc">意式浓缩与丝滑奶泡，平衡香醇。</p>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <span class="price">¥28</span>
+                                            <button class="btn btn-sm btn-outline-dark" data-bs-toggle="modal"
+                                                data-bs-target="#nutritionModal"
+                                                data-i18n="item.nutrition">营养信息</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <div class="card product-card h-100" data-new="false" data-dairy-free="true"
+                                    data-low-sugar="true" data-flavors="nut">
+                                    <img src="Images/HotCoffee.jpg" class="card-img-top" alt="美式">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center justify-content-between mb-1">
+                                            <h3 class="h6 card-title mb-0" data-i18n="item.americano">美式</h3>
+                                            <span class="badge badge-flavor" data-i18n="item.refreshing">清爽</span>
+                                        </div>
+                                        <p class="text-secondary mb-2" data-i18n="item.americano.desc">经典意式与热水调和，醇香回甘。
+                                        </p>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <span class="price">¥22</span>
+                                            <button class="btn btn-sm btn-outline-dark" data-bs-toggle="modal"
+                                                data-bs-target="#nutritionModal"
+                                                data-i18n="item.nutrition">营养信息</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <div class="card product-card h-100" data-new="true" data-dairy-free="false"
+                                    data-low-sugar="false" data-flavors="caramel">
+                                    <img src="Images/CaramelMacchiato(1.jpg" class="card-img-top" alt="焦糖玛奇朵">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center justify-content-between mb-1">
+                                            <h3 class="h6 card-title mb-0" data-i18n="item.caramelMacchiato">焦糖玛奇朵</h3>
+                                            <span class="badge badge-new" data-i18n="item.new">新品</span>
+                                        </div>
+                                        <p class="text-secondary mb-2" data-i18n="item.caramelMacchiato.desc">
+                                            香甜焦糖与奶泡交织，口感丰富。</p>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <span class="price">¥32</span>
+                                            <button class="btn btn-sm btn-outline-dark" data-bs-toggle="modal"
+                                                data-bs-target="#nutritionModal"
+                                                data-i18n="item.nutrition">营养信息</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 冷咖啡 -->
+                    <div id="cold-coffee" class="mb-5">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <h2 class="h4 mb-0" data-i18n="sec.cold">冷咖啡</h2>
+                            <!-- <a href="#" class="link-dark" data-i18n="sec.seeAll">查看全部</a> -->
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-6 col-md-4">
+                                <div class="card product-card h-100" data-new="false" data-dairy-free="true"
+                                    data-low-sugar="true" data-flavors="nut">
+                                    <img src="Images/IcedBlackCoffee.jpg" class="card-img-top" alt="冷萃咖啡">
+                                    <div class="card-body">
+                                        <h3 class="h6 card-title" data-i18n="item.coldBrew">冷萃咖啡</h3>
+                                        <p class="text-secondary mb-2" data-i18n="item.coldBrew.desc">低温萃取，顺滑细腻，余味回甘。
+                                        </p>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <span class="price">¥30</span>
+                                            <button class="btn btn-sm btn-outline-dark" data-bs-toggle="modal"
+                                                data-bs-target="#nutritionModal"
+                                                data-i18n="item.nutrition">营养信息</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <div class="card product-card h-100" data-new="false" data-dairy-free="false"
+                                    data-low-sugar="false" data-flavors="nut">
+                                    <img src="Images/IcedBlackCoffee.jpg" class="card-img-top" alt="冰拿铁">
+                                    <div class="card-body">
+                                        <h3 class="h6 card-title" data-i18n="item.icedLatte">冰拿铁</h3>
+                                        <p class="text-secondary mb-2" data-i18n="item.icedLatte.desc">清爽冰感与奶香平衡，夏日之选。
+                                        </p>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <span class="price">¥30</span>
+                                            <button class="btn btn-sm btn-outline-dark" data-bs-toggle="modal"
+                                                data-bs-target="#nutritionModal"
+                                                data-i18n="item.nutrition">营养信息</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <div class="card product-card h-100" data-new="false" data-dairy-free="true"
+                                    data-low-sugar="true" data-flavors="nut">
+                                    <img src="Images/IcedBlackCoffee.jpg" class="card-img-top" alt="冰美式">
+                                    <div class="card-body">
+                                        <h3 class="h6 card-title" data-i18n="item.icedAmericano">冰美式</h3>
+                                        <p class="text-secondary mb-2" data-i18n="item.icedAmericano.desc">
+                                            清新爽口，咖啡香气干净利落。</p>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <span class="price">¥24</span>
+                                            <button class="btn btn-sm btn-outline-dark" data-bs-toggle="modal"
+                                                data-bs-target="#nutritionModal"
+                                                data-i18n="item.nutrition">营养信息</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 茶饮 -->
+                    <div id="teavana" class="mb-5">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <h2 class="h4 mb-0" data-i18n="sec.tea">茶饮</h2>
+                            <!-- <a href="#" class="link-dark" data-i18n="sec.seeAll">查看全部</a> -->
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-6 col-md-4">
+                                <div class="card product-card h-100" data-new="false" data-dairy-free="true"
+                                    data-low-sugar="true" data-flavors="fruit">
+                                    <img src="Images/Tea.jpg" class="card-img-top" alt="茉莉绿茶">
+                                    <div class="card-body">
+                                        <h3 class="h6 card-title" data-i18n="item.jasmineGreen">茉莉绿茶</h3>
+                                        <p class="text-secondary mb-2" data-i18n="item.jasmineGreen.desc">清新茶香，回味悠长。</p>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <span class="price">¥20</span>
+                                            <button class="btn btn-sm btn-outline-dark" data-bs-toggle="modal"
+                                                data-bs-target="#nutritionModal"
+                                                data-i18n="item.nutrition">营养信息</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <div class="card product-card h-100" data-new="false" data-dairy-free="true"
+                                    data-low-sugar="true" data-flavors="nut">
+                                    <img src="Images/Tea(1.jpg" class="card-img-top" alt="英式红茶">
+                                    <div class="card-body">
+                                        <h3 class="h6 card-title" data-i18n="item.blackTea">英式红茶</h3>
+                                        <p class="text-secondary mb-2" data-i18n="item.blackTea.desc">醇厚温润，适合午后时光。</p>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <span class="price">¥20</span>
+                                            <button class="btn btn-sm btn-outline-dark" data-bs-toggle="modal"
+                                                data-bs-target="#nutritionModal"
+                                                data-i18n="item.nutrition">营养信息</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <div class="card product-card h-100" data-new="false" data-dairy-free="false"
+                                    data-low-sugar="false" data-flavors="caramel">
+                                    <img src="Images/Tea(2.jpg" class="card-img-top" alt="黑糖奶茶">
+                                    <div class="card-body">
+                                        <h3 class="h6 card-title" data-i18n="item.brownSugarMilkTea">黑糖奶茶</h3>
+                                        <p class="text-secondary mb-2" data-i18n="item.brownSugarMilkTea.desc">
+                                            黑糖香与奶香交织，甜而不腻。</p>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <span class="price">¥26</span>
+                                            <button class="btn btn-sm btn-outline-dark" data-bs-toggle="modal"
+                                                data-bs-target="#nutritionModal"
+                                                data-i18n="item.nutrition">营养信息</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 烘焙&甜点 -->
+                    <div id="bakery" class="mb-5">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <h2 class="h4 mb-0" data-i18n="sec.bakery">烘焙&甜点</h2>
+                            <!-- <a href="#" class="link-dark" data-i18n="sec.seeAll">查看全部</a> -->
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-6 col-md-4">
+                                <div class="card product-card h-100" data-new="false" data-dairy-free="false"
+                                    data-low-sugar="false" data-flavors="chocolate">
+                                    <img src="Images/croissant.jpg" class="card-img-top" alt="牛角包">
+                                    <div class="card-body">
+                                        <h3 class="h6 card-title" data-i18n="item.croissant">牛角包</h3>
+                                        <p class="text-secondary mb-2" data-i18n="item.croissant.desc">层次酥香，黄油风味浓郁。</p>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <span class="price">¥16</span>
+                                            <button class="btn btn-sm btn-outline-dark" data-bs-toggle="modal"
+                                                data-bs-target="#nutritionModal"
+                                                data-i18n="item.nutrition">营养信息</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <div class="card product-card h-100" data-new="false" data-dairy-free="false"
+                                    data-low-sugar="false" data-flavors="fruit">
+                                    <img src="Images/croissant.jpg" class="card-img-top" alt="蓝莓玛芬">
+                                    <div class="card-body">
+                                        <h3 class="h6 card-title" data-i18n="item.blueberryMuffin">蓝莓玛芬</h3>
+                                        <p class="text-secondary mb-2" data-i18n="item.blueberryMuffin.desc">果香充盈，口感蓬松。
+                                        </p>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <span class="price">¥18</span>
+                                            <button class="btn btn-sm btn-outline-dark" data-bs-toggle="modal"
+                                                data-bs-target="#nutritionModal"
+                                                data-i18n="item.nutrition">营养信息</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <div class="card product-card h-100" data-new="false" data-dairy-free="false"
+                                    data-low-sugar="false" data-flavors="caramel">
+                                    <img src="Images/croissant.jpg" class="card-img-top" alt="芝士蛋糕">
+                                    <div class="card-body">
+                                        <h3 class="h6 card-title" data-i18n="item.cheesecake">芝士蛋糕</h3>
+                                        <p class="text-secondary mb-2" data-i18n="item.cheesecake.desc">细腻醇厚，奶香充盈。</p>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <span class="price">¥28</span>
+                                            <button class="btn btn-sm btn-outline-dark" data-bs-toggle="modal"
+                                                data-bs-target="#nutritionModal"
+                                                data-i18n="item.nutrition">营养信息</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 轻食 -->
+                    <div id="food" class="mb-5">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <h2 class="h4 mb-0" data-i18n="sec.food">轻食</h2>
+                            <!-- <a href="#" class="link-dark" data-i18n="sec.seeAll">查看全部</a> -->
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-6 col-md-4">
+                                <div class="card product-card h-100" data-new="false" data-dairy-free="false"
+                                    data-low-sugar="false" data-flavors="nut">
+                                    <img src="Images/salad.jpg" class="card-img-top" alt="凯撒鸡肉沙拉">
+                                    <div class="card-body">
+                                        <h3 class="h6 card-title" data-i18n="item.caesarSalad">凯撒鸡肉沙拉</h3>
+                                        <p class="text-secondary mb-2" data-i18n="item.caesarSalad.desc">清爽均衡，蛋白补给首选。
+                                        </p>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <span class="price">¥32</span>
+                                            <button class="btn btn-sm btn-outline-dark" data-bs-toggle="modal"
+                                                data-bs-target="#nutritionModal"
+                                                data-i18n="item.nutrition">营养信息</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <div class="card product-card h-100" data-new="false" data-dairy-free="false"
+                                    data-low-sugar="true" data-flavors="nut">
+                                    <img src="Images/salad.jpg" class="card-img-top" alt="火腿芝士三明治">
+                                    <div class="card-body">
+                                        <h3 class="h6 card-title" data-i18n="item.hamCheeseSandwich">火腿芝士三明治</h3>
+                                        <p class="text-secondary mb-2" data-i18n="item.hamCheeseSandwich.desc">
+                                            咸香浓郁，能量满满。</p>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <span class="price">¥26</span>
+                                            <button class="btn btn-sm btn-outline-dark" data-bs-toggle="modal"
+                                                data-bs-target="#nutritionModal"
+                                                data-i18n="item.nutrition">营养信息</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <div class="card product-card h-100" data-new="false" data-dairy-free="false"
+                                    data-low-sugar="false" data-flavors="nut">
+                                    <img src="Images/salad.jpg" class="card-img-top" alt="香煎鸡胸便当">
+                                    <div class="card-body">
+                                        <h3 class="h6 card-title" data-i18n="item.grilledChickenBento">香煎鸡胸便当</h3>
+                                        <p class="text-secondary mb-2" data-i18n="item.grilledChickenBento.desc">
+                                            营养均衡，轻负担选择。</p>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <span class="price">¥36</span>
+                                            <button class="btn btn-sm btn-outline-dark" data-bs-toggle="modal"
+                                                data-bs-target="#nutritionModal"
+                                                data-i18n="item.nutrition">营养信息</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 咖啡豆&冲煮 -->
+                    <div id="beans" class="mb-5">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <h2 class="h4 mb-0" data-i18n="sec.beans">咖啡豆&冲煮</h2>
+                            <!-- <a href="#" class="link-dark" data-i18n="sec.seeAll">查看全部</a> -->
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-6 col-md-4">
+                                <div class="card product-card h-100" data-new="false" data-dairy-free="false"
+                                    data-low-sugar="false" data-flavors="nut" data-skip-filter="true">
+                                    <img src="Images/Coffee.Bean.jpg" class="card-img-top" alt="耶加雪菲 咖啡豆">
+                                    <div class="card-body">
+                                        <h3 class="h6 card-title" data-i18n="item.yirgacheffe">耶加雪菲 咖啡豆</h3>
+                                        <p class="text-secondary mb-2" data-i18n="item.yirgacheffe.desc">花果香气明显，酸甜平衡。
+                                        </p>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <span class="price">¥88 / 200g</span>
+                                            <a class="btn btn-sm btn-outline-dark" href="Collections.CoffeeBeans.html"
+                                                data-i18n="item.discoverMore">查看详情</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <div class="card product-card h-100" data-new="false" data-dairy-free="false"
+                                    data-low-sugar="false" data-flavors="nut" data-skip-filter="true">
+                                    <img src="Images/Coffee.BeanInHand.jpg" class="card-img-top" alt="曼特宁 咖啡豆">
+                                    <div class="card-body">
+                                        <h3 class="h6 card-title" data-i18n="item.mandheling">曼特宁 咖啡豆</h3>
+                                        <p class="text-secondary mb-2" data-i18n="item.mandheling.desc">厚重醇苦，层次丰富。</p>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <span class="price">¥96 / 200g</span>
+                                            <a class="btn btn-sm btn-outline-dark" href="Collections.CoffeeBeans.html"
+                                                data-i18n="item.discoverMore">查看详情</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <div class="card product-card h-100" data-new="false" data-dairy-free="false"
+                                    data-low-sugar="false" data-flavors="nut" data-skip-filter="true">
+                                    <img src="Images/Coffee.Containers.jpg" class="card-img-top" alt="手冲器具套装">
+                                    <div class="card-body">
+                                        <h3 class="h6 card-title" data-i18n="item.pourOverSet">手冲器具套装</h3>
+                                        <p class="text-secondary mb-2" data-i18n="item.pourOverSet.desc">
+                                            滤杯、手磨壶与手冲壶，一步到位。</p>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <span class="price">¥199</span>
+                                            <a class="btn btn-sm btn-outline-dark" href="Collections.Tumblers.html"
+                                                data-i18n="item.purchase">选购</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- 营养信息 Modal（示例） -->
+    <div class="modal fade" id="nutritionModal" tabindex="-1" aria-labelledby="nutritionModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="nutritionModalLabel" data-i18n="modal.title">营养信息（示例）</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- 说明：以下为占位示例。真实营养信息应来自后台或静态数据表。 -->
+                    <ul class="mb-0">
+                        <li data-i18n="modal.calories">热量：120 kcal</li>
+                        <li data-i18n="modal.sugar">糖：9 g</li>
+                        <li data-i18n="modal.protein">蛋白质：6 g</li>
+                        <li data-i18n="modal.fat">脂肪：4 g</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                        data-i18n="modal.close">关闭</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚（深色背景） -->
+    <footer class="site-footer border-top pt-5 pb-4 mt-4">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-6 col-md-3">
+                    <h6 class="fw-bold mb-3" data-i18n="footer.about">关于我们</h6>
+                    <ul class="list-unstyled small mb-0">
+                        <li class="mb-2"><a href="History.html" data-i18n="footer.about.story">品牌故事</a></li>
+                        <li class="mb-2"><a href="NewsRoom.html" data-i18n="footer.about.news">新闻中心</a></li>
+                        <li class="mb-2"><a href="JoinUs.html" data-i18n="footer.about.join">加入我们</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h6 class="fw-bold mb-3" data-i18n="footer.help">帮助与支持</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="ContextUs.CustomerService.html" data-i18n="footer.help.cs">客户服务</a>
+                        </li>
+                        <li class="mb-2"><a href="ContextUs.Feedback.html" data-i18n="footer.help.feedback">意见反馈</a>
+                        </li>
+                        <li class="mb-2"><a href="GetOurApp.html" data-i18n="footer.help.app">下载 App</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h6 class="fw-bold mb-3" data-i18n="footer.business">商务合作</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="JoinUs.Inverstor.html" data-i18n="footer.business.invest">投资者关系</a>
+                        </li>
+                        <li class="mb-2"><a href="JoinUs.Career.html" data-i18n="footer.business.career">人才招聘</a></li>
+                        <li class="mb-2"><a href="JoinUs.Franchisees.html"
+                                data-i18n="footer.business.franchise">加盟合作</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h6 class="fw-bold mb-3" data-i18n="footer.follow">关注我们</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="https://www.instagram.com/shylie_gj/"
+                                data-i18n="footer.follow.instagram">Instagram</a></li>
+                        <li class="mb-2"><a href="https://www.facebook.com/profile.php?id=61577266087614"
+                                data-i18n="footer.follow.Facebook">脸书</a></li>
+                        <li class="mb-2"><a href="https://www.tiktok.com/@merricano_"
+                                data-i18n="footer.follow.douyin">抖音</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-flex flex-column flex-md-row align-items-center justify-content-between pt-4 mt-4 border-top">
+                <span class="small">© <span id="year"></span> Merricano Promax</span>
+                <div class="d-flex gap-3 small">
+                    <a href="ContextUs.html" data-i18n="footer.bottom.contact">联系我们</a>
+                    <a href="#" data-i18n="footer.bottom.privacy">隐私政策</a>
+                    <a href="#" data-i18n="footer.bottom.terms">使用条款</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- Helpers + i18n -->
+    <script>
+        // 年份
+        const yearEl = document.getElementById('year');
+        if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+        // TODO：筛选/分类切换、分页、SKU 规格（杯型/冷热/加料）等逻辑可在此实现
+        // TODO：如接入后端，可将产品数据改为动态渲染（例如使用 fetch + 模板）
+        // TODO：产品图建议替换为真实素材（当前使用 Images/ 下的占位图）
+
+        // 简易筛选逻辑：根据左侧复选框和风味徽章过滤右侧产品卡片
+        (function () {
+            const filterNew = document.getElementById('filterNew');
+            const filterNoMilk = document.getElementById('filterNoMilk');
+            const filterLowSugar = document.getElementById('filterLowSugar');
+            const flavorBadges = document.querySelectorAll('[data-flavor]');
+            const productCards = document.querySelectorAll('.product-card');
+
+            function getSelectedFlavors() {
+                const selected = [];
+                flavorBadges.forEach(badge => {
+                    if (badge.classList.contains('active')) {
+                        selected.push(badge.getAttribute('data-flavor'));
+                    }
+                });
+                return selected;
+            }
+
+            function applyFilters() {
+                const wantNew = filterNew?.checked;
+                const wantDairyFree = filterNoMilk?.checked;
+                const wantLowSugar = filterLowSugar?.checked;
+                const flavors = getSelectedFlavors();
+
+                productCards.forEach(card => {
+                    // Beans & gear 等不参与筛选
+                    if (card.hasAttribute('data-skip-filter')) {
+                        card.parentElement?.classList.remove('d-none');
+                        return;
+                    }
+
+                    const isNew = card.getAttribute('data-new') === 'true';
+                    const isDairyFree = card.getAttribute('data-dairy-free') === 'true';
+                    const isLowSugar = card.getAttribute('data-low-sugar') === 'true';
+                    const cardFlavors = (card.getAttribute('data-flavors') || '').split(',').map(s => s.trim()).filter(Boolean);
+
+                    let visible = true;
+                    if (wantNew) visible = visible && isNew;
+                    if (wantDairyFree) visible = visible && isDairyFree;
+                    if (wantLowSugar) visible = visible && isLowSugar;
+                    if (flavors.length > 0) {
+                        visible = visible && flavors.some(f => cardFlavors.includes(f));
+                    }
+
+                    const col = card.closest('[class*="col-"]');
+                    if (col) col.classList.toggle('d-none', !visible);
+                });
+            }
+
+            // 绑定复选框事件
+            [filterNew, filterNoMilk, filterLowSugar].forEach(input => {
+                if (input) input.addEventListener('change', applyFilters);
+            });
+
+            // 绑定风味徽章点击/键盘事件
+            flavorBadges.forEach(badge => {
+                function toggleBadge() {
+                    badge.classList.toggle('active');
+                    // 切换样式：选中时加深背景
+                    if (badge.classList.contains('active')) {
+                        badge.classList.remove('bg-light', 'text-dark');
+                        badge.classList.add('bg-dark', 'text-white');
+                    } else {
+                        badge.classList.remove('bg-dark', 'text-white');
+                        badge.classList.add('bg-light', 'text-dark');
+                    }
+                    applyFilters();
+                }
+                badge.addEventListener('click', toggleBadge);
+                badge.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        toggleBadge();
+                    }
+                });
+            });
+
+            // 初始应用一次（确保状态一致）
+            applyFilters();
+        })();
+
+        // i18n dictionary
+        const i18n = {
+            zh: {
+                'nav.menu': '菜单', 'nav.collections': '臻选', 'nav.stores': '门店', 'nav.brand': '品牌', 'nav.login': '登录/注册', 'nav.language': '语言/EN',
+                'hero.title': '菜单', 'hero.desc': '从经典咖啡到季节风味、轻食甜点与甄选咖啡豆，探索你的每日灵感。', 'hero.ctaStores': '查找附近门店', 'hero.ctaApp': '下载 App 点单',
+                'tabs.hot': '热咖啡', 'tabs.cold': '冷咖啡', 'tabs.tea': '茶饮', 'tabs.bakery': '烘焙&甜点', 'tabs.food': '轻食', 'tabs.beans': '咖啡豆&冲煮',
+                'sec.hot': '热咖啡', 'sec.cold': '冷咖啡', 'sec.tea': '茶饮', 'sec.bakery': '烘焙&甜点', 'sec.food': '轻食', 'sec.beans': '咖啡豆&冲煮', 'sec.seeAll': '查看全部',
+                'filter.filter': '筛选', 'filter.new': '筛选', 'filter.nomilk': '无乳制品可选', 'filter.lowsugar': '低糖/无糖', 'filter.flavor': '风味', 'filter.nut': '坚果', 'filter.caramel': '焦糖',
+                'filter.chocolate': '巧克力', 'filter.fruit': '果香',
+                'item.latte': '拿铁', 'item.latte.desc': '意式浓缩与丝滑奶泡，平衡香醇。', 'item.smooth': '顺滑',
+                'item.americano': '美式', 'item.americano.desc': '经典意式与热水调和，醇香回甘。', 'item.refreshing': '清爽',
+                'item.caramelMacchiato': '焦糖玛奇朵', 'item.caramelMacchiato.desc': '香甜焦糖与奶泡交织，口感丰富。', 'item.new': '新品',
+                'item.coldBrew': '冷萃咖啡', 'item.coldBrew.desc': '低温萃取，顺滑细腻，余味回甘。',
+                'item.icedLatte': '冰拿铁', 'item.icedLatte.desc': '清爽冰感与奶香平衡，夏日之选。',
+                'item.icedAmericano': '冰美式', 'item.icedAmericano.desc': '清新爽口，咖啡香气干净利落。',
+                'item.jasmineGreen': '茉莉绿茶', 'item.jasmineGreen.desc': '清新茶香，回味悠长。',
+                'item.blackTea': '英式红茶', 'item.blackTea.desc': '醇厚温润，适合午后时光。',
+                'item.brownSugarMilkTea': '黑糖奶茶', 'item.brownSugarMilkTea.desc': '黑糖香与奶香交织，甜而不腻。',
+                'item.croissant': '牛角包', 'item.croissant.desc': '层次酥香，黄油风味浓郁。',
+                'item.blueberryMuffin': '蓝莓玛芬', 'item.blueberryMuffin.desc': '果香充盈，口感蓬松。',
+                'item.cheesecake': '芝士蛋糕', 'item.cheesecake.desc': '细腻醇厚，奶香充盈。',
+                'item.caesarSalad': '凯撒鸡肉沙拉', 'item.caesarSalad.desc': '清爽均衡，蛋白补给首选。',
+                'item.hamCheeseSandwich': '火腿芝士三明治', 'item.hamCheeseSandwich.desc': '咸香浓郁，能量满满。',
+                'item.grilledChickenBento': '香煎鸡胸便当', 'item.grilledChickenBento.desc': '营养均衡，轻负担选择。',
+                'item.yirgacheffe': '耶加雪菲 咖啡豆', 'item.yirgacheffe.desc': '花果香气明显，酸甜平衡。',
+                'item.mandheling': '曼特宁 咖啡豆', 'item.mandheling.desc': '厚重醇苦，层次丰富。',
+                'item.pourOverSet': '手冲器具套装', 'item.pourOverSet.desc': '滤杯、手磨壶与手冲壶，一步到位。',
+                'item.nutrition': '营养信息',
+                'item.discoverMore': '查看详情',
+                'item.purchase': '选购',
+                'modal.title': '营养信息（示例）', 'modal.calories': '热量：120 kcal', 'modal.sugar': '糖：9 g', 'modal.protein': '蛋白质：6 g', 'modal.fat': '脂肪：4 g', 'modal.close': '关闭',
+                'footer.about': '关于我们', 'footer.about.story': '品牌故事', 'footer.about.news': '新闻中心', 'footer.about.join': '加入我们',
+                'footer.help': '帮助与支持', 'footer.help.cs': '客户服务', 'footer.help.feedback': '意见反馈', 'footer.help.app': '下载 App',
+                'footer.business': '商务合作', 'footer.business.invest': '投资者关系', 'footer.business.career': '人才招聘', 'footer.business.franchise': '加盟合作',
+                'footer.follow': '关注我们', 'footer.follow.weibo': '微博', 'footer.follow.wechat': '微信', 'footer.follow.Facebook': '脸书', 'footer.follow.douyin': '抖音',
+                'footer.bottom.contact': '联系我们', 'footer.bottom.privacy': '隐私政策', 'footer.bottom.terms': '使用条款'
+            },
+            en: {
+                'nav.menu': 'Menu', 'nav.collections': 'Collections', 'nav.stores': 'Stores', 'nav.brand': 'Brand', 'nav.login': 'Sign In / Join', 'nav.language': 'Language/语言',
+                'hero.title': 'Menu', 'hero.desc': 'From classic coffee to seasonal flavors, food and Reserve beans. Discover daily inspiration.', 'hero.ctaStores': 'Find nearby stores', 'hero.ctaApp': 'Order in App',
+                'tabs.hot': 'Hot Coffee', 'tabs.cold': 'Cold Coffee', 'tabs.tea': 'Tea', 'tabs.bakery': 'Bakery & Desserts', 'tabs.food': 'Food', 'tabs.beans': 'Beans & Brewing',
+                'sec.hot': 'Hot Coffee', 'sec.cold': 'Cold Coffee', 'sec.tea': 'Tea', 'sec.bakery': 'Bakery & Desserts', 'sec.food': 'Food', 'sec.beans': 'Beans & Brewing', 'sec.seeAll': 'See all',
+                'filter.filter': 'Filter', 'filter.new': 'New Item', 'filter.nomilk': 'No Milk', 'filter.lowsugar': 'Lesser Sugar / No Sugar', 'filter.flavor': 'Flavor', 'filter.nut': 'Nut', 'filter.caramel': 'Caramel',
+                'filter.chocolate': 'Chocolate', 'filter.fruit': 'Fruit',
+                'item.latte': 'Latte', 'item.latte.desc': 'Espresso with silky milk for a balanced, smooth taste.', 'item.smooth': 'Smooth',
+                'item.americano': 'Americano', 'item.americano.desc': 'Classic espresso mellowed with hot water, rich and clean.', 'item.refreshing': 'Refreshing',
+                'item.caramelMacchiato': 'Caramel Macchiato', 'item.caramelMacchiato.desc': 'Sweet caramel with foam for layered richness.', 'item.new': 'New',
+                'item.coldBrew': 'Cold Brew', 'item.coldBrew.desc': 'Slow-steeped for a smooth, rounded finish.',
+                'item.icedLatte': 'Iced Latte', 'item.icedLatte.desc': 'Chilled balance of milk and espresso, perfect for summer.',
+                'item.icedAmericano': 'Iced Americano', 'item.icedAmericano.desc': 'Crisp and refreshing with a clean coffee aroma.',
+                'item.jasmineGreen': 'Jasmine Green Tea', 'item.jasmineGreen.desc': 'Bright floral aroma with a lingering finish.',
+                'item.blackTea': 'English Black Tea', 'item.blackTea.desc': 'Rich and warming, made for afternoons.',
+                'item.brownSugarMilkTea': 'Brown Sugar Milk Tea', 'item.brownSugarMilkTea.desc': 'Sweet brown sugar meets creamy milk.',
+                'item.croissant': 'Croissant', 'item.croissant.desc': 'Buttery layers with a fragrant crunch.',
+                'item.blueberryMuffin': 'Blueberry Muffin', 'item.blueberryMuffin.desc': 'Bursting with berries and soft crumb.',
+                'item.cheesecake': 'Cheesecake', 'item.cheesecake.desc': 'Creamy, rich and indulgent.',
+                'item.caesarSalad': 'Caesar Chicken Salad', 'item.caesarSalad.desc': 'Refreshing balance and protein-packed.',
+                'item.hamCheeseSandwich': 'Ham & Cheese Sandwich', 'item.hamCheeseSandwich.desc': 'Savory, satisfying energy boost.',
+                'item.grilledChickenBento': 'Grilled Chicken Bento', 'item.grilledChickenBento.desc': 'Balanced nutrition with light feel.',
+                'item.yirgacheffe': 'Yirgacheffe Beans', 'item.yirgacheffe.desc': 'Floral, fruity and well-balanced acidity.',
+                'item.mandheling': 'Mandheling Beans', 'item.mandheling.desc': 'Full-bodied bittersweet with layered depth.',
+                'item.pourOverSet': 'Pour-over Set', 'item.pourOverSet.desc': 'Dripper, hand grinder and kettle in one.',
+                'item.nutrition': 'Nutrition',
+                'item.discoverMore': 'Discover More',
+                'item.purchase': 'Purchase',
+                'modal.title': 'Nutrition (Sample)', 'modal.calories': 'Calories: 120 kcal', 'modal.sugar': 'Sugar: 9 g', 'modal.protein': 'Protein: 6 g', 'modal.fat': 'Fat: 4 g', 'modal.close': 'Close',
+                'footer.about': 'About us', 'footer.about.story': 'Our story', 'footer.about.news': 'Newsroom', 'footer.about.join': 'Join us',
+                'footer.help': 'Help & support', 'footer.help.cs': 'Customer service', 'footer.help.feedback': 'Feedback', 'footer.help.app': 'Get the App',
+                'footer.business': 'Business', 'footer.business.invest': 'Investors', 'footer.business.career': 'Careers', 'footer.business.franchise': 'Franchise',
+                'footer.follow': 'Follow us', 'footer.follow.weibo': 'Weibo', 'footer.follow.wechat': 'WeChat', 'footer.follow.Facebook': 'Facebook', 'footer.follow.douyin': 'Douyin',
+                'footer.bottom.contact': 'Contact us', 'footer.bottom.privacy': 'Privacy policy', 'footer.bottom.terms': 'Terms of use'
+            }
+        };
+
+        function setLanguage(lang) {
+            const dict = i18n[lang] || i18n.zh;
+            document.querySelectorAll('[data-i18n]').forEach(function (el) {
+                const key = el.getAttribute('data-i18n');
+                if (dict[key]) el.textContent = dict[key];
+            });
+            localStorage.setItem('lang', lang);
+        }
+
+        document.querySelectorAll('[data-lang]').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                const lang = this.getAttribute('data-lang');
+                setLanguage(lang);
+            });
+        });
+
+        setLanguage(localStorage.getItem('lang') || 'zh');
+    </script>
 </body>
 
 </html>

@@ -4,8 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Merricano - 联系我们 Contact Us</title>
-    <meta name="description" content="Contact Us page for Merricano, providing ways for customers to get in touch.">
+    <title>Merricano - 加盟合作 Franchisees</title>
+    <meta name="description"
+        content="Join Us as a Franchisee page for Merricano, focusing on franchise benefits and process.">
 
     <!-- Bootstrap 5.3 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -128,25 +129,15 @@
             opacity: 1;
         }
 
-        /* New styles for the contact form section */
-        .sbx-contact-form-bg {
+        /* New class for the form background */
+        .sbx-form-bg {
             background-color: #F3EFE9;
         }
 
-        /* FAQ accordion styling */
-        .accordion-button:not(.collapsed) {
-            color: var(--brand-primary);
-            background-color: var(--bg-light-cream);
-            box-shadow: none;
-        }
-
-        .accordion-button:focus {
-            box-shadow: none;
-            border-color: var(--brand-primary);
-        }
-
-        .accordion-button {
-            background-color: var(--bg-light-cream);
+        /* New styles for card images */
+        .card-img-top-custom {
+            height: 200px;
+            object-fit: cover;
         }
     </style>
 </head>
@@ -189,97 +180,47 @@
     <!-- Hero Section -->
     <section class="py-5 sbx-hero">
         <div class="container text-center">
-            <h1 class="display-5 fw-bold mb-3" data-i18n="contact.title">联系我们</h1>
-            <p class="lead text-secondary" data-i18n="contact.subtitle">我们在这里为您解答任何疑问。请选择最适合您的联系方式。</p>
+            <h1 class="display-5 fw-bold mb-3" data-i18n="franchisee.title">加入我们，开启创业新篇章</h1>
+            <p class="lead text-secondary" data-i18n="franchisee.subtitle">成为 Merricano 加盟商，与一个快速增长的全球咖啡品牌携手共进。</p>
+            <img src="https://placehold.co/1200x400/6B4226/FFFFFF?text=Merricano+Franchise"
+                class="img-fluid rounded shadow-sm mt-4" alt="Merricano Franchise">
+            <a href="#benefits" class="btn sbx-cta-primary btn-lg mt-3" data-i18n="franchisee.cta">了解加盟优势</a>
         </div>
     </section>
 
-    <!-- Contact Options Section -->
+    <!-- Franchisee Benefits Section -->
     <section class="py-5">
         <div class="container">
-            <h2 class="h3 fw-bold mb-4 text-center" data-i18n="contact.options.title">常见问题与联系方式</h2>
-            <div class="row g-4">
-                <!-- FAQs Accordion -->
-                <div class="col-lg-6">
-                    <h4 class="h5 fw-bold mb-3" data-i18n="contact.faq.title">常见问题解答</h4>
-                    <div class="accordion" id="faqAccordion">
-                        <div class="accordion-item rounded shadow-sm mb-3">
-                            <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"
-                                    data-i18n="contact.faq.q1">
-                                    如何查询我的订单状态？
-                                </button>
-                            </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                                data-bs-parent="#faqAccordion">
-                                <div class="accordion-body text-secondary" data-i18n="contact.faq.a1">
-                                    您可以在我们的App或官方网站登录后，在“我的订单”页面查看实时状态。
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item rounded shadow-sm mb-3">
-                            <h2 class="accordion-header" id="headingTwo">
-                                <button class="accordion-button fw-bold collapsed" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
-                                    aria-controls="collapseTwo" data-i18n="contact.faq.q2">
-                                    Merricano 门店的营业时间是什么？
-                                </button>
-                            </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                                data-bs-parent="#faqAccordion">
-                                <div class="accordion-body text-secondary" data-i18n="contact.faq.a2">
-                                    不同门店的营业时间可能会有所不同。请访问“门店”页面查询您附近的门店信息。
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item rounded shadow-sm">
-                            <h2 class="accordion-header" id="headingThree">
-                                <button class="accordion-button fw-bold collapsed" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
-                                    aria-controls="collapseThree" data-i18n="contact.faq.q3">
-                                    如何成为 Merricano 的会员？
-                                </button>
-                            </h2>
-                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                                data-bs-parent="#faqAccordion">
-                                <div class="accordion-body text-secondary" data-i18n="contact.faq.a3">
-                                    您可以通过我们的官方网站或App注册，即可免费成为会员，享受专属优惠。
-                                </div>
-                            </div>
+            <h2 class="h3 fw-bold mb-4 text-center" data-i18n="benefits.title">为什么选择 Merricano?</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://placehold.co/600x400/D4A373/3E2723?text=Proven+Model"
+                            class="card-img-top rounded-top card-img-top-custom" alt="Proven Business Model">
+                        <div class="card-body text-center">
+                            <h3 class="h5 fw-bold text-accent-olive mb-3" data-i18n="benefits.card1.title">成熟的商业模式</h3>
+                            <p class="text-secondary" data-i18n="benefits.card1.text">我们提供一套经过市场验证的成功运营模式，助您快速起步。</p>
                         </div>
                     </div>
                 </div>
-
-                <!-- Contact Details Card -->
-                <div class="col-lg-6">
-                    <h4 class="h5 fw-bold mb-3" data-i18n="contact.details.title">或直接联系我们</h4>
-                    <div class="card p-4 rounded-3 shadow-sm h-100">
-                        <div class="d-flex align-items-center mb-3">
-                            <img src="https://placehold.co/40x40/D4A373/3E2723?text=CS" class="rounded me-3" alt="客服">
-                            <div>
-                                <h6 class="mb-0 fw-bold" data-i18n="contact.details.cs.title">客户服务</h6>
-                                <p class="mb-0 text-secondary" data-i18n="contact.details.cs.info">服务时间：周一至周五 9:00 -
-                                    18:00 (GMT+8)</p>
-                            </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://placehold.co/600x400/D4A373/3E2723?text=Training+Support"
+                            class="card-img-top rounded-top card-img-top-custom" alt="Comprehensive Training">
+                        <div class="card-body text-center">
+                            <h3 class="h5 fw-bold text-accent-olive mb-3" data-i18n="benefits.card2.title">全面的培训与支持</h3>
+                            <p class="text-secondary" data-i18n="benefits.card2.text">从选址到日常运营，我们提供全程指导和支持，确保您无后顾之忧。</p>
                         </div>
-                        <hr class="my-3">
-                        <div class="d-flex align-items-center mb-3">
-                            <img src="https://placehold.co/40x40/D4A373/3E2723?text=Email" class="rounded me-3"
-                                alt="邮箱">
-                            <div>
-                                <h6 class="mb-0 fw-bold" data-i18n="contact.details.email.title">邮箱地址</h6>
-                                <p class="mb-0 text-secondary">support@merricano.com</p>
-                            </div>
-                        </div>
-                        <hr class="my-3">
-                        <div class="d-flex align-items-center">
-                            <img src="https://placehold.co/40x40/D4A373/3E2723?text=Phone" class="rounded me-3"
-                                alt="电话">
-                            <div>
-                                <h6 class="mb-0 fw-bold" data-i18n="contact.details.phone.title">客服热线</h6>
-                                <p class="mb-0 text-secondary">+86 123-4567-8900</p>
-                            </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://placehold.co/600x400/D4A373/3E2723?text=Marketing+Tools"
+                            class="card-img-top rounded-top card-img-top-custom" alt="Marketing and Branding">
+                        <div class="card-body text-center">
+                            <h3 class="h5 fw-bold text-accent-olive mb-3" data-i18n="benefits.card3.title">强大的品牌和营销</h3>
+                            <p class="text-secondary" data-i18n="benefits.card3.text">利用我们强大的品牌知名度和专业的营销工具，吸引并留住您的客户。
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -287,38 +228,74 @@
         </div>
     </section>
 
-    <!-- Feedback Form Section -->
-    <section class="py-5 sbx-contact-form-bg">
-        <div class="container">
-            <h2 class="h3 fw-bold mb-4 text-center" data-i18n="contact.form.title">给我们留言</h2>
+    <!-- Franchise Process Section and Application Form -->
+    <section class="py-5 sbx-form-bg">
+        <div class="container text-center">
+            <h2 class="h3 fw-bold mb-4" data-i18n="process.title">加盟流程</h2>
+            <div class="row g-4 align-items-center mb-5">
+                <div class="col-md-4">
+                    <div class="p-4 rounded-3 text-center">
+                        <h4 class="h1 fw-bold text-accent-olive mb-3">1.</h4>
+                        <h5 class="fw-bold mb-2" data-i18n="process.step1.title">提交申请</h5>
+                        <p class="text-secondary" data-i18n="process.step1.text">填写在线表格，提交您的基本信息。</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-4 rounded-3 text-center">
+                        <h4 class="h1 fw-bold text-accent-olive mb-3">2.</h4>
+                        <h5 class="fw-bold mb-2" data-i18n="process.step2.title">洽谈与审核</h5>
+                        <p class="text-secondary" data-i18n="process.step2.text">我们将安排专人与您联系，进行深入洽谈和资格审核。</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-4 rounded-3 text-center">
+                        <h4 class="h1 fw-bold text-accent-olive mb-3">3.</h4>
+                        <h5 class="fw-bold mb-2" data-i18n="process.step3.title">签订合同</h5>
+                        <p class="text-secondary" data-i18n="process.step3.text">审核通过后，双方签订正式加盟合同。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Franchise Application Form -->
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <form id="contactForm">
+                    <h3 class="h4 fw-bold mb-4" data-i18n="form.title">提交加盟申请</h3>
+                    <form id="franchiseForm" class="text-start">
+                        <!-- Name Input -->
                         <div class="mb-3">
-                            <label for="name" class="form-label" data-i18n="contact.form.label.name">您的姓名</label>
+                            <label for="name" class="form-label" data-i18n="form.label.name">姓名</label>
                             <input type="text" class="form-control" id="name" required>
                         </div>
+                        <!-- Email Input -->
                         <div class="mb-3">
-                            <label for="email" class="form-label" data-i18n="contact.form.label.email">邮箱</label>
+                            <label for="email" class="form-label" data-i18n="form.label.email">邮箱</label>
                             <input type="email" class="form-control" id="email" required>
                         </div>
+                        <!-- Gender Select -->
                         <div class="mb-3">
-                            <label for="subject" class="form-label" data-i18n="contact.form.label.subject">主题</label>
-                            <input type="text" class="form-control" id="subject" required>
+                            <label for="gender" class="form-label" data-i18n="form.label.gender">性别</label>
+                            <select class="form-select" id="gender" required>
+                                <option value="" data-i18n="form.gender.select" selected disabled>请选择...</option>
+                                <option value="male" data-i18n="form.gender.male">男</option>
+                                <option value="female" data-i18n="form.gender.female">女</option>
+                                <option value="other" data-i18n="form.gender.other">其他</option>
+                            </select>
                         </div>
-                        <div class="mb-3">
-                            <label for="message" class="form-label" data-i18n="contact.form.label.message">您的留言</label>
-                            <textarea class="form-control" id="message" rows="5" required></textarea>
+                        <!-- File Upload -->
+                        <div class="mb-4">
+                            <label for="document" class="form-label" data-i18n="form.label.document">上传文件</label>
+                            <input class="form-control" type="file" id="document">
                         </div>
+                        <!-- Submit Button -->
                         <div class="d-grid">
                             <button type="submit" class="btn sbx-cta-primary btn-lg"
-                                data-i18n="contact.form.submit">提交</button>
+                                data-i18n="form.submit">提交申请</button>
                         </div>
                     </form>
                     <!-- Success Message -->
-                    <div id="formSuccessMessage" class="alert alert-success text-center mt-4 d-none" role="alert"
-                        data-i18n="contact.form.success">
-                        您的留言已成功发送，感谢您的宝贵意见！
+                    <div id="successMessage" class="alert alert-success text-center mt-4 d-none" role="alert"
+                        data-i18n="form.success">
+                        您的申请已成功提交，我们稍后将与您联系。
                     </div>
                 </div>
             </div>
@@ -350,7 +327,7 @@
                 <div class="col-6 col-md-3">
                     <h6 class="fw-bold mb-3" data-i18n="footer.business">商务合作</h6>
                     <ul class="list-unstyled small">
-                        <li class="mb-2"><a href="JoinUs.Career.html" data-i18n="footer.business.invest">投资者关系</a>
+                        <li class="mb-2"><a href="JoinUs.Inverstor.html" data-i18n="footer.business.invest">投资者关系</a>
                         </li>
                         <li class="mb-2"><a href="JoinUs.Career.html" data-i18n="footer.business.career">人才招聘</a></li>
                         <li class="mb-2"><a href="JoinUs.Franchisees.html"
@@ -420,29 +397,36 @@
                 'footer.bottom.contact': '联系我们',
                 'footer.bottom.privacy': '隐私政策',
                 'footer.bottom.terms': '使用条款',
-                // Contact Us specific translations
-                'contact.title': '联系我们',
-                'contact.subtitle': '我们在这里为您解答任何疑问。请选择最适合您的联系方式。',
-                'contact.options.title': '常见问题与联系方式',
-                'contact.faq.title': '常见问题解答',
-                'contact.faq.q1': '如何查询我的订单状态？',
-                'contact.faq.a1': '您可以在我们的App或官方网站登录后，在“我的订单”页面查看实时状态。',
-                'contact.faq.q2': 'Merricano 门店的营业时间是什么？',
-                'contact.faq.a2': '不同门店的营业时间可能会有所不同。请访问“门店”页面查询您附近的门店信息。',
-                'contact.faq.q3': '如何成为 Merricano 的会员？',
-                'contact.faq.a3': '您可以通过我们的官方网站或App注册，即可免费成为会员，享受专属优惠。',
-                'contact.details.title': '或直接联系我们',
-                'contact.details.cs.title': '客户服务',
-                'contact.details.cs.info': '服务时间：周一至周五 9:00 - 18:00 (GMT+8)',
-                'contact.details.email.title': '邮箱地址',
-                'contact.details.phone.title': '客服热线',
-                'contact.form.title': '给我们留言',
-                'contact.form.label.name': '您的姓名',
-                'contact.form.label.email': '邮箱',
-                'contact.form.label.subject': '主题',
-                'contact.form.label.message': '您的留言',
-                'contact.form.submit': '提交',
-                'contact.form.success': '您的留言已成功发送，感谢您的宝贵意见！'
+                // Franchisee specific translations
+                'franchisee.title': '加入我们，开启创业新篇章',
+                'franchisee.subtitle': '成为 Merricano 加盟商，与一个快速增长的全球咖啡品牌携手共进。',
+                'franchisee.cta': '了解加盟优势',
+                'benefits.title': '为什么选择 Merricano?',
+                'benefits.card1.title': '成熟的商业模式',
+                'benefits.card1.text': '我们提供一套经过市场验证的成功运营模式，助您快速起步。',
+                'benefits.card2.title': '全面的培训与支持',
+                'benefits.card2.text': '从选址到日常运营，我们提供全程指导和支持，确保您无后顾之忧。',
+                'benefits.card3.title': '强大的品牌和营销',
+                'benefits.card3.text': '利用我们强大的品牌知名度和专业的营销工具，吸引并留住您的客户。',
+                'process.title': '加盟流程',
+                'process.step1.title': '提交申请',
+                'process.step1.text': '填写在线表格，提交您的基本信息。',
+                'process.step2.title': '洽谈与审核',
+                'process.step2.text': '我们将安排专人与您联系，进行深入洽谈和资格审核。',
+                'process.step3.title': '签订合同',
+                'process.step3.text': '审核通过后，双方签订正式加盟合同。',
+                // Form specific translations
+                'form.title': '提交加盟申请',
+                'form.label.name': '姓名',
+                'form.label.email': '邮箱',
+                'form.label.gender': '性别',
+                'form.label.document': '上传文件 (可选)',
+                'form.gender.select': '请选择...',
+                'form.gender.male': '男',
+                'form.gender.female': '女',
+                'form.gender.other': '其他',
+                'form.submit': '提交申请',
+                'form.success': '您的申请已成功提交，我们稍后将与您联系。'
             },
             en: {
                 'nav.menu': 'Menu',
@@ -471,29 +455,36 @@
                 'footer.bottom.contact': 'Contact us',
                 'footer.bottom.privacy': 'Privacy policy',
                 'footer.bottom.terms': 'Terms of use',
-                // Contact Us specific translations
-                'contact.title': 'Contact Us',
-                'contact.subtitle': 'We are here to help. Please choose the most convenient way to get in touch.',
-                'contact.options.title': 'FAQs & Contact Details',
-                'contact.faq.title': 'Frequently Asked Questions',
-                'contact.faq.q1': 'How can I check my order status?',
-                'contact.faq.a1': 'You can check the real-time status of your order by logging into your account on our App or official website and visiting the "My Orders" page.',
-                'contact.faq.q2': 'What are the operating hours for Merricano stores?',
-                'contact.faq.a2': 'Operating hours may vary by location. Please visit the "Stores" page to find information for a store near you.',
-                'contact.faq.q3': 'How can I become a Merricano member?',
-                'contact.faq.a3': 'You can register for a free membership on our official website or App to enjoy exclusive benefits.',
-                'contact.details.title': 'Or Contact Us Directly',
-                'contact.details.cs.title': 'Customer Service',
-                'contact.details.cs.info': 'Service Hours: Mon - Fri 9:00 AM - 6:00 PM (GMT+8)',
-                'contact.details.email.title': 'Email Address',
-                'contact.details.phone.title': 'Customer Hotline',
-                'contact.form.title': 'Leave Us a Message',
-                'contact.form.label.name': 'Your Name',
-                'contact.form.label.email': 'Email',
-                'contact.form.label.subject': 'Subject',
-                'contact.form.label.message': 'Your Message',
-                'contact.form.submit': 'Submit',
-                'contact.form.success': 'Your message has been sent successfully. Thank you for your feedback!'
+                // Franchisee specific translations
+                'franchisee.title': 'Join Us, Start a New Venture',
+                'franchisee.subtitle': 'Become a Merricano franchisee and grow with a rapidly expanding global coffee brand.',
+                'franchisee.cta': 'Discover Franchise Benefits',
+                'benefits.title': 'Why Partner with Merricano?',
+                'benefits.card1.title': 'Proven Business Model',
+                'benefits.card1.text': 'We offer a market-tested, successful operating model to help you get started quickly.',
+                'benefits.card2.title': 'Comprehensive Training & Support',
+                'benefits.card2.text': 'From site selection to daily operations, we provide full guidance and support for your peace of mind.',
+                'benefits.card3.title': 'Powerful Brand & Marketing',
+                'benefits.card3.text': 'Leverage our strong brand recognition and professional marketing tools to attract and retain customers.',
+                'process.title': 'Franchise Process',
+                'process.step1.title': 'Submit Application',
+                'process.step1.text': 'Fill out the online form and submit your basic information.',
+                'process.step2.title': 'Consultation & Review',
+                'process.step2.text': 'A specialist will contact you for a detailed consultation and qualification review.',
+                'process.step3.title': 'Sign Agreement',
+                'process.step3.text': 'Upon approval, both parties will sign the official franchise agreement.',
+                // Form specific translations
+                'form.title': 'Submit Franchise Application',
+                'form.label.name': 'Name',
+                'form.label.email': 'Email',
+                'form.label.gender': 'Gender',
+                'form.label.document': 'Upload Document (Optional)',
+                'form.gender.select': 'Select...',
+                'form.gender.male': 'Male',
+                'form.gender.female': 'Female',
+                'form.gender.other': 'Other',
+                'form.submit': 'Submit Application',
+                'form.success': 'Your application has been submitted successfully. We will contact you shortly.'
             }
         };
 
@@ -505,6 +496,14 @@
                     el.textContent = dict[key];
                 }
             });
+            // Update gender options for current language
+            const genderSelect = document.getElementById('gender');
+            if (genderSelect) {
+                genderSelect.querySelector('option[value=""]').textContent = dict['form.gender.select'];
+                genderSelect.querySelector('option[value="male"]').textContent = dict['form.gender.male'];
+                genderSelect.querySelector('option[value="female"]').textContent = dict['form.gender.female'];
+                genderSelect.querySelector('option[value="other"]').textContent = dict['form.gender.other'];
+            }
             localStorage.setItem('lang', lang);
         }
 
@@ -515,14 +514,26 @@
             });
         });
 
-        document.getElementById('contactForm').addEventListener('submit', function (event) {
-            event.preventDefault();
-            // In a real app, you would send this to a backend service.
-            console.log('Contact form submitted.');
+        // Form submission handler
+        document.getElementById('franchiseForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent default form submission
 
-            // Hide form and show success message
-            this.style.display = 'none';
-            document.getElementById('formSuccessMessage').classList.remove('d-none');
+            // This is a demo. In a real application, you would send this data to a server.
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const gender = document.getElementById('gender').value;
+            const documentFile = document.getElementById('document').files[0];
+
+            console.log('Application Submitted:', {
+                name: name,
+                email: email,
+                gender: gender,
+                document: documentFile ? documentFile.name : 'No file uploaded'
+            });
+
+            // Show success message and hide the form
+            document.getElementById('franchiseForm').style.display = 'none';
+            document.getElementById('successMessage').classList.remove('d-none');
         });
 
         setLanguage(localStorage.getItem('lang') || 'zh');

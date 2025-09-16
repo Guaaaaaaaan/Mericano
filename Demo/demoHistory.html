@@ -4,84 +4,146 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Merricano Promax - Demo</title>
-    <meta name="description" content="Demo page using Bootstrap 5 CDN">
+    <title>Merricano - Our Story</title>
+    <meta name="description"
+        content="Discover the rich history and journey of Merricano Coffee, from its origins to its current mission.">
 
     <!-- Bootstrap 5.3 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <!-- Optional: site favicon -->
     <link rel="icon" type="image/png" href="Images/IconMerricano1.jpg">
     <style>
         :root {
-            --sbx-green: #006241;
-            --sbx-dark: #1e3932;
-            --sbx-light: #d4e9e2;
+            /* Primary */
+            --brand-primary: #6B4226;
+            /* Coffee Brown */
+            /* Background */
+            --bg-light-cream: #FAF3E7;
+            --bg-dark-brown: #3E2723;
+            /* Accents */
+            --accent-caramel: #D4A373;
+            --accent-olive: #7B8D42;
+            /* Text */
+            --text-main: #2C2C2C;
+            --text-secondary: #5C5C5C;
+            --text-inverse: #FFFFFF;
+            /* Borders */
+            --border-light: #E0D6CC;
+            --border-dark: #8B5E3C;
         }
 
+        /* Base */
+        body {
+            background-color: var(--bg-light-cream);
+            color: var(--text-main);
+        }
+
+        .text-secondary {
+            color: var(--text-secondary) !important;
+        }
+
+        .border-top {
+            border-top-color: var(--border-light) !important;
+        }
+
+        .card {
+            border-color: var(--border-light);
+            border-radius: 0.75rem;
+        }
+
+        /* Navbar */
         .sbx-navbar {
-            background-color: var(--sbx-green);
+            background-color: var(--brand-primary);
         }
 
         .sbx-navbar .nav-link,
         .sbx-navbar .navbar-brand {
-            color: #ffffff;
+            color: var(--text-inverse);
         }
 
         .sbx-navbar .nav-link.active,
         .sbx-navbar .nav-link:hover {
-            color: #ffffff;
-            opacity: 0.85;
+            color: var(--text-inverse);
+            opacity: 0.9;
         }
 
+        /* Hero */
         .sbx-hero {
-            background-color: var(--sbx-light);
+            background-color: var(--bg-light-cream);
         }
 
+        /* Buttons */
         .sbx-cta-primary {
-            background-color: #ffffff;
-            color: var(--sbx-dark);
-            border-color: #ffffff;
+            background-color: var(--brand-primary);
+            color: var(--text-inverse);
+            border-color: var(--brand-primary);
+            border-radius: 0.5rem;
         }
 
         .sbx-cta-primary:hover {
-            background-color: #f0f0f0;
-            border-color: #f0f0f0;
+            background-color: var(--accent-caramel);
+            border-color: var(--accent-caramel);
+            color: var(--text-main);
         }
 
         .sbx-cta-outline {
-            color: #ffffff;
-            border-color: #ffffff;
+            color: var(--brand-primary);
+            border-color: var(--brand-primary);
+            background-color: transparent;
+            border-radius: 0.5rem;
         }
 
         .sbx-cta-outline:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-            color: #ffffff;
+            background-color: rgba(107, 66, 38, 0.08);
+            color: var(--brand-primary);
         }
 
+        /* Accent utilities */
+        .text-accent-olive {
+            color: var(--accent-olive);
+        }
+
+        .text-accent-caramel {
+            color: var(--accent-caramel);
+        }
+
+        /* Band */
         .sbx-band {
-            background-color: var(--sbx-dark);
-            color: #ffffff;
+            background-color: var(--bg-dark-brown);
+            color: var(--text-inverse);
         }
 
+        /* Footer */
         .sbx-footer {
-            background-color: #ffffff;
+            background-color: var(--bg-dark-brown);
+            color: var(--text-inverse);
         }
 
         .sbx-footer a {
-            color: #6b6b6b;
+            color: var(--text-inverse);
             text-decoration: none;
+            opacity: 0.9;
         }
 
         .sbx-footer a:hover {
-            color: #000000;
+            color: var(--text-inverse);
+            opacity: 1;
+        }
+
+        /* Custom styles for history page */
+        .history-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
 
 <body>
-    <!-- Navbar (Starbucks-like) -->
+    <!-- Navbar (Merricano-like) -->
     <nav class="navbar navbar-expand-lg sbx-navbar">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
@@ -100,11 +162,10 @@
                     </li>
                     <li class="nav-item"><a class="nav-link" href="Countries.html" data-i18n="nav.stores">门店</a></li>
                     <li class="nav-item"><a class="nav-link" href="NewsRoom.html" data-i18n="nav.brand">品牌</a></li>
-                    <li class="nav-item d-none d-lg-block"><a class="btn btn-sm sbx-cta-primary ms-lg-3"
-                            href="LogInSignUp.html" data-i18n="nav.login">登录/注册</a></li>
+                    <li class="nav-item"><a class="nav-link" href="LogInSignUp.html" data-i18n="nav.login">登录/注册</a>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="langDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false" data-i18n="nav.language">语言</a>
+                            data-bs-toggle="dropdown" aria-expanded="false" data-i18n="nav.language">语言/EN</a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
                             <li><button class="dropdown-item" data-lang="zh">中文</button></li>
                             <li><button class="dropdown-item" data-lang="en">English</button></li>
@@ -115,95 +176,60 @@
         </div>
     </nav>
 
-    <!-- Hero (light green) -->
-    <section class="py-5 sbx-hero">
+    <!-- Main Content Area - Our Story -->
+    <main class="py-5">
         <div class="container">
-            <div class="row align-items-center g-4">
-                <div class="col-lg-6">
-                    <h1 class="display-5 fw-bold mb-3" data-i18n="hero.title">加入星享俱乐部</h1>
-                    <p class="lead text-secondary" data-i18n="hero.desc">灵感好礼，尽在此刻。累积星星，兑换好味，悦享会员专属福利。</p>
-                    <div class="d-flex gap-2">
-                        <a href="GetOurApp.html" class="btn sbx-cta-primary btn-lg" data-i18n="hero.ctaJoin">立即加入</a>
-                        <a href="JoinUs.html" class="btn sbx-cta-outline btn-lg" data-i18n="hero.ctaLearn">了解更多</a>
-                    </div>
-                </div>
-                <div class="col-lg-6 text-center">
-                    <img src="Images/2.png" class="img-fluid rounded shadow" alt="Coffee illustration">
-                </div>
-            </div>
-        </div>
-    </section>
+            <h1 class="display-5 fw-bold text-center mb-5" data-i18n="history.pageTitle">品牌故事</h1>
 
-    <!-- Categories grid (menu-like tiles) -->
-    <section class="py-5">
-        <div class="container">
-            <h2 class="h3 fw-bold mb-4" data-i18n="section.explore">探索美味</h2>
-            <div class="row g-4">
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card h-100 shadow-sm">
-                        <img src="Images/1.png" class="card-img-top" alt="Card image 1">
-                        <div class="card-body">
-                            <h5 class="card-title" data-i18n="card1.title">手工饮品</h5>
-                            <p class="card-text" data-i18n="card1.text">经典拿铁、美式、冷萃与限定风味，随心之选。</p>
-                            <a href="Menu.html" class="btn btn-outline-dark" data-i18n="card1.cta">查看菜单</a>
-                        </div>
-                    </div>
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <img src="Images/HistoryPlaceholder.jpg" alt="Merricano History Image"
+                        class="history-image img-fluid">
                 </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card h-100 shadow-sm">
-                        <img src="Images/IconMerricano1.jpg" class="card-img-top" alt="Card image 2">
-                        <div class="card-body">
-                            <h5 class="card-title" data-i18n="card2.title">甄选咖啡</h5>
-                            <p class="card-text" data-i18n="card2.text">产地限定豆，细腻风味层次，为你呈现。</p>
-                            <a href="Collections/CoffeeBeans.html" class="btn btn-outline-dark"
-                                data-i18n="card2.cta">了解甄选</a>
-                        </div>
-                    </div>
+                <div class="col-lg-6">
+                    <h2 class="h3 fw-bold mb-3" data-i18n="history.section1.title">起源与愿景</h2>
+                    <p class="text-secondary mb-3" data-i18n="history.section1.paragraph1">
+                        Merricano 的故事始于对完美咖啡体验的简单愿景：在每一次冲泡中捕捉世界的精髓。
+                        从一个小小的梦想萌芽，我们踏上了一段环球之旅，寻找最优质的咖啡豆和最独特的风味。
+                    </p>
+                    <p class="text-secondary mb-0" data-i18n="history.section1.paragraph2">
+                        我们的创始人，一群热爱咖啡的鉴赏家，相信一杯卓越的咖啡不仅仅是饮品，
+                        更是一种联结人心的艺术。正是这份信念，塑造了 Merricano 的灵魂。
+                    </p>
                 </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card h-100 shadow-sm">
-                        <img src="Images/IconMerricano.jpg" class="card-img-top" alt="Card image 3">
-                        <div class="card-body">
-                            <h5 class="card-title" data-i18n="card3.title">咖啡好物</h5>
-                            <p class="card-text" data-i18n="card3.text">随行杯与冲煮器具，陪你记录每一口好时光。</p>
-                            <a href="Collections/Tumblers.html" class="btn btn-outline-dark"
-                                data-i18n="card3.cta">选购好物</a>
-                        </div>
-                    </div>
+            </div>
+
+            <hr class="my-5">
+
+            <div class="row align-items-center g-5 flex-lg-row-reverse">
+                <div class="col-lg-6">
+                    <img src="Images/IconMerricano1.jpg" alt="Merricano Coffee Making" class="history-image img-fluid">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="h3 fw-bold mb-3" data-i18n="history.section2.title">创新与未来</h2>
+                    <p class="text-secondary mb-3" data-i18n="history.section2.paragraph1">
+                        多年来，Merricano 始终致力于创新，将传统工艺与现代技术完美融合。
+                        我们不断探索新的烘焙方法和饮品配方，只为给您带来前所未有的味蕾享受。
+                    </p>
+                    <p class="text-secondary mb-0" data-i18n="history.section2.paragraph2">
+                        展望未来，Merricano 将继续秉承对卓越品质的追求，
+                        与全球社区紧密合作，共同创造更多可持续的咖啡文化，将 Merricano 的独特风味带给更多人。
+                    </p>
                 </div>
             </div>
         </div>
-    </section>
+    </main>
 
     <!-- Rewards band -->
     <section class="sbx-band py-5">
         <div class="container">
             <div class="row align-items-center g-4">
                 <div class="col-lg-8">
-                    <h2 class="h3 fw-bold mb-2" data-i18n="band.title">星享好礼 · 积星有礼</h2>
-                    <p class="mb-0" data-i18n="band.text">下单累积星星，解锁会员等级，兑换专属好礼与优惠券。</p>
+                    <h2 class="h3 fw-bold mb-2" data-i18n="band.title">MAX享好礼 · 积星有礼</h2>
+                    <p class="mb-0" data-i18n="band.text">下单累积MAX豆，解锁会员等级，兑换专属好礼与优惠券。</p>
                 </div>
                 <div class="col-lg-4 text-lg-end">
                     <a href="LogInSignUp.html" class="btn btn-light" data-i18n="band.cta">立即登录</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Store locator CTA -->
-    <section class="py-5">
-        <div class="container">
-            <div class="row align-items-center g-4">
-                <div class="col-lg-6 order-lg-2">
-                    <div
-                        class="ratio ratio-16x9 bg-light border rounded d-flex align-items-center justify-content-center text-secondary">
-                        <span>门店地图占位</span>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <h2 class="h3 fw-bold mb-3" data-i18n="store.title">查找附近门店</h2>
-                    <p class="text-secondary" data-i18n="store.text">探索你附近的 Merricano 门店，堂食或外带皆可。开启你的咖啡之旅。</p>
-                    <a href="Countries/Outlets.html" class="btn btn-dark" data-i18n="store.cta">查找门店</a>
                 </div>
             </div>
         </div>
@@ -224,9 +250,9 @@
                 <div class="col-6 col-md-3">
                     <h6 class="fw-bold mb-3" data-i18n="footer.help">帮助与支持</h6>
                     <ul class="list-unstyled small">
-                        <li class="mb-2"><a href="ContextUs/CustomerService.html" data-i18n="footer.help.cs">客户服务</a>
+                        <li class="mb-2"><a href="ContextUs.html" data-i18n="footer.help.cs">客户服务</a>
                         </li>
-                        <li class="mb-2"><a href="ContextUs/Feedback.html" data-i18n="footer.help.feedback">意见反馈</a>
+                        <li class="mb-2"><a href="ContextUs.html" data-i18n="footer.help.feedback">意见反馈</a>
                         </li>
                         <li class="mb-2"><a href="GetOurApp.html" data-i18n="footer.help.app">下载 App</a></li>
                     </ul>
@@ -237,8 +263,8 @@
                         <li class="mb-2"><a href="JoinUs/Investor.html" data-i18n="footer.business.invest">投资者关系</a>
                         </li>
                         <li class="mb-2"><a href="JoinUs/Career.html" data-i18n="footer.business.career">人才招聘</a></li>
-                        <li class="mb-2"><a href="ContextUs/Franchisees.html"
-                                data-i18n="footer.business.franchise">加盟合作</a></li>
+                        <li class="mb-2"><a href="JoinUs/Franchise.html" data-i18n="footer.business.franchise">加盟合作</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="col-6 col-md-3">
@@ -263,7 +289,7 @@
 
     <!-- Bootstrap JS (bundle includes Popper) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 
     <!-- Small helper script with i18n -->
@@ -279,28 +305,19 @@
                 'nav.collections': '臻选',
                 'nav.stores': '门店',
                 'nav.brand': '品牌',
+                'nav.history': '历史',
                 'nav.login': '登录/注册',
-                'nav.language': '语言',
-                'hero.title': '加入星享俱乐部',
-                'hero.desc': '灵感好礼，尽在此刻。累积星星，兑换好味，悦享会员专属福利。',
-                'hero.ctaJoin': '立即加入',
-                'hero.ctaLearn': '了解更多',
-                'section.explore': '探索美味',
-                'card1.title': '手工饮品',
-                'card1.text': '经典拿铁、美式、冷萃与限定风味，随心之选。',
-                'card1.cta': '查看菜单',
-                'card2.title': '甄选咖啡',
-                'card2.text': '产地限定豆，细腻风味层次，为你呈现。',
-                'card2.cta': '了解甄选',
-                'card3.title': '咖啡好物',
-                'card3.text': '随行杯与冲煮器具，陪你记录每一口好时光。',
-                'card3.cta': '选购好物',
-                'band.title': '星享好礼 · 积星有礼',
-                'band.text': '下单累积星星，解锁会员等级，兑换专属好礼与优惠券。',
+                'nav.language': '语言/Language',
+                'history.pageTitle': '品牌故事',
+                'history.section1.title': '起源与愿景',
+                'history.section1.paragraph1': 'Merricano 的故事始于对完美咖啡体验的简单愿景：在每一次冲泡中捕捉世界的精髓。从一个小小的梦想萌芽，我们踏上了一段环球之旅，寻找最优质的咖啡豆和最独特的风味。',
+                'history.section1.paragraph2': '我们的创始人，一群热爱咖啡的鉴赏家，相信一杯卓越的咖啡不仅仅是饮品，更是一种联结人心的艺术。正是这份信念，塑造了 Merricano 的灵魂。',
+                'history.section2.title': '创新与未来',
+                'history.section2.paragraph1': '多年来，Merricano 始终致力于创新，将传统工艺与现代技术完美融合。我们不断探索新的烘焙方法和饮品配方，只为给您带来前所未有的味蕾享受。',
+                'history.section2.paragraph2': '展望未来，Merricano 将继续秉承对卓越品质的追求，与全球社区紧密合作，共同创造更多可持续的咖啡文化，将 Merricano 的独特风味带给更多人。',
+                'band.title': 'MAX享好礼 · 积星有礼',
+                'band.text': '下单累积MAX豆，解锁会员等级，兑换专属好礼与优惠券。',
                 'band.cta': '立即登录',
-                'store.title': '查找附近门店',
-                'store.text': '探索你附近的 Merricano 门店，堂食或外带皆可。开启你的咖啡之旅。',
-                'store.cta': '查找门店',
                 'footer.about': '关于我们',
                 'footer.about.story': '品牌故事',
                 'footer.about.news': '新闻中心',
@@ -327,27 +344,17 @@
                 'nav.stores': 'Stores',
                 'nav.brand': 'Brand',
                 'nav.login': 'Sign In / Join',
-                'nav.language': 'Language',
-                'hero.title': 'Join Rewards',
-                'hero.desc': 'Collect stars and unlock member-exclusive offers and delightful surprises.',
-                'hero.ctaJoin': 'Join now',
-                'hero.ctaLearn': 'Learn more',
-                'section.explore': 'Explore Flavors',
-                'card1.title': 'Handcrafted Beverages',
-                'card1.text': 'Classics like Latte, Americano, Cold Brew, plus seasonal favorites.',
-                'card1.cta': 'See menu',
-                'card2.title': 'Reserve Coffee',
-                'card2.text': 'Limited-origin beans with layered tasting notes, curated for you.',
-                'card2.cta': 'Discover Reserve',
-                'card3.title': 'Coffee Gear',
-                'card3.text': 'Tumblers and brew tools to savor every sip along the way.',
-                'card3.cta': 'Shop gear',
-                'band.title': 'Rewards Perks · Stars Add Up',
-                'band.text': 'Earn stars with every order to unlock levels, gifts, and coupons.',
+                'nav.language': 'Language/语言',
+                'history.pageTitle': 'Our Story',
+                'history.section1.title': 'Origins and Vision',
+                'history.section1.paragraph1': 'The Merricano story began with a simple vision for the perfect coffee experience: capturing the essence of the world in every brew. From a small dream, we embarked on a global journey to find the finest coffee beans and most unique flavors.',
+                'history.section1.paragraph2': 'Our founders, a group of passionate coffee connoisseurs, believe that an exceptional cup of coffee is more than just a drink; it\'s an art that connects people. This belief shaped the soul of Merricano.',
+                'history.section2.title': 'Innovation and Future',
+                'history.section2.paragraph1': 'Over the years, Merricano has been committed to innovation, perfectly blending traditional craftsmanship with modern technology. We continuously explore new roasting methods and beverage recipes to bring you an unprecedented taste experience.',
+                'history.section2.paragraph2': 'Looking ahead, Merricano will continue to uphold its pursuit of excellence, working closely with global communities to create more sustainable coffee culture and bring Merricano\'s unique flavors to more people.',
+                'band.title': 'Rewards Perks · MAXs Add Up',
+                'band.text': 'Earn MAXs with every order to unlock levels, gifts, and coupons.',
                 'band.cta': 'Sign in now',
-                'store.title': 'Find a store nearby',
-                'store.text': 'Discover Merricano stores near you for dine-in or to-go. Start your journey.',
-                'store.cta': 'Find stores',
                 'footer.about': 'About us',
                 'footer.about.story': 'Our story',
                 'footer.about.news': 'Newsroom',
@@ -379,6 +386,11 @@
                 }
             });
             localStorage.setItem('lang', lang);
+            // Update the dropdown button text
+            const langDropdown = document.getElementById('langDropdown');
+            if (langDropdown) {
+                langDropdown.textContent = lang === 'en' ? 'Language/EN' : '语言/EN';
+            }
         }
 
         document.querySelectorAll('[data-lang]')?.forEach(function (btn) {
@@ -388,6 +400,7 @@
             });
         });
 
+        // Initialize language on load
         setLanguage(localStorage.getItem('lang') || 'zh');
     </script>
 </body>

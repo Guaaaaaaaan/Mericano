@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Merricano - Our Story</title>
-    <meta name="description"
-        content="Discover the rich history and journey of Merricano Coffee, from its origins to its current mission.">
+    <title>Merricano - 获取我们的App Get Our App</title>
+    <meta name="description" content="Get the Merricano App on App Store or Google Play.">
 
     <!-- Bootstrap 5.3 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -50,7 +49,6 @@
 
         .card {
             border-color: var(--border-light);
-            border-radius: 0.75rem;
         }
 
         /* Navbar */
@@ -79,7 +77,6 @@
             background-color: var(--brand-primary);
             color: var(--text-inverse);
             border-color: var(--brand-primary);
-            border-radius: 0.5rem;
         }
 
         .sbx-cta-primary:hover {
@@ -92,7 +89,6 @@
             color: var(--brand-primary);
             border-color: var(--brand-primary);
             background-color: transparent;
-            border-radius: 0.5rem;
         }
 
         .sbx-cta-outline:hover {
@@ -131,19 +127,11 @@
             color: var(--text-inverse);
             opacity: 1;
         }
-
-        /* Custom styles for history page */
-        .history-image {
-            max-width: 100%;
-            height: auto;
-            border-radius: 0.75rem;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
     </style>
 </head>
 
 <body>
-    <!-- Navbar (Merricano-like) -->
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg sbx-navbar">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
@@ -163,6 +151,7 @@
                     <li class="nav-item"><a class="nav-link" href="Countries.html" data-i18n="nav.stores">门店</a></li>
                     <li class="nav-item"><a class="nav-link" href="NewsRoom.html" data-i18n="nav.brand">品牌</a></li>
                     <li class="nav-item"><a class="nav-link" href="LogInSignUp.html" data-i18n="nav.login">登录/注册</a>
+                    </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="langDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false" data-i18n="nav.language">语言/EN</a>
@@ -176,65 +165,112 @@
         </div>
     </nav>
 
-    <!-- Main Content Area - Our Story -->
-    <main class="py-5">
-        <div class="container">
-            <h1 class="display-5 fw-bold text-center mb-5" data-i18n="history.pageTitle">品牌故事</h1>
-
-            <div class="row align-items-center g-5">
-                <div class="col-lg-6">
-                    <img src="Images/IconMerricano1.jpg" alt="Merricano History Image" class="history-image img-fluid">
-                </div>
-                <div class="col-lg-6">
-                    <h2 class="h3 fw-bold mb-3" data-i18n="history.section1.title">起源与愿景</h2>
-                    <p class="text-secondary mb-3" data-i18n="history.section1.paragraph1">
-                        Merricano 的故事始于对完美咖啡体验的简单愿景：在每一次冲泡中捕捉世界的精髓。
-                        从一个小小的梦想萌芽，我们踏上了一段环球之旅，寻找最优质的咖啡豆和最独特的风味。
-                    </p>
-                    <p class="text-secondary mb-0" data-i18n="history.section1.paragraph2">
-                        我们的创始人，一群热爱咖啡的鉴赏家，相信一杯卓越的咖啡不仅仅是饮品，
-                        更是一种联结人心的艺术。正是这份信念，塑造了 Merricano 的灵魂。
-                    </p>
-                </div>
-            </div>
-
-            <hr class="my-5">
-
-            <div class="row align-items-center g-5 flex-lg-row-reverse">
-                <div class="col-lg-6">
-                    <img src="Images/IconMerricano1.jpg" alt="Merricano Coffee Making" class="history-image img-fluid">
-                </div>
-                <div class="col-lg-6">
-                    <h2 class="h3 fw-bold mb-3" data-i18n="history.section2.title">创新与未来</h2>
-                    <p class="text-secondary mb-3" data-i18n="history.section2.paragraph1">
-                        多年来，Merricano 始终致力于创新，将传统工艺与现代技术完美融合。
-                        我们不断探索新的烘焙方法和饮品配方，只为给您带来前所未有的味蕾享受。
-                    </p>
-                    <p class="text-secondary mb-0" data-i18n="history.section2.paragraph2">
-                        展望未来，Merricano 将继续秉承对卓越品质的追求，
-                        与全球社区紧密合作，共同创造更多可持续的咖啡文化，将 Merricano 的独特风味带给更多人。
-                    </p>
-                </div>
-            </div>
+    <!-- Hero Section -->
+    <section class="py-5 sbx-hero">
+        <div class="container text-center">
+            <h1 class="display-5 fw-bold mb-3" data-i18n="getApp.title">下载 Merricano App</h1>
+            <p class="lead text-secondary" data-i18n="getApp.subtitle">
+                你的专属咖啡体验，从这里开始。
+            </p>
         </div>
-    </main>
+    </section>
 
-    <!-- Rewards band -->
-    <section class="sbx-band py-5">
+    <!-- Main Content Section: Download Options -->
+    <section class="py-5">
         <div class="container">
-            <div class="row align-items-center g-4">
+            <div class="row justify-content-center text-center">
                 <div class="col-lg-8">
-                    <h2 class="h3 fw-bold mb-2" data-i18n="band.title">MAX享好礼 · 积星有礼</h2>
-                    <p class="mb-0" data-i18n="band.text">下单累积MAX豆，解锁会员等级，兑换专属好礼与优惠券。</p>
-                </div>
-                <div class="col-lg-4 text-lg-end">
-                    <a href="LogInSignUp.html" class="btn btn-light" data-i18n="band.cta">立即登录</a>
+                    <h2 class="h4 fw-bold mb-4" data-i18n="getApp.downloadTitle">立即获取 Merricano App</h2>
+                    <p class="text-secondary mb-5" data-i18n="getApp.scanQr">
+                        用手机扫描以下二维码即可下载，或选择您所属平台的应用商店。
+                    </p>
+                    <!-- QR Code & App Store Buttons -->
+                    <div class="d-flex flex-column flex-md-row align-items-center justify-content-center gap-4 mb-5">
+                        <div class="d-flex flex-column align-items-center">
+                            <!-- QR Code for https://guaaaaaaaan.github.io/Mericano -->
+                            <div class="card p-3 rounded-4 shadow-sm" style="width: 150px; height: 150px;">
+                                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://guaaaaaaaan.github.io/Mericano"
+                                    alt="Merricano App Download QR Code" class="w-100 h-100 object-fit-contain">
+                            </div>
+                            <p class="mt-2 text-secondary" data-i18n="getApp.qrDesc">二维码下载</p>
+                        </div>
+                        <div class="d-flex flex-column gap-3">
+                            <a href="#"
+                                class="btn btn-dark sbx-cta-primary rounded-pill py-3 px-5 d-flex align-items-center justify-content-center gap-2"
+                                data-i18n="getApp.appStore">
+                                <!-- Apple logo SVG -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                    class="bi bi-apple" viewBox="0 0 16 16">
+                                    <path
+                                        d="M11.196 4.607c-.459-1.39-1.928-1.488-2.684-.043-1.042 1.956-.375 3.99.712 4.5 1.054.484 2.213-.67 2.113-2.071z" />
+                                    <path
+                                        d="M11.97 9.876c-.636 2.016-2.083 3.65-3.834 3.633-1.65.01-3.155-1.503-3.79-3.411-.532-1.595.23-3.398 1.7-4.137 1.434-.783 3.14-.153 3.733 1.834.469 1.55-.733 3.04-1.984 3.49-1.127.42-2.14-.75-2.046-2.182.264-1.637 1.8-3.047 3.32-3.033 1.258.01 2.518.927 3.256 1.889z" />
+                                    <path
+                                        d="M14 11.232c.168.49.239 1.02.26 1.586-.063 1.86-1.026 3.403-2.617 3.412-1.034 0-2.143-.807-3.235-1.884C7.653 13.91 6.138 15 4.873 15c-1.378-.01-2.68-1.128-2.75-3.32-.016-.447.01-.9.083-1.336.564 1.164 1.51 2.3 2.825 2.327 1.34.025 2.34-.848 3.19-2.012l.626-.95a5.57 5.57 0 0 1 1.455.518c1.353.766 2.096 1.124 2.946 1.13c.895 0 1.635-.292 2.238-.854.764-.727 1.228-1.58 1.246-1.595z" />
+                                </svg>
+                                App Store
+                            </a>
+                            <a href="#"
+                                class="btn btn-dark sbx-cta-primary rounded-pill py-3 px-5 d-flex align-items-center justify-content-center gap-2"
+                                data-i18n="getApp.googlePlay">
+                                <!-- Google Play logo SVG -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                    class="bi bi-google-play" viewBox="0 0 16 16">
+                                    <path
+                                        d="M14.28 1.28c.17-.12.39-.18.62-.18h.04c.26 0 .52.1.72.3l1.24 1.48c.24.28.32.65.23 1.01l-2.04 7.68c-.1.36-.29.69-.53.94l-3.36 3.36c-.25.25-.58.44-.94.53L1.12 15.68c-.36.09-.73.01-1.01-.23L-.16 14.12c-.2-.2-.3-.46-.3-.72v-.04c0-.23.06-.45.18-.62l7.7-7.7L-.16 1.28c-.12-.17-.18-.39-.18-.62v-.04c0-.26.1-.52.3-.72L1.58-.16c.28-.24.65-.32 1.01-.23L14.28 1.28z" />
+                                </svg>
+                                Google Play
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer (multi-column links) -->
+    <!-- App Features Section -->
+    <section class="py-5 sbx-band">
+        <div class="container text-center">
+            <h2 class="h4 fw-bold mb-5" data-i18n="getApp.featuresTitle">App 核心功能</h2>
+            <div class="row g-4 justify-content-center">
+                <!-- Feature 1 -->
+                <div class="col-md-4">
+                    <div class="card bg-transparent text-white border-0">
+                        <div class="card-body">
+                            <h5 class="fw-bold" data-i18n="getApp.feature1.title">便捷点餐</h5>
+                            <p class="text-secondary" data-i18n="getApp.feature1.desc">
+                                提前在线点餐，到店自取或享受外送服务，无需排队。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Feature 2 -->
+                <div class="col-md-4">
+                    <div class="card bg-transparent text-white border-0">
+                        <div class="card-body">
+                            <h5 class="fw-bold" data-i18n="getApp.feature2.title">积分奖励</h5>
+                            <p class="text-secondary" data-i18n="getApp.feature2.desc">
+                                每笔消费都可获得积分，兑换独家饮品、周边或抵扣券。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Feature 3 -->
+                <div class="col-md-4">
+                    <div class="card bg-transparent text-white border-0">
+                        <div class="card-body">
+                            <h5 class="fw-bold" data-i18n="getApp.feature3.title">专属优惠</h5>
+                            <p class="text-secondary" data-i18n="getApp.feature3.desc">
+                                接收会员专属折扣、生日惊喜和新品试饮邀请。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="sbx-footer border-top pt-5 pb-4">
         <div class="container">
             <div class="row g-4">
@@ -269,10 +305,8 @@
                 <div class="col-6 col-md-3">
                     <h6 class="fw-bold mb-3" data-i18n="footer.follow">关注我们</h6>
                     <ul class="list-unstyled small">
-                        <li class="mb-2"><a href="https://www.instagram.com/shylie_gj/"
-                                data-i18n="footer.follow.instagram">Instagram</a></li>
-                        <li class="mb-2"><a href="https://www.facebook.com/profile.php?id=61577266087614"
-                                data-i18n="footer.follow.Facebook">脸书</a></li>
+                        <li class="mb-2"><a href="#" data-i18n="footer.follow.weibo">微博</a></li>
+                        <li class="mb-2"><a href="#" data-i18n="footer.follow.wechat">微信</a></li>
                         <li class="mb-2"><a href="https://www.tiktok.com/@merricano_"
                                 data-i18n="footer.follow.douyin">抖音</a></li>
                     </ul>
@@ -303,23 +337,30 @@
 
         const translations = {
             zh: {
+                // Nav
                 'nav.menu': '菜单',
                 'nav.collections': '臻选',
                 'nav.stores': '门店',
                 'nav.brand': '品牌',
-                'nav.history': '历史',
                 'nav.login': '登录/注册',
-                'nav.language': '语言/Language',
-                'history.pageTitle': '品牌故事',
-                'history.section1.title': '起源与愿景',
-                'history.section1.paragraph1': 'Merricano 的故事始于对完美咖啡体验的简单愿景：在每一次冲泡中捕捉世界的精髓。从一个小小的梦想萌芽，我们踏上了一段环球之旅，寻找最优质的咖啡豆和最独特的风味。',
-                'history.section1.paragraph2': '我们的创始人，一群热爱咖啡的鉴赏家，相信一杯卓越的咖啡不仅仅是饮品，更是一种联结人心的艺术。正是这份信念，塑造了 Merricano 的灵魂。',
-                'history.section2.title': '创新与未来',
-                'history.section2.paragraph1': '多年来，Merricano 始终致力于创新，将传统工艺与现代技术完美融合。我们不断探索新的烘焙方法和饮品配方，只为给您带来前所未有的味蕾享受。',
-                'history.section2.paragraph2': '展望未来，Merricano 将继续秉承对卓越品质的追求，与全球社区紧密合作，共同创造更多可持续的咖啡文化，将 Merricano 的独特风味带给更多人。',
-                'band.title': 'MAX享好礼 · 积星有礼',
-                'band.text': '下单累积MAX豆，解锁会员等级，兑换专属好礼与优惠券。',
-                'band.cta': '立即登录',
+                'nav.language': '语言/EN',
+                // CS Page Specific
+                'getApp.title': '下载 Merricano App',
+                'getApp.subtitle': '你的专属咖啡体验，从这里开始。',
+                'getApp.downloadTitle': '立即获取 Merricano App',
+                'getApp.scanQr': '用手机扫描以下二维码即可下载，或选择您所属平台的应用商店。',
+                'getApp.qrDesc': '二维码下载',
+                'getApp.appStore': 'App Store',
+                'getApp.googlePlay': 'Google Play',
+                'getApp.directDownload': '直接下载 APK',
+                'getApp.featuresTitle': 'App 核心功能',
+                'getApp.feature1.title': '便捷点餐',
+                'getApp.feature1.desc': '提前在线点餐，到店自取或享受外送服务，无需排队。',
+                'getApp.feature2.title': '积分奖励',
+                'getApp.feature2.desc': '每笔消费都可获得积分，兑换独家饮品、周边或抵扣券。',
+                'getApp.feature3.title': '专属优惠',
+                'getApp.feature3.desc': '接收会员专属折扣、生日惊喜和新品试饮邀请。',
+                // Footer
                 'footer.about': '关于我们',
                 'footer.about.story': '品牌故事',
                 'footer.about.news': '新闻中心',
@@ -335,29 +376,36 @@
                 'footer.follow': '关注我们',
                 'footer.follow.weibo': '微博',
                 'footer.follow.wechat': '微信',
-                'footer.follow.Facebook': '脸书',
                 'footer.follow.douyin': '抖音',
                 'footer.bottom.contact': '联系我们',
                 'footer.bottom.privacy': '隐私政策',
                 'footer.bottom.terms': '使用条款'
             },
             en: {
+                // Nav
                 'nav.menu': 'Menu',
                 'nav.collections': 'Collections',
                 'nav.stores': 'Stores',
                 'nav.brand': 'Brand',
                 'nav.login': 'Sign In / Join',
                 'nav.language': 'Language/语言',
-                'history.pageTitle': 'Our Story',
-                'history.section1.title': 'Origins and Vision',
-                'history.section1.paragraph1': 'The Merricano story began with a simple vision for the perfect coffee experience: capturing the essence of the world in every brew. From a small dream, we embarked on a global journey to find the finest coffee beans and most unique flavors.',
-                'history.section1.paragraph2': 'Our founders, a group of passionate coffee connoisseurs, believe that an exceptional cup of coffee is more than just a drink; it\'s an art that connects people. This belief shaped the soul of Merricano.',
-                'history.section2.title': 'Innovation and Future',
-                'history.section2.paragraph1': 'Over the years, Merricano has been committed to innovation, perfectly blending traditional craftsmanship with modern technology. We continuously explore new roasting methods and beverage recipes to bring you an unprecedented taste experience.',
-                'history.section2.paragraph2': 'Looking ahead, Merricano will continue to uphold its pursuit of excellence, working closely with global communities to create more sustainable coffee culture and bring Merricano\'s unique flavors to more people.',
-                'band.title': 'Rewards Perks · MAXs Add Up',
-                'band.text': 'Earn MAXs with every order to unlock levels, gifts, and coupons.',
-                'band.cta': 'Sign in now',
+                // CS Page Specific
+                'getApp.title': 'Download the Merricano App',
+                'getApp.subtitle': 'Your exclusive coffee experience starts here.',
+                'getApp.downloadTitle': 'Get the Merricano App Now',
+                'getApp.scanQr': 'Scan the QR code below with your phone to download, or select your platform\'s app store.',
+                'getApp.qrDesc': 'QR Code Download',
+                'getApp.appStore': 'App Store',
+                'getApp.googlePlay': 'Google Play',
+                'getApp.directDownload': 'Direct APK Download',
+                'getApp.featuresTitle': 'App Core Features',
+                'getApp.feature1.title': 'Easy Ordering',
+                'getApp.feature1.desc': 'Order online in advance for in-store pickup or delivery, no more waiting in line.',
+                'getApp.feature2.title': 'Reward Points',
+                'getApp.feature2.desc': 'Earn points with every purchase to redeem exclusive drinks, merchandise, or coupons.',
+                'getApp.feature3.title': 'Exclusive Offers',
+                'getApp.feature3.desc': 'Receive member-only discounts, birthday surprises, and new product sampling invitations.',
+                // Footer
                 'footer.about': 'About us',
                 'footer.about.story': 'Our story',
                 'footer.about.news': 'Newsroom',
@@ -373,7 +421,6 @@
                 'footer.follow': 'Follow us',
                 'footer.follow.weibo': 'Weibo',
                 'footer.follow.wechat': 'WeChat',
-                'footer.follow.Facebook': 'Facebook',
                 'footer.follow.douyin': 'Douyin',
                 'footer.bottom.contact': 'Contact us',
                 'footer.bottom.privacy': 'Privacy policy',
@@ -390,11 +437,6 @@
                 }
             });
             localStorage.setItem('lang', lang);
-            // Update the dropdown button text
-            const langDropdown = document.getElementById('langDropdown');
-            if (langDropdown) {
-                langDropdown.textContent = lang === 'en' ? 'Language/EN' : '语言/EN';
-            }
         }
 
         document.querySelectorAll('[data-lang]')?.forEach(function (btn) {
@@ -404,7 +446,6 @@
             });
         });
 
-        // Initialize language on load
         setLanguage(localStorage.getItem('lang') || 'zh');
     </script>
 </body>

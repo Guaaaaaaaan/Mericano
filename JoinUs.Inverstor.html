@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Merricano - Our Story</title>
+    <title>Merricano - 投资者关系 Investor Relations</title>
     <meta name="description"
-        content="Discover the rich history and journey of Merricano Coffee, from its origins to its current mission.">
+        content="Investor Relations page for Merricano, including financial highlights and reports.">
 
     <!-- Bootstrap 5.3 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -50,7 +50,6 @@
 
         .card {
             border-color: var(--border-light);
-            border-radius: 0.75rem;
         }
 
         /* Navbar */
@@ -79,7 +78,6 @@
             background-color: var(--brand-primary);
             color: var(--text-inverse);
             border-color: var(--brand-primary);
-            border-radius: 0.5rem;
         }
 
         .sbx-cta-primary:hover {
@@ -92,7 +90,6 @@
             color: var(--brand-primary);
             border-color: var(--brand-primary);
             background-color: transparent;
-            border-radius: 0.5rem;
         }
 
         .sbx-cta-outline:hover {
@@ -132,18 +129,15 @@
             opacity: 1;
         }
 
-        /* Custom styles for history page */
-        .history-image {
-            max-width: 100%;
-            height: auto;
-            border-radius: 0.75rem;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        /* New class for the form background */
+        .sbx-form-bg {
+            background-color: #F3EFE9;
         }
     </style>
 </head>
 
 <body>
-    <!-- Navbar (Merricano-like) -->
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg sbx-navbar">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
@@ -163,6 +157,7 @@
                     <li class="nav-item"><a class="nav-link" href="Countries.html" data-i18n="nav.stores">门店</a></li>
                     <li class="nav-item"><a class="nav-link" href="NewsRoom.html" data-i18n="nav.brand">品牌</a></li>
                     <li class="nav-item"><a class="nav-link" href="LogInSignUp.html" data-i18n="nav.login">登录/注册</a>
+                    </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="langDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false" data-i18n="nav.language">语言/EN</a>
@@ -176,59 +171,140 @@
         </div>
     </nav>
 
-    <!-- Main Content Area - Our Story -->
-    <main class="py-5">
+    <!-- Hero Section -->
+    <section class="py-5 sbx-hero">
+        <div class="container text-center">
+            <h1 class="display-5 fw-bold mb-3" data-i18n="investor.title">投资者关系</h1>
+            <p class="lead text-secondary" data-i18n="investor.subtitle">与Merricano共同成长，创造长远价值。</p>
+            <a href="#highlights" class="btn sbx-cta-primary btn-lg mt-3" data-i18n="investor.cta">查看财务数据</a>
+        </div>
+    </section>
+
+    <!-- Banner Image 1 -->
+    <section class="py-5">
         <div class="container">
-            <h1 class="display-5 fw-bold text-center mb-5" data-i18n="history.pageTitle">品牌故事</h1>
+            <img src="https://placehold.co/1200x400/D4A373/3E2723?text=Merricano+Investors"
+                class="img-fluid rounded shadow-sm" alt="Merricano Investors Banner">
+        </div>
+    </section>
 
-            <div class="row align-items-center g-5">
-                <div class="col-lg-6">
-                    <img src="Images/IconMerricano1.jpg" alt="Merricano History Image" class="history-image img-fluid">
+    <!-- Financial Highlights Section -->
+    <section id="highlights" class="py-5">
+        <div class="container text-center">
+            <h2 class="h3 fw-bold mb-4" data-i18n="highlights.title">财务亮点</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm p-4 text-center">
+                        <h3 class="h5 fw-bold text-accent-olive" data-i18n="highlights.card1.title">年度收入</h3>
+                        <p class="display-6 fw-bold mb-0 text-accent-caramel" data-i18n="highlights.card1.value">¥50亿+
+                        </p>
+                    </div>
                 </div>
-                <div class="col-lg-6">
-                    <h2 class="h3 fw-bold mb-3" data-i18n="history.section1.title">起源与愿景</h2>
-                    <p class="text-secondary mb-3" data-i18n="history.section1.paragraph1">
-                        Merricano 的故事始于对完美咖啡体验的简单愿景：在每一次冲泡中捕捉世界的精髓。
-                        从一个小小的梦想萌芽，我们踏上了一段环球之旅，寻找最优质的咖啡豆和最独特的风味。
-                    </p>
-                    <p class="text-secondary mb-0" data-i18n="history.section1.paragraph2">
-                        我们的创始人，一群热爱咖啡的鉴赏家，相信一杯卓越的咖啡不仅仅是饮品，
-                        更是一种联结人心的艺术。正是这份信念，塑造了 Merricano 的灵魂。
-                    </p>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm p-4 text-center">
+                        <h3 class="h5 fw-bold text-accent-olive" data-i18n="highlights.card2.title">门店数量</h3>
+                        <p class="display-6 fw-bold mb-0 text-accent-caramel" data-i18n="highlights.card2.value">1000+
+                        </p>
+                    </div>
                 </div>
-            </div>
-
-            <hr class="my-5">
-
-            <div class="row align-items-center g-5 flex-lg-row-reverse">
-                <div class="col-lg-6">
-                    <img src="Images/IconMerricano1.jpg" alt="Merricano Coffee Making" class="history-image img-fluid">
-                </div>
-                <div class="col-lg-6">
-                    <h2 class="h3 fw-bold mb-3" data-i18n="history.section2.title">创新与未来</h2>
-                    <p class="text-secondary mb-3" data-i18n="history.section2.paragraph1">
-                        多年来，Merricano 始终致力于创新，将传统工艺与现代技术完美融合。
-                        我们不断探索新的烘焙方法和饮品配方，只为给您带来前所未有的味蕾享受。
-                    </p>
-                    <p class="text-secondary mb-0" data-i18n="history.section2.paragraph2">
-                        展望未来，Merricano 将继续秉承对卓越品质的追求，
-                        与全球社区紧密合作，共同创造更多可持续的咖啡文化，将 Merricano 的独特风味带给更多人。
-                    </p>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm p-4 text-center">
+                        <h3 class="h5 fw-bold text-accent-olive" data-i18n="highlights.card3.title">同比增长</h3>
+                        <p class="display-6 fw-bold mb-0 text-accent-caramel" data-i18n="highlights.card3.value">25%</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </main>
+    </section>
 
-    <!-- Rewards band -->
-    <section class="sbx-band py-5">
+    <!-- Reports and Filings Section -->
+    <section class="py-5 sbx-form-bg">
         <div class="container">
-            <div class="row align-items-center g-4">
-                <div class="col-lg-8">
-                    <h2 class="h3 fw-bold mb-2" data-i18n="band.title">MAX享好礼 · 积星有礼</h2>
-                    <p class="mb-0" data-i18n="band.text">下单累积MAX豆，解锁会员等级，兑换专属好礼与优惠券。</p>
-                </div>
-                <div class="col-lg-4 text-lg-end">
-                    <a href="LogInSignUp.html" class="btn btn-light" data-i18n="band.cta">立即登录</a>
+            <h2 class="h3 fw-bold mb-4 text-center" data-i18n="reports.title">报告与文件</h2>
+            <p class="text-secondary mb-4 text-center" data-i18n="reports.text">浏览我们的年度报告、季度财报及其他重要文件。</p>
+            <div class="list-group shadow-sm">
+                <a href="#"
+                    class="list-group-item list-group-item-action py-3 d-flex justify-content-between align-items-center rounded-top"
+                    aria-current="true">
+                    <span data-i18n="reports.item1">2023年年度报告</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-download" viewBox="0 0 16 16">
+                        <path
+                            d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
+                        <path
+                            d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V3.5a.5.5 0 0 0-1 0v6.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
+                    </svg>
+                </a>
+                <a href="#"
+                    class="list-group-item list-group-item-action py-3 d-flex justify-content-between align-items-center">
+                    <span data-i18n="reports.item2">2024年第一季度财报</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-download" viewBox="0 0 16 16">
+                        <path
+                            d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
+                        <path
+                            d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V3.5a.5.5 0 0 0-1 0v6.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
+                    </svg>
+                </a>
+                <a href="#"
+                    class="list-group-item list-group-item-action py-3 d-flex justify-content-between align-items-center rounded-bottom">
+                    <span data-i18n="reports.item3">投资者演示稿</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-download" viewBox="0 0 16 16">
+                        <path
+                            d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
+                        <path
+                            d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V3.5a.5.5 0 0 0-1 0v6.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="h3 fw-bold mb-3 text-center" data-i18n="contact.title">联系投资者关系团队</h2>
+            <p class="text-secondary mb-4 text-center" data-i18n="contact.text">如果您有任何疑问，请填写下表或通过以下方式联系我们。</p>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <ul class="list-unstyled text-center mb-4">
+                        <li class="mb-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-envelope me-2" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.168V5.383zm-.03 6.914L8.5 7.429 1.03 12.3c-.078.077-.119.16-.119.243 0 .285.405.344.92.146l7-4.2 7 4.2c.515.198.92-.146.92-.431 0-.083-.041-.166-.119-.244zM1 11.168l4.758-2.855L1 5.383v5.785z" />
+                            </svg>
+                            <a href="mailto:ir@merricano.com" class="text-secondary"
+                                data-i18n="contact.email">ir@merricano.com</a>
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-geo-alt me-2" viewBox="0 0 16 16">
+                                <path
+                                    d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.045 7.73 2.5 6.43 2.5 5.5a3.5 3.5 0 0 1 7 0c0 .93-.545 2.23-1.334 3.44z" />
+                                <path d="M8 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                            </svg>
+                            <span class="text-secondary" data-i18n="contact.address">北京市朝阳区咖啡大道88号</span>
+                        </li>
+                    </ul>
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label" data-i18n="form.name">姓名</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label" data-i18n="form.email">邮箱</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label" data-i18n="form.message">留言</label>
+                            <textarea class="form-control" id="message" rows="4" required></textarea>
+                        </div>
+                        <div class="d-grid mt-4">
+                            <button type="submit" class="btn sbx-cta-primary btn-lg" data-i18n="form.submit">提交</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -307,19 +383,8 @@
                 'nav.collections': '臻选',
                 'nav.stores': '门店',
                 'nav.brand': '品牌',
-                'nav.history': '历史',
                 'nav.login': '登录/注册',
-                'nav.language': '语言/Language',
-                'history.pageTitle': '品牌故事',
-                'history.section1.title': '起源与愿景',
-                'history.section1.paragraph1': 'Merricano 的故事始于对完美咖啡体验的简单愿景：在每一次冲泡中捕捉世界的精髓。从一个小小的梦想萌芽，我们踏上了一段环球之旅，寻找最优质的咖啡豆和最独特的风味。',
-                'history.section1.paragraph2': '我们的创始人，一群热爱咖啡的鉴赏家，相信一杯卓越的咖啡不仅仅是饮品，更是一种联结人心的艺术。正是这份信念，塑造了 Merricano 的灵魂。',
-                'history.section2.title': '创新与未来',
-                'history.section2.paragraph1': '多年来，Merricano 始终致力于创新，将传统工艺与现代技术完美融合。我们不断探索新的烘焙方法和饮品配方，只为给您带来前所未有的味蕾享受。',
-                'history.section2.paragraph2': '展望未来，Merricano 将继续秉承对卓越品质的追求，与全球社区紧密合作，共同创造更多可持续的咖啡文化，将 Merricano 的独特风味带给更多人。',
-                'band.title': 'MAX享好礼 · 积星有礼',
-                'band.text': '下单累积MAX豆，解锁会员等级，兑换专属好礼与优惠券。',
-                'band.cta': '立即登录',
+                'nav.language': '语言/EN',
                 'footer.about': '关于我们',
                 'footer.about.story': '品牌故事',
                 'footer.about.news': '新闻中心',
@@ -339,7 +404,31 @@
                 'footer.follow.douyin': '抖音',
                 'footer.bottom.contact': '联系我们',
                 'footer.bottom.privacy': '隐私政策',
-                'footer.bottom.terms': '使用条款'
+                'footer.bottom.terms': '使用条款',
+                // Investor Relations specific translations
+                'investor.title': '投资者关系',
+                'investor.subtitle': '与Merricano共同成长，创造长远价值。',
+                'investor.cta': '查看财务数据',
+                'highlights.title': '财务亮点',
+                'highlights.card1.title': '年度收入',
+                'highlights.card1.value': '¥50亿+',
+                'highlights.card2.title': '门店数量',
+                'highlights.card2.value': '1000+',
+                'highlights.card3.title': '同比增长',
+                'highlights.card3.value': '25%',
+                'reports.title': '报告与文件',
+                'reports.text': '浏览我们的年度报告、季度财报及其他重要文件。',
+                'reports.item1': '2023年年度报告',
+                'reports.item2': '2024年第一季度财报',
+                'reports.item3': '投资者演示稿',
+                'contact.title': '联系投资者关系团队',
+                'contact.text': '如果您有任何疑问，请填写下表或通过以下方式联系我们。',
+                'contact.email': 'ir@merricano.com',
+                'contact.address': '北京市朝阳区咖啡大道88号',
+                'form.name': '姓名',
+                'form.email': '邮箱',
+                'form.message': '留言',
+                'form.submit': '提交'
             },
             en: {
                 'nav.menu': 'Menu',
@@ -348,16 +437,6 @@
                 'nav.brand': 'Brand',
                 'nav.login': 'Sign In / Join',
                 'nav.language': 'Language/语言',
-                'history.pageTitle': 'Our Story',
-                'history.section1.title': 'Origins and Vision',
-                'history.section1.paragraph1': 'The Merricano story began with a simple vision for the perfect coffee experience: capturing the essence of the world in every brew. From a small dream, we embarked on a global journey to find the finest coffee beans and most unique flavors.',
-                'history.section1.paragraph2': 'Our founders, a group of passionate coffee connoisseurs, believe that an exceptional cup of coffee is more than just a drink; it\'s an art that connects people. This belief shaped the soul of Merricano.',
-                'history.section2.title': 'Innovation and Future',
-                'history.section2.paragraph1': 'Over the years, Merricano has been committed to innovation, perfectly blending traditional craftsmanship with modern technology. We continuously explore new roasting methods and beverage recipes to bring you an unprecedented taste experience.',
-                'history.section2.paragraph2': 'Looking ahead, Merricano will continue to uphold its pursuit of excellence, working closely with global communities to create more sustainable coffee culture and bring Merricano\'s unique flavors to more people.',
-                'band.title': 'Rewards Perks · MAXs Add Up',
-                'band.text': 'Earn MAXs with every order to unlock levels, gifts, and coupons.',
-                'band.cta': 'Sign in now',
                 'footer.about': 'About us',
                 'footer.about.story': 'Our story',
                 'footer.about.news': 'Newsroom',
@@ -377,7 +456,31 @@
                 'footer.follow.douyin': 'Douyin',
                 'footer.bottom.contact': 'Contact us',
                 'footer.bottom.privacy': 'Privacy policy',
-                'footer.bottom.terms': 'Terms of use'
+                'footer.bottom.terms': 'Terms of use',
+                // Investor Relations specific translations
+                'investor.title': 'Investor Relations',
+                'investor.subtitle': 'Grow with Merricano, create long-term value.',
+                'investor.cta': 'View Financial Data',
+                'highlights.title': 'Financial Highlights',
+                'highlights.card1.title': 'Annual Revenue',
+                'highlights.card1.value': '¥5B+',
+                'highlights.card2.title': 'Number of Stores',
+                'highlights.card2.value': '1000+',
+                'highlights.card3.title': 'YoY Growth',
+                'highlights.card3.value': '25%',
+                'reports.title': 'Reports and Filings',
+                'reports.text': 'Browse our annual reports, quarterly earnings, and other key documents.',
+                'reports.item1': '2023 Annual Report',
+                'reports.item2': 'Q1 2024 Earnings',
+                'reports.item3': 'Investor Presentation',
+                'contact.title': 'Contact Investor Relations',
+                'contact.text': 'If you have any questions, please fill out the form below or contact us via the following methods.',
+                'contact.email': 'ir@merricano.com',
+                'contact.address': '88 Coffee Avenue, Chaoyang District, Beijing',
+                'form.name': 'Name',
+                'form.email': 'Email',
+                'form.message': 'Message',
+                'form.submit': 'Submit'
             }
         };
 
@@ -389,12 +492,13 @@
                     el.textContent = dict[key];
                 }
             });
+            // Update form labels and options
+            document.getElementById('name').previousElementSibling.textContent = dict['form.name'];
+            document.getElementById('email').previousElementSibling.textContent = dict['form.email'];
+            document.getElementById('message').previousElementSibling.textContent = dict['form.message'];
+            document.querySelector('button[type="submit"]').textContent = dict['form.submit'];
+
             localStorage.setItem('lang', lang);
-            // Update the dropdown button text
-            const langDropdown = document.getElementById('langDropdown');
-            if (langDropdown) {
-                langDropdown.textContent = lang === 'en' ? 'Language/EN' : '语言/EN';
-            }
         }
 
         document.querySelectorAll('[data-lang]')?.forEach(function (btn) {
@@ -404,7 +508,6 @@
             });
         });
 
-        // Initialize language on load
         setLanguage(localStorage.getItem('lang') || 'zh');
     </script>
 </body>

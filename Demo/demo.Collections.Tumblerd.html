@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title data-i18n="page.title">Merricano - 臻选杯具</title>
+    <meta name="description" content="探索 Merricano 臻选杯具的独特设计与功能">
+
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="Images/IconMerricano1.jpg">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        :root {
+            /* Primary */
+            --brand-primary: #6B4226;
+            /* Coffee Brown */
+            /* Background */
+            --bg-light-cream: #FAF3E7;
+            --bg-dark-brown: #3E2723;
+            /* Accents */
+            --accent-caramel: #D4A373;
+            --accent-olive: #7B8D42;
+            /* Text */
+            --text-main: #2C2C2C;
+            --text-secondary: #5C5C5C;
+            --text-inverse: #FFFFFF;
+            /* Borders */
+            --border-light: #E0D6CC;
+            --border-dark: #8B5E3C;
+        }
+
+        body {
+            background-color: var(--bg-light-cream);
+            color: var(--text-main);
+        }
+
+        .text-secondary {
+            color: var(--text-secondary) !important;
+        }
+
+        .card {
+            border-color: var(--border-light);
+        }
+
+        /* Navbar */
+        .nav-brandbar {
+            background-color: var(--brand-primary);
+        }
+
+        .nav-brandbar .navbar-brand,
+        .nav-brandbar .nav-link {
+            color: var(--text-inverse);
+        }
+
+        .nav-brandbar .nav-link:hover {
+            color: var(--text-inverse);
+            opacity: .9;
+        }
+
+        /* Hero */
+        .collections-hero {
+            background-color: var(--bg-light-cream);
+        }
+
+        /* Buttons */
+        .sbx-cta-primary {
+            background-color: var(--brand-primary);
+            color: var(--text-inverse);
+            border-color: var(--brand-primary);
+        }
+
+        .sbx-cta-primary:hover {
+            background-color: var(--accent-caramel);
+            border-color: var(--accent-caramel);
+            color: var(--text-main);
+        }
+
+        .sbx-cta-outline {
+            color: var(--brand-primary);
+            border-color: var(--brand-primary);
+            background: transparent;
+        }
+
+        .sbx-cta-outline:hover {
+            background-color: rgba(107, 66, 38, .08);
+        }
+
+        /* Badges */
+        .badge-origin {
+            background-color: var(--accent-olive);
+        }
+
+        .badge-notes {
+            background-color: var(--accent-caramel);
+            color: var(--text-main);
+        }
+
+        /* Section dividers */
+        .section-title {
+            border-bottom: 1px solid var(--border-light);
+            padding-bottom: .5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Footer */
+        .site-footer {
+            background-color: var(--bg-dark-brown);
+            color: var(--text-inverse);
+        }
+
+        .site-footer a {
+            color: var(--text-inverse);
+            text-decoration: none;
+            opacity: .9;
+        }
+
+        .site-footer a:hover {
+            opacity: 1;
+        }
+
+        /* Custom Styles for Tumbler Page */
+        .detail-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .detail-table td {
+            padding: .75rem 0;
+            border-bottom: 1px dashed var(--border-light);
+            vertical-align: top;
+        }
+
+        .detail-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .detail-table td:first-child {
+            padding-right: 1rem;
+            white-space: nowrap;
+        }
+
+        .detail-table td:last-child {
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg nav-brandbar">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <img src="Images/IconMerricano.jpg" alt="Merricano" width="36" height="36" class="rounded-circle">
+                <span class="fw-semibold">Merricano</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+                aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-lg-2">
+                    <li class="nav-item"><a class="nav-link" href="Menu.html" data-i18n="nav.menu">菜单</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Collections.html" data-i18n="nav.collections">臻选</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="Countries.html" data-i18n="nav.stores">门店</a></li>
+                    <li class="nav-item"><a class="nav-link" href="NewsRoom.html" data-i18n="nav.brand">品牌</a></li>
+                    <li class="nav-item"><a class="nav-link" href="LogInSignUp.html" data-i18n="nav.login">登录/注册</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="langDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false" data-i18n="nav.language">语言/EN</a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
+                            <li><button class="dropdown-item" data-lang="zh">中文</button></li>
+                            <li><button class="dropdown-item" data-lang="en">English</button></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="collections-hero py-5">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-7">
+                    <h1 class="display-6 fw-bold mb-3" data-i18n="hero.title">臻选杯具</h1>
+                    <p class="lead text-secondary mb-0" data-i18n="hero.desc">轻便、时尚、环保。我们为您精选了一系列功能与美感兼具的杯具。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="py-4">
+        <div class="container">
+            <!-- Why Choose Us Section -->
+            <div class="row mb-5">
+                <div class="col-12">
+                    <h2 class="section-title text-center mb-4" data-i18n="why.title">为什么选择 Merricano 杯具？</h2>
+                </div>
+                <div class="col-md-4 text-center">
+                    <i class="fa-solid fa-seedling text-success fa-3x mb-3"></i>
+                    <h5 class="fw-bold" data-i18n="why.eco.title">环保耐用</h5>
+                    <p class="text-secondary" data-i18n="why.eco.desc">减少一次性杯具的使用，为地球贡献一份力量。</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <i class="fa-solid fa-temperature-full text-danger fa-3x mb-3"></i>
+                    <h5 class="fw-bold" data-i18n="why.temp.title">卓越保温性能</h5>
+                    <p class="text-secondary" data-i18n="why.temp.desc">双层真空设计，长效保持饮品的理想温度。</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <i class="fa-solid fa-mug-hot text-primary fa-3x mb-3"></i>
+                    <h5 class="fw-bold" data-i18n="why.design.title">时尚简约设计</h5>
+                    <p class="text-secondary" data-i18n="why.design.desc">完美融合功能与美学，是您日常生活的时尚单品。</p>
+                </div>
+            </div>
+
+            <!-- Cup Section -->
+            <h2 class="section-title text-center mb-4" data-i18n="cup.title">随行杯</h2>
+            <div class="row g-4 mb-5">
+                <!-- Single Cup Detail -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://placehold.co/400x300/E0D6CC/3E2723?text=Minimalist+Cup" class="card-img-top"
+                            alt="简约款随行杯">
+                        <div class="card-body d-flex flex-column">
+                            <h4 class="h4 card-title fw-bold" data-i18n="cup1.title">轻奢简约随行杯</h4>
+                            <p class="text-secondary mb-4" data-i18n="cup1.desc">采用食品级不锈钢，哑光质感，手感舒适，密封防漏，是通勤的理想选择。</p>
+                            <table class="detail-table mb-5">
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-semibold" data-i18n="detail.material">材质</td>
+                                        <td data-i18n="cup1.material">304 不锈钢</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold" data-i18n="detail.capacity">容量</td>
+                                        <td data-i18n="cup1.capacity">500ml</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold" data-i18n="detail.function">功能</td>
+                                        <td data-i18n="cup1.function">保温 / 保冷</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold" data-i18n="detail.cleaning">清洗方式</td>
+                                        <td data-i18n="cup1.cleaning">手洗</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="d-flex align-items-center justify-content-between mt-auto pt-3 border-top">
+                                <span class="fw-bold fs-5" data-i18n="cup1.price">¥128</span>
+                                <button class="btn sbx-cta-primary" data-i18n="buy.cta">加入购物车</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://placehold.co/400x300/E0D6CC/3E2723?text=Ceramic+Lined+Cup"
+                            class="card-img-top" alt="陶瓷涂层随行杯">
+                        <div class="card-body d-flex flex-column">
+                            <h4 class="h4 card-title fw-bold" data-i18n="cup2.title">陶瓷内胆随行杯</h4>
+                            <p class="text-secondary mb-4" data-i18n="cup2.desc">独特的陶瓷内胆，不留异味，完美保留咖啡的纯粹风味，适合对口感有高要求的你。
+                            </p>
+                            <table class="detail-table mb-5">
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-semibold" data-i18n="detail.material">材质</td>
+                                        <td data-i18n="cup2.material">陶瓷内胆, 304 不锈钢</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold" data-i18n="detail.capacity">容量</td>
+                                        <td data-i18n="cup2.capacity">380ml</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold" data-i18n="detail.function">功能</td>
+                                        <td data-i18n="cup2.function">保温 / 保冷</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold" data-i18n="detail.cleaning">清洗方式</td>
+                                        <td data-i18n="cup2.cleaning">洗碗机适用</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="d-flex align-items-center justify-content-between mt-auto pt-3 border-top">
+                                <span class="fw-bold fs-5" data-i18n="cup2.price">¥168</span>
+                                <button class="btn sbx-cta-primary" data-i18n="buy.cta">加入购物车</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://placehold.co/400x300/E0D6CC/3E2723?text=Smart+Cup" class="card-img-top"
+                            alt="智能温显随行杯">
+                        <div class="card-body d-flex flex-column">
+                            <h4 class="h4 card-title fw-bold" data-i18n="cup3.title">智能温显随行杯</h4>
+                            <p class="text-secondary mb-4" data-i18n="cup3.desc">杯盖上的 LED 屏幕可实时显示饮品温度，防止烫伤，让您随时掌握最佳饮用时机。
+                            </p>
+                            <table class="detail-table mb-5">
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-semibold" data-i18n="detail.material">材质</td>
+                                        <td data-i18n="cup3.material">304 不锈钢, 塑料</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold" data-i18n="detail.capacity">容量</td>
+                                        <td data-i18n="cup3.capacity">450ml</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold" data-i18n="detail.function">功能</td>
+                                        <td data-i18n="cup3.function">保温 / 保冷, 智能温显</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold" data-i18n="detail.cleaning">清洗方式</td>
+                                        <td data-i18n="cup3.cleaning">仅杯体可洗</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="d-flex align-items-center justify-content-between mt-auto pt-3 border-top">
+                                <span class="fw-bold fs-5" data-i18n="cup3.price">¥199</span>
+                                <button class="btn sbx-cta-primary" data-i18n="buy.cta">加入购物车</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hand-pour Section -->
+            <h2 class="section-title text-center mb-4" data-i18n="handpour.title">手冲器具套装</h2>
+            <div class="row g-4 mb-5">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://placehold.co/400x300/E0D6CC/3E2723?text=Handpour+Set" class="card-img-top"
+                            alt="经典手冲咖啡套装">
+                        <div class="card-body d-flex flex-column">
+                            <h4 class="h4 card-title fw-bold" data-i18n="handpour1.title">经典手冲咖啡套装</h4>
+                            <p class="text-secondary mb-4" data-i18n="handpour1.desc">包含 V60 滤杯、分享壶、滤纸和专用手冲壶。是手冲新手的理想之选。
+                            </p>
+                            <table class="detail-table mb-5">
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-semibold" data-i18n="detail.material">材质</td>
+                                        <td data-i18n="handpour1.material">陶瓷, 玻璃, 不锈钢</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold" data-i18n="detail.capacity">容量</td>
+                                        <td data-i18n="handpour1.capacity">600ml</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold" data-i18n="detail.function">功能</td>
+                                        <td data-i18n="handpour1.function">手冲咖啡</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold" data-i18n="detail.accessory">配件</td>
+                                        <td data-i18n="handpour1.accessory">滤杯, 滤壶, 滤纸, 手冲壶</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="d-flex align-items-center justify-content-between mt-auto pt-3 border-top">
+                                <span class="fw-bold fs-5" data-i18n="handpour1.price">¥298</span>
+                                <button class="btn sbx-cta-primary" data-i18n="buy.cta">加入购物车</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://placehold.co/400x300/E0D6CC/3E2723?text=Travel+Set" class="card-img-top"
+                            alt="旅行手冲套装">
+                        <div class="card-body d-flex flex-column">
+                            <h4 class="h4 card-title fw-bold" data-i18n="handpour2.title">旅行手冲套装</h4>
+                            <p class="text-secondary mb-4" data-i18n="handpour2.desc">紧凑便携，包含折叠滤杯和迷你磨豆机，随时随地享受手冲乐趣。</p>
+                            <table class="detail-table mb-5">
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-semibold" data-i18n="detail.material">材质</td>
+                                        <td data-i18n="handpour2.material">不锈钢, 硅胶</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold" data-i18n="detail.capacity">容量</td>
+                                        <td data-i18n="handpour2.capacity">300ml</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold" data-i18n="detail.function">功能</td>
+                                        <td data-i18n="handpour2.function">户外手冲</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold" data-i18n="detail.accessory">配件</td>
+                                        <td data-i18n="handpour2.accessory">折叠滤杯, 磨豆机, 分享杯</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="d-flex align-items-center justify-content-between mt-auto pt-3 border-top">
+                                <span class="fw-bold fs-5" data-i18n="handpour2.price">¥368</span>
+                                <button class="btn sbx-cta-primary" data-i18n="buy.cta">加入购物车</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://placehold.co/400x300/E0D6CC/3E2723?text=Premium+Set" class="card-img-top"
+                            alt="精致手冲礼盒">
+                        <div class="card-body d-flex flex-column">
+                            <h4 class="h4 card-title fw-bold" data-i18n="handpour3.title">精致手冲礼盒</h4>
+                            <p class="text-secondary mb-4" data-i18n="handpour3.desc">高品质铜制手冲壶和玻璃滤杯，搭配温度计，送礼自用两相宜。</p>
+                            <table class="detail-table mb-5">
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-semibold" data-i18n="detail.material">材质</td>
+                                        <td data-i18n="handpour3.material">黄铜, 耐热玻璃</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold" data-i18n="detail.capacity">容量</td>
+                                        <td data-i18n="handpour3.capacity">800ml</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold" data-i18n="detail.function">功能</td>
+                                        <td data-i18n="handpour3.function">精准手冲</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold" data-i18n="detail.accessory">配件</td>
+                                        <td data-i18n="handpour3.accessory">铜壶, 玻璃滤杯, 温度计</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="d-flex align-items-center justify-content-between mt-auto pt-3 border-top">
+                                <span class="fw-bold fs-5" data-i18n="handpour3.price">¥499</span>
+                                <button class="btn sbx-cta-primary" data-i18n="buy.cta">加入购物车</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Espresso & Mug Section -->
+            <h2 class="section-title text-center mb-4" data-i18n="espresso.title">意式马克杯</h2>
+            <div class="row g-4">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://placehold.co/400x300/E0D6CC/3E2723?text=Espresso+Mug" class="card-img-top"
+                            alt="经典意式浓缩杯">
+                        <div class="card-body d-flex flex-column">
+                            <h4 class="h4 card-title fw-bold" data-i18n="mug1.title">经典意式浓缩杯</h4>
+                            <p class="text-secondary mb-4" data-i18n="mug1.desc">厚实陶瓷，圆润手柄，完美保持意式浓缩的香醇温度。</p>
+                            <table class="detail-table mb-5">
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-semibold" data-i18n="detail.material">材质</td>
+                                        <td data-i18n="mug1.material">陶瓷</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold" data-i18n="detail.capacity">容量</td>
+                                        <td data-i18n="mug1.capacity">80ml</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold" data-i18n="detail.feature">特点</td>
+                                        <td data-i18n="mug1.feature">厚壁设计</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold" data-i18n="detail.cleaning">清洗方式</td>
+                                        <td data-i18n="mug1.cleaning">洗碗机适用</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="d-flex align-items-center justify-content-between mt-auto pt-3 border-top">
+                                <span class="fw-bold fs-5" data-i18n="mug1.price">¥38</span>
+                                <button class="btn sbx-cta-primary" data-i18n="buy.cta">加入购物车</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://placehold.co/400x300/E0D6CC/3E2723?text=Latte+Art+Mug" class="card-img-top"
+                            alt="拿铁艺术马克杯">
+                        <div class="card-body d-flex flex-column">
+                            <h4 class="h4 card-title fw-bold" data-i18n="mug2.title">拿铁艺术马克杯</h4>
+                            <p class="text-secondary mb-4" data-i18n="mug2.desc">宽口设计和弧形杯底，是制作和展示拿铁拉花艺术的专业之选。</p>
+                            <table class="detail-table mb-5">
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-semibold" data-i18n="detail.material">材质</td>
+                                        <td data-i18n="mug2.material">骨瓷</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold" data-i18n="detail.capacity">容量</td>
+                                        <td data-i18n="mug2.capacity">250ml</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold" data-i18n="detail.feature">特点</td>
+                                        <td data-i18n="mug2.feature">宽口, 弧形杯底</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold" data-i18n="detail.cleaning">清洗方式</td>
+                                        <td data-i18n="mug2.cleaning">手洗</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="d-flex align-items-center justify-content-between mt-auto pt-3 border-top">
+                                <span class="fw-bold fs-5" data-i18n="mug2.price">¥68</span>
+                                <button class="btn sbx-cta-primary" data-i18n="buy.cta">加入购物车</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://placehold.co/400x300/E0D6CC/3E2723?text=Glass+Mug" class="card-img-top"
+                            alt="双层玻璃马克杯">
+                        <div class="card-body d-flex flex-column">
+                            <h4 class="h4 card-title fw-bold" data-i18n="mug3.title">双层玻璃马克杯</h4>
+                            <p class="text-secondary mb-4" data-i18n="mug3.desc">双层设计，隔热不烫手，悬浮感设计，视觉上非常美观。</p>
+                            <table class="detail-table mb-5">
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-semibold" data-i18n="detail.material">材质</td>
+                                        <td data-i18n="mug3.material">耐热玻璃</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold" data-i18n="detail.capacity">容量</td>
+                                        <td data-i18n="mug3.capacity">350ml</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold" data-i18n="detail.feature">特点</td>
+                                        <td data-i18n="mug3.feature">双层隔热, 悬浮设计</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold" data-i18n="detail.cleaning">清洗方式</td>
+                                        <td data-i18n="mug3.cleaning">手洗</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="d-flex align-items-center justify-content-between mt-auto pt-3 border-top">
+                                <span class="fw-bold fs-5" data-i18n="mug3.price">¥88</span>
+                                <button class="btn sbx-cta-primary" data-i18n="buy.cta">加入购物车</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer border-top pt-5 pb-4 mt-4">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-6 col-md-3">
+                    <h6 class="fw-bold mb-3" data-i18n="footer.about">关于我们</h6>
+                    <ul class="list-unstyled small mb-0">
+                        <li class="mb-2"><a href="History.html" data-i18n="footer.about.story">品牌故事</a></li>
+                        <li class="mb-2"><a href="NewsRoom.html" data-i18n="footer.about.news">新闻中心</a></li>
+                        <li class="mb-2"><a href="JoinUs.html" data-i18n="footer.about.join">加入我们</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h6 class="fw-bold mb-3" data-i18n="footer.help">帮助与支持</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="ContextUs.CustomerService.html" data-i18n="footer.help.cs">客户服务</a>
+                        </li>
+                        <li class="mb-2"><a href="ContextUs.Feedback.html" data-i18n="footer.help.feedback">意见反馈</a>
+                        </li>
+                        <li class="mb-2"><a href="GetOurApp.html" data-i18n="footer.help.app">下载 App</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h6 class="fw-bold mb-3" data-i18n="footer.business">商务合作</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="JoinUs.Inverstor.html" data-i18n="footer.business.invest">投资者关系</a>
+                        </li>
+                        <li class="mb-2"><a href="JoinUs.Career.html" data-i18n="footer.business.career">人才招聘</a></li>
+                        <li class="mb-2"><a href="JoinUs.Franchisees.html"
+                                data-i18n="footer.business.franchise">加盟合作</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h6 class="fw-bold mb-3" data-i18n="footer.follow">关注我们</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="https://www.instagram.com/shylie_gj/"
+                                data-i18n="footer.follow.instagram">Instagram</a></li>
+                        <li class="mb-2"><a href="https://www.facebook.com/profile.php?id=61577266087614"
+                                data-i18n="footer.follow.Facebook">脸书</a></li>
+                        <li class="mb-2"><a href="https://www.tiktok.com/@merricano_"
+                                data-i18n="footer.follow.douyin">抖音</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-flex flex-column flex-md-row align-items-center justify-content-between pt-4 mt-4 border-top">
+                <span class="small">© <span id="year"></span> Merricano Promax</span>
+                <div class="d-flex gap-3 small">
+                    <a href="ContextUs.html" data-i18n="footer.bottom.contact">联系我们</a>
+                    <a href="#" data-i18n="footer.bottom.privacy">隐私政策</a>
+                    <a href="#" data-i18n="footer.bottom.terms">使用条款</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- Helpers + i18n -->
+    <script>
+        const yearEl = document.getElementById('year');
+        if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+        const i18n = {
+            zh: {
+                'page.title': 'Merricano - 臻选杯具',
+                'nav.menu': '菜单',
+                'nav.collections': '臻选',
+                'nav.stores': '门店',
+                'nav.brand': '品牌',
+                'nav.login': '登录/注册',
+                'nav.language': '语言/EN',
+                'hero.title': '臻选杯具',
+                'hero.desc': '轻便、时尚、环保。我们为您精选了一系列功能与美感兼具的杯具。',
+                'why.title': '为什么选择 Merricano 杯具？',
+                'why.eco.title': '环保耐用',
+                'why.eco.desc': '减少一次性杯具的使用，为地球贡献一份力量。',
+                'why.temp.title': '卓越保温性能',
+                'why.temp.desc': '双层真空设计，长效保持饮品的理想温度。',
+                'why.design.title': '时尚简约设计',
+                'why.design.desc': '完美融合功能与美学，是您日常生活的时尚单品。',
+                'cup.title': '随行杯',
+                'cup1.title': '轻奢简约随行杯',
+                'cup1.desc': '采用食品级不锈钢，哑光质感，手感舒适，密封防漏，是通勤的理想选择。',
+                'cup1.material': '304 不锈钢',
+                'cup1.capacity': '500ml',
+                'cup1.function': '保温 / 保冷',
+                'cup1.cleaning': '手洗',
+                'cup1.price': '¥128',
+                'cup2.title': '陶瓷内胆随行杯',
+                'cup2.desc': '独特的陶瓷内胆，不留异味，完美保留咖啡的纯粹风味，适合对口感有高要求的你。',
+                'cup2.material': '陶瓷内胆, 304 不锈钢',
+                'cup2.capacity': '380ml',
+                'cup2.function': '保温 / 保冷',
+                'cup2.cleaning': '洗碗机适用',
+                'cup2.price': '¥168',
+                'cup3.title': '智能温显随行杯',
+                'cup3.desc': '杯盖上的 LED 屏幕可实时显示饮品温度，防止烫伤，让您随时掌握最佳饮用时机。',
+                'cup3.material': '304 不锈钢, 塑料',
+                'cup3.capacity': '450ml',
+                'cup3.function': '保温 / 保冷, 智能温显',
+                'cup3.cleaning': '仅杯体可洗',
+                'cup3.price': '¥199',
+                'handpour.title': '手冲器具套装',
+                'handpour1.title': '经典手冲咖啡套装',
+                'handpour1.desc': '包含 V60 滤杯、分享壶、滤纸和专用手冲壶。是手冲新手的理想之选。',
+                'handpour1.material': '陶瓷, 玻璃, 不锈钢',
+                'handpour1.capacity': '600ml',
+                'handpour1.function': '手冲咖啡',
+                'handpour1.accessory': '滤杯, 滤壶, 滤纸, 手冲壶',
+                'handpour1.price': '¥298',
+                'handpour2.title': '旅行手冲套装',
+                'handpour2.desc': '紧凑便携，包含折叠滤杯和迷你磨豆机，随时随地享受手冲乐趣。',
+                'handpour2.material': '不锈钢, 硅胶',
+                'handpour2.capacity': '300ml',
+                'handpour2.function': '户外手冲',
+                'handpour2.accessory': '折叠滤杯, 磨豆机, 分享杯',
+                'handpour2.price': '¥368',
+                'handpour3.title': '精致手冲礼盒',
+                'handpour3.desc': '高品质铜制手冲壶和玻璃滤杯，搭配温度计，送礼自用两相宜。',
+                'handpour3.material': '黄铜, 耐热玻璃',
+                'handpour3.capacity': '800ml',
+                'handpour3.function': '精准手冲',
+                'handpour3.accessory': '铜壶, 玻璃滤杯, 温度计',
+                'handpour3.price': '¥499',
+                'espresso.title': '意式马克杯',
+                'mug1.title': '经典意式浓缩杯',
+                'mug1.desc': '厚实陶瓷，圆润手柄，完美保持意式浓缩的香醇温度。',
+                'mug1.material': '陶瓷',
+                'mug1.capacity': '80ml',
+                'mug1.feature': '厚壁设计',
+                'mug1.cleaning': '洗碗机适用',
+                'mug1.price': '¥38',
+                'mug2.title': '拿铁艺术马克杯',
+                'mug2.desc': '宽口设计和弧形杯底，是制作和展示拿铁拉花艺术的专业之选。',
+                'mug2.material': '骨瓷',
+                'mug2.capacity': '250ml',
+                'mug2.feature': '宽口, 弧形杯底',
+                'mug2.cleaning': '手洗',
+                'mug2.price': '¥68',
+                'mug3.title': '双层玻璃马克杯',
+                'mug3.desc': '双层设计，隔热不烫手，悬浮感设计，视觉上非常美观。',
+                'mug3.material': '耐热玻璃',
+                'mug3.capacity': '350ml',
+                'mug3.feature': '双层隔热, 悬浮设计',
+                'mug3.cleaning': '手洗',
+                'mug3.price': '¥88',
+                'detail.material': '材质',
+                'detail.capacity': '容量',
+                'detail.function': '功能',
+                'detail.accessory': '配件',
+                'detail.feature': '特点',
+                'detail.cleaning': '清洗方式',
+                'buy.cta': '加入购物车',
+                'footer.about': '关于我们',
+                'footer.about.story': '品牌故事',
+                'footer.about.news': '新闻中心',
+                'footer.about.join': '加入我们',
+                'footer.help': '帮助与支持',
+                'footer.help.cs': '客户服务',
+                'footer.help.feedback': '意见反馈',
+                'footer.help.app': '下载 App',
+                'footer.business': '商务合作',
+                'footer.business.invest': '投资者关系',
+                'footer.business.career': '人才招聘',
+                'footer.business.franchise': '加盟合作',
+                'footer.follow': '关注我们',
+                'footer.follow.instagram': 'Instagram',
+                'footer.follow.Facebook': '脸书',
+                'footer.follow.douyin': '抖音',
+                'footer.bottom.contact': '联系我们',
+                'footer.bottom.privacy': '隐私政策',
+                'footer.bottom.terms': '使用条款'
+            },
+            en: {
+                'page.title': 'Merricano - Coffee Gear',
+                'nav.menu': 'Menu',
+                'nav.collections': 'Collections',
+                'nav.stores': 'Stores',
+                'nav.brand': 'Brand',
+                'nav.login': 'Sign In / Join',
+                'nav.language': 'Language/语言',
+                'hero.title': 'Coffee Gear',
+                'hero.desc': 'Our curated collection of high-quality coffee gear is designed for enthusiasts who appreciate function and style.',
+                'why.title': 'Why Choose Merricano Coffee Gear?',
+                'why.eco.title': 'Eco-Friendly & Durable',
+                'why.eco.desc': 'Reduce disposable cup use to help the planet.',
+                'why.temp.title': 'Superior Insulation',
+                'why.temp.desc': 'Superior insulation for lasting hot or cold drinks.',
+                'why.design.title': 'Stylish & Minimalist Design',
+                'why.design.desc': 'A blend of function and aesthetics for a stylish everyday essential.',
+                'cup.title': 'Tumblers',
+                'cup1.title': 'Minimalist Tumbler',
+                'cup1.desc': 'Food-grade stainless steel with a matte finish. Leak-proof and perfect for commuting.',
+                'cup1.material': '304 Stainless Steel',
+                'cup1.capacity': '500ml',
+                'cup1.function': 'Hot / Cold',
+                'cup1.cleaning': 'Hand Wash Only',
+                'cup1.price': '¥128',
+                'cup2.title': 'Ceramic-Lined Tumbler',
+                'cup2.desc': 'Unique ceramic lining for a pure, untainted coffee flavor. Dishwasher safe.',
+                'cup2.material': 'Ceramic-Lined, 304 Stainless Steel',
+                'cup2.capacity': '380ml',
+                'cup2.function': 'Hot / Cold',
+                'cup2.cleaning': 'Dishwasher Safe',
+                'cup2.price': '¥168',
+                'cup3.title': 'Smart Display Tumbler',
+                'cup3.desc': 'Smart LED lid shows real-time temp to prevent burns. Perfect for the ideal sip.',
+                'cup3.material': '304 Stainless Steel, Plastic',
+                'cup3.capacity': '450ml',
+                'cup3.function': 'Hot / Cold, Smart Temp Display',
+                'cup3.cleaning': 'Cup body only',
+                'cup3.price': '¥199',
+                'handpour.title': 'Hand-pour Coffee Sets',
+                'handpour1.title': 'Classic Hand-pour Set',
+                'handpour1.desc': 'Includes a V60 dripper, server, filters, and kettle. Ideal for beginners.',
+                'handpour1.material': 'Ceramic, Glass, Stainless Steel',
+                'handpour1.capacity': '600ml',
+                'handpour1.function': 'Pour-over Coffee',
+                'handpour1.accessory': 'Dripper, Server, Filters, Kettle',
+                'handpour1.price': '¥298',
+                'handpour2.title': 'Travel Hand-pour Set',
+                'handpour2.desc': 'Compact and portable, with a collapsible dripper and mini grinder. Enjoy coffee on the go.',
+                'handpour2.material': 'Stainless Steel, Silicone',
+                'handpour2.capacity': '300ml',
+                'handpour2.function': 'Outdoor Pour-over',
+                'handpour2.accessory': 'Collapsible Dripper, Grinder, Cup',
+                'handpour2.price': '¥368',
+                'handpour3.title': 'Premium Hand-pour Gift Set',
+                'handpour3.desc': 'High-quality copper kettle and glass dripper with thermometer. A perfect gift.',
+                'handpour3.material': 'Copper, Heat-resistant Glass',
+                'handpour3.capacity': '800ml',
+                'handpour3.function': 'Precision Pour-over',
+                'handpour3.accessory': 'Copper Kettle, Glass Dripper, Thermometer',
+                'handpour3.price': '¥499',
+                'espresso.title': 'Espresso & Mug',
+                'mug1.title': 'Classic Espresso Cup',
+                'mug1.desc': 'Thick ceramic with a round handle, perfect for keeping espresso hot.',
+                'mug1.material': 'Ceramic',
+                'mug1.capacity': '80ml',
+                'mug1.feature': 'Thick-walled Design',
+                'mug1.cleaning': 'Dishwasher Safe',
+                'mug1.price': '¥38',
+                'mug2.title': 'Latte Art Mug',
+                'mug2.desc': 'Wide rim and curved bottom, designed for professional latte art.',
+                'mug2.material': 'Bone China',
+                'mug2.capacity': '250ml',
+                'mug2.feature': 'Wide Rim, Curved Bottom',
+                'mug2.cleaning': 'Hand Wash Only',
+                'mug2.price': '¥68',
+                'mug3.title': 'Double-wall Glass Mug',
+                'mug3.desc': 'Double-layered for insulation, preventing burns. Visually stunning with a floating effect.',
+                'mug3.material': 'Heat-resistant Glass',
+                'mug3.capacity': '350ml',
+                'mug3.feature': 'Double-wall, Floating Design',
+                'mug3.cleaning': 'Hand Wash Only',
+                'mug3.price': '¥88',
+                'detail.material': 'Material',
+                'detail.capacity': 'Capacity',
+                'detail.function': 'Function',
+                'detail.accessory': 'Accessory',
+                'detail.feature': 'Feature',
+                'detail.cleaning': 'Cleaning',
+                'buy.cta': 'Add to Cart',
+                'footer.about': 'About us',
+                'footer.about.story': 'Our story',
+                'footer.about.news': 'Newsroom',
+                'footer.about.join': 'Join us',
+                'footer.help': 'Help & support',
+                'footer.help.cs': 'Customer service',
+                'footer.help.feedback': 'Feedback',
+                'footer.help.app': 'Get the App',
+                'footer.business': 'Business',
+                'footer.business.invest': 'Investors',
+                'footer.business.career': 'Careers',
+                'footer.business.franchise': 'Franchise',
+                'footer.follow': 'Follow us',
+                'footer.follow.instagram': 'Instagram',
+                'footer.follow.Facebook': 'Facebook',
+                'footer.follow.douyin': 'Douyin',
+                'footer.bottom.contact': 'Contact us',
+                'footer.bottom.privacy': 'Privacy policy',
+                'footer.bottom.terms': 'Terms of use'
+            }
+        };
+
+        function setLanguage(lang) {
+            const dict = i18n[lang] || i18n.zh;
+            document.querySelectorAll('[data-i18n]').forEach(function (el) {
+                const key = el.getAttribute('data-i18n');
+                if (dict[key]) el.textContent = dict[key];
+            });
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(function (el) {
+                const key = el.getAttribute('data-i18n-placeholder');
+                if (dict[key]) el.placeholder = dict[key];
+            });
+            localStorage.setItem('lang', lang);
+        }
+
+        document.querySelectorAll('[data-lang]').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                const lang = this.getAttribute('data-lang');
+                setLanguage(lang);
+            });
+        });
+
+        setLanguage(localStorage.getItem('lang') || 'zh');
+    </script>
+</body>
+
+</html>
