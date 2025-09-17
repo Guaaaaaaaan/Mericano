@@ -264,12 +264,15 @@
                         <!-- Name Input -->
                         <div class="mb-3">
                             <label for="name" class="form-label" data-i18n="form.label.name">姓名</label>
-                            <input type="text" class="form-control" id="name" required>
+                            <input type="text" class="form-control rounded-3" id="name"
+                                data-i18n-placeholder="cs.form.placeholder.name" placeholder="请输入你的姓名" required>
                         </div>
                         <!-- Email Input -->
                         <div class="mb-3">
                             <label for="email" class="form-label" data-i18n="form.label.email">邮箱</label>
-                            <input type="email" class="form-control" id="email" required>
+                            <input type="email" class="form-control rounded-3" id="email"
+                                data-i18n-placeholder="cs.form.placeholder.email" placeholder="name@example.com"
+                                required>
                         </div>
                         <!-- Gender Select -->
                         <div class="mb-3">
@@ -284,7 +287,8 @@
                         <!-- File Upload -->
                         <div class="mb-4">
                             <label for="document" class="form-label" data-i18n="form.label.document">上传文件</label>
-                            <input class="form-control" type="file" id="document">
+                            <input class="form-control" type="file" id="document" accept=".pdf,.doc,.docx,.jpg,.png"
+                                data-i18n-placeholder="cs.form.placeholder.document" placeholder="上传文件 (可选)">
                         </div>
                         <!-- Submit Button -->
                         <div class="d-grid">
@@ -426,7 +430,11 @@
                 'form.gender.female': '女',
                 'form.gender.other': '其他',
                 'form.submit': '提交申请',
-                'form.success': '您的申请已成功提交，我们稍后将与您联系。'
+                'form.success': '您的申请已成功提交，我们稍后将与您联系。',
+                'cs.form.placeholder.document': '上传文件 (可选)',
+                'cs.form.placeholder.name': '请输入你的姓名',
+                'cs.form.placeholder.email': 'name@example.com',
+
             },
             en: {
                 'nav.menu': 'Menu',
@@ -484,7 +492,10 @@
                 'form.gender.female': 'Female',
                 'form.gender.other': 'Other',
                 'form.submit': 'Submit Application',
-                'form.success': 'Your application has been submitted successfully. We will contact you shortly.'
+                'form.success': 'Your application has been submitted successfully. We will contact you shortly.',
+                'cs.form.placeholder.document': 'Upload Document (Optional)',
+                'cs.form.placeholder.name': 'Enter your name',
+                'cs.form.placeholder.email': 'name@example.com',
             }
         };
 
@@ -494,6 +505,12 @@
                 const key = el.getAttribute('data-i18n');
                 if (dict[key]) {
                     el.textContent = dict[key];
+                }
+            });
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(function (el) {
+                const key = el.getAttribute('data-i18n-placeholder');
+                if (dict[key]) {
+                    el.setAttribute('placeholder', dict[key]);
                 }
             });
             // Update gender options for current language

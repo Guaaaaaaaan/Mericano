@@ -185,11 +185,13 @@
                     <form>
                         <div class="mb-3">
                             <label for="name" class="form-label text-secondary" data-i18n="cs.form.name">你的姓名</label>
-                            <input type="text" class="form-control rounded-3" id="name" placeholder="请输入你的姓名" required>
+                            <input type="text" class="form-control rounded-3" id="name"
+                                data-i18n-placeholder="cs.form.placeholder.name" placeholder="请输入你的姓名" required>
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label text-secondary" data-i18n="cs.form.email">邮箱地址</label>
-                            <input type="email" class="form-control rounded-3" id="email" placeholder="name@example.com"
+                            <input type="email" class="form-control rounded-3" id="email"
+                                data-i18n-placeholder="cs.form.placeholder.email" placeholder="name@example.com"
                                 required>
                         </div>
                         <div class="mb-3">
@@ -206,7 +208,8 @@
                         <div class="mb-3">
                             <label for="message" class="form-label text-secondary"
                                 data-i18n="cs.form.message">详细描述</label>
-                            <textarea class="form-control rounded-3" id="message" rows="5" placeholder="请详细描述你的问题或建议"
+                            <textarea class="form-control rounded-3" id="message" rows="5"
+                                data-i18n-placeholder="cs.form.placeholder.message" placeholder="请详细描述你的问题或建议"
                                 required></textarea>
                         </div>
                         <div class="d-grid">
@@ -397,6 +400,9 @@
                 'cs.form.email': '邮箱地址',
                 'cs.form.subject': '主题',
                 'cs.form.placeholder': '选择问题类型',
+                'cs.form.placeholder.name': '请输入你的姓名',
+                'cs.form.placeholder.email': 'name@example.com',
+                'cs.form.placeholder.message': '请详细描述你的问题或建议',
                 'cs.form.option1': '订单问题',
                 'cs.form.option2': '产品/质量问题',
                 'cs.form.option3': '技术支持',
@@ -455,6 +461,9 @@
                 'cs.form.email': 'Email Address',
                 'cs.form.subject': 'Subject',
                 'cs.form.placeholder': 'Select an issue type',
+                'cs.form.placeholder.name': 'Enter your name',
+                'cs.form.placeholder.email': 'name@example.com',
+                'cs.form.placeholder.message': 'Please describe your question or suggestion in detail',
                 'cs.form.option1': 'Order Issue',
                 'cs.form.option2': 'Product/Quality Issue',
                 'cs.form.option3': 'Technical Support',
@@ -505,6 +514,12 @@
                 const key = el.getAttribute('data-i18n');
                 if (dict[key]) {
                     el.textContent = dict[key];
+                }
+            });
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(function (el) {
+                const key = el.getAttribute('data-i18n-placeholder');
+                if (dict[key]) {
+                    el.setAttribute('placeholder', dict[key]);
                 }
             });
             localStorage.setItem('lang', lang);

@@ -190,12 +190,15 @@
                             <div class="mb-3">
                                 <label for="feedbackName" class="form-label"
                                     data-i18n="feedback.form.label.name">您的姓名</label>
-                                <input type="text" class="form-control" id="feedbackName" required>
+                                <input type="text" class="form-control rounded-3" id="name"
+                                    data-i18n-placeholder="cs.form.placeholder.name" placeholder="请输入你的姓名" required>
                             </div>
                             <div class="mb-3">
                                 <label for="feedbackEmail" class="form-label"
                                     data-i18n="feedback.form.label.email">邮箱</label>
-                                <input type="email" class="form-control" id="feedbackEmail" required>
+                                <input type="email" class="form-control rounded-3" id="email"
+                                    data-i18n-placeholder="cs.form.placeholder.email" placeholder="name@example.com"
+                                    required>
                             </div>
                             <div class="mb-3">
                                 <label for="feedbackType" class="form-label"
@@ -212,7 +215,9 @@
                             <div class="mb-3">
                                 <label for="feedbackMessage" class="form-label"
                                     data-i18n="feedback.form.label.message">详细内容</label>
-                                <textarea class="form-control" id="feedbackMessage" rows="6" required></textarea>
+                                <textarea class="form-control rounded-3" id="message" rows="5"
+                                    data-i18n-placeholder="cs.form.placeholder.message" placeholder="请详细描述你的问题或建议"
+                                    required></textarea>
                             </div>
                             <div class="d-grid">
                                 <button type="submit" class="btn sbx-cta-primary btn-lg"
@@ -341,7 +346,11 @@
                 'footer.follow.douyin': '抖音',
                 'footer.bottom.contact': '联系我们',
                 'footer.bottom.privacy': '隐私政策',
-                'footer.bottom.terms': '使用条款'
+                'footer.bottom.terms': '使用条款',
+                'cs.form.placeholder': '选择问题类型',
+                'cs.form.placeholder.name': '请输入你的姓名',
+                'cs.form.placeholder.email': 'name@example.com',
+                'cs.form.placeholder.message': '请详细描述你的问题或建议',
             },
             en: {
                 // Nav
@@ -386,7 +395,12 @@
                 'footer.follow.douyin': 'Douyin',
                 'footer.bottom.contact': 'Contact us',
                 'footer.bottom.privacy': 'Privacy policy',
-                'footer.bottom.terms': 'Terms of use'
+                'footer.bottom.terms': 'Terms of use',
+                'cs.form.placeholder': 'Select an issue type',
+                'cs.form.placeholder.name': 'Enter your name',
+                'cs.form.placeholder.email': 'name@example.com',
+                'cs.form.placeholder.message': 'Please describe your question or suggestion in detail',
+
             }
         };
 
@@ -396,6 +410,12 @@
                 const key = el.getAttribute('data-i18n');
                 if (dict[key]) {
                     el.textContent = dict[key];
+                }
+            });
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(function (el) {
+                const key = el.getAttribute('data-i18n-placeholder');
+                if (dict[key]) {
+                    el.setAttribute('placeholder', dict[key]);
                 }
             });
             localStorage.setItem('lang', lang);

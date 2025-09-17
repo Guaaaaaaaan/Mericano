@@ -200,12 +200,12 @@
                             <div class="mb-3">
                                 <label for="loginEmail" class="form-label" data-i18n="auth.emailLabel">邮箱地址</label>
                                 <input type="email" class="form-control" id="loginEmail" aria-describedby="emailHelp"
-                                    data-i18n="auth.emailPlaceholder" placeholder="您的邮箱">
+                                    data-i18n-placeholder="auth.emailPlaceholder" placeholder="您的邮箱">
                             </div>
                             <div class="mb-3">
                                 <label for="loginPassword" class="form-label" data-i18n="auth.passwordLabel">密码</label>
                                 <input type="password" class="form-control" id="loginPassword"
-                                    data-i18n="auth.passwordPlaceholder" placeholder="您的密码">
+                                    data-i18n-placeholder="auth.passwordPlaceholder" placeholder="您的密码">
                             </div>
                             <div class="mb-3 form-check">
                                 <input type="checkbox" class="form-check-input" id="rememberMe">
@@ -226,18 +226,18 @@
                             <div class="mb-3">
                                 <label for="signupEmail" class="form-label" data-i18n="auth.emailLabel">邮箱地址</label>
                                 <input type="email" class="form-control" id="signupEmail"
-                                    data-i18n="auth.emailPlaceholder" placeholder="您的邮箱">
+                                    data-i18n-placeholder="auth.emailPlaceholder" placeholder="您的邮箱">
                             </div>
                             <div class="mb-3">
                                 <label for="signupPassword" class="form-label" data-i18n="auth.passwordLabel">密码</label>
                                 <input type="password" class="form-control" id="signupPassword"
-                                    data-i18n="auth.passwordPlaceholder" placeholder="您的密码">
+                                    data-i18n-placeholder="auth.passwordPlaceholder" placeholder="您的密码">
                             </div>
                             <div class="mb-3">
                                 <label for="confirmPassword" class="form-label"
                                     data-i18n="auth.confirmPasswordLabel">确认密码</label>
                                 <input type="password" class="form-control" id="confirmPassword"
-                                    data-i18n="auth.confirmPasswordPlaceholder" placeholder="再次输入密码">
+                                    data-i18n-placeholder="auth.confirmPasswordPlaceholder" placeholder="再次输入密码">
                             </div>
                             <div class="mb-3 form-check">
                                 <input type="checkbox" class="form-check-input" id="agreeTerms">
@@ -430,10 +430,18 @@
 
         function setLanguage(lang) {
             const dict = translations[lang] || translations.zh;
+            // Update text content
             document.querySelectorAll('[data-i18n]').forEach(function (el) {
                 const key = el.getAttribute('data-i18n');
                 if (dict[key]) {
                     el.textContent = dict[key];
+                }
+            });
+            // Update placeholder attributes
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(function (el) {
+                const key = el.getAttribute('data-i18n-placeholder');
+                if (dict[key]) {
+                    el.setAttribute('placeholder', dict[key]);
                 }
             });
             localStorage.setItem('lang', lang);
