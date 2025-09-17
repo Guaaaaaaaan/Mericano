@@ -296,19 +296,26 @@
                     <form id="contactForm">
                         <div class="mb-3">
                             <label for="name" class="form-label" data-i18n="contact.form.label.name">您的姓名</label>
-                            <input type="text" class="form-control" id="name" required>
+                            <input type="text" class="form-control rounded-3" id="name"
+                                data-i18n-placeholder="cs.form.placeholder.name" placeholder="请输入你的姓名" required>
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label" data-i18n="contact.form.label.email">邮箱</label>
-                            <input type="email" class="form-control" id="email" required>
+                            <input type="email" class="form-control rounded-3" id="email"
+                                data-i18n-placeholder="cs.form.placeholder.email" placeholder="name@example.com"
+                                required>
                         </div>
                         <div class="mb-3">
                             <label for="subject" class="form-label" data-i18n="contact.form.label.subject">主题</label>
-                            <input type="text" class="form-control" id="subject" required>
+                            <input type="text" class="form-control rounded-3" id="Subject"
+                                data-i18n-placeholder="cs.form.placeholder.subject" placeholder="请输入你的姓名" required>
+
                         </div>
                         <div class="mb-3">
                             <label for="message" class="form-label" data-i18n="contact.form.label.message">您的留言</label>
-                            <textarea class="form-control" id="message" rows="5" required></textarea>
+                            <textarea class="form-control rounded-3" id="message" rows="5"
+                                data-i18n-placeholder="cs.form.placeholder.message" placeholder="请详细描述你的问题或建议"
+                                required></textarea>
                         </div>
                         <div class="d-grid">
                             <button type="submit" class="btn sbx-cta-primary btn-lg"
@@ -442,7 +449,11 @@
                 'contact.form.label.subject': '主题',
                 'contact.form.label.message': '您的留言',
                 'contact.form.submit': '提交',
-                'contact.form.success': '您的留言已成功发送，感谢您的宝贵意见！'
+                'contact.form.success': '您的留言已成功发送，感谢您的宝贵意见！',
+                'cs.form.placeholder.name': '请输入你的姓名',
+                'cs.form.placeholder.email': 'name@example.com',
+                'cs.form.placeholder.message': '请详细描述你的问题或建议',
+                'cs.form.placeholder.subject': '请输入你的主题',
             },
             en: {
                 'nav.menu': 'Menu',
@@ -493,7 +504,11 @@
                 'contact.form.label.subject': 'Subject',
                 'contact.form.label.message': 'Your Message',
                 'contact.form.submit': 'Submit',
-                'contact.form.success': 'Your message has been sent successfully. Thank you for your feedback!'
+                'contact.form.success': 'Your message has been sent successfully. Thank you for your feedback!',
+                'cs.form.placeholder.name': 'Enter your name',
+                'cs.form.placeholder.email': 'name@example.com',
+                'cs.form.placeholder.message': 'Please describe your question or suggestion in detail',
+                'cs.form.placeholder.subject': 'Enter your subject',
             }
         };
 
@@ -503,6 +518,12 @@
                 const key = el.getAttribute('data-i18n');
                 if (dict[key]) {
                     el.textContent = dict[key];
+                }
+            });
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(function (el) {
+                const key = el.getAttribute('data-i18n-placeholder');
+                if (dict[key]) {
+                    el.setAttribute('placeholder', dict[key]);
                 }
             });
             localStorage.setItem('lang', lang);
