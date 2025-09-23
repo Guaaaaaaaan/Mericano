@@ -1,161 +1,120 @@
-* {
-      margin:0; /*It removes outer spacing on each element*/
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #1C1C1C; /* Light beige background */
-    }
-
-    /* Header */
-    .header {
-      background-color: #1C1C1C;
-      color: #D4AF37;
-      padding: 15px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: relative;
-    }
-
-   /* Logo */
-    .logo {
-      display: flex;
-      align-items: center;
-      color: white;
-      font-size: 24px;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    .logo img {
-      height: 40px;
-      margin-right: 10px;
-    }
-
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-    }
-
-    .lang-switch {
-      margin-right: 10px;
-    }
-    .lang-switch select {
-      background: #1C1C1C;
-      color: #D4AF37;
-      border: 1px solid #555;
-      padding: 6px 8px;
-      border-radius: 4px;
-    }
-
-    .hamburger span {
-      height: 3px;
-      width: 25px;
-      background: white;
-      margin: 4px 0;
-    }
-
-    /* Navigation Menu */
-    .nav {
-      display: flex;
-      align-items: center;
-    }
-    .nav a {
-      color: #D4AF37;
-      text-decoration: none;
-      padding: 8px 15px;
-      transition: background-color 0.3s;
-    }
-    
-    /* Menu Styles */
-    .menu {
-      display: flex;
-      gap: 20px;
-    }
-
-    .menu a {
-      color: white;
-      text-decoration: none;
-      padding: 8px;
-    }
-
-    .menu a:hover {
-      background-color: #555;
-      border-radius: 4px;
-    }
-
-    /* Responsive Menu */
-    @media (max-width: 1700px) {
-      .hamburger {
-        display: flex;
-      }
-
-      .menu {
-        display: none;
-        flex-direction: column;
-        background-color: #333;
-        width: 100%;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        padding: 10px 0;
-      }
-
-      .menu.active {
-        display: flex;
-      }
-    }
-
-    .banner 
-    {
-        width: 100%;
-        height: 600px;
-        background-image: url('Images/Banner.png');
-        background-size: cover;
-        background-position: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        text-align: center;
-        transition: margin-top 0.3s;
-    }
-
-    .banner h1
-    {
-        background-color: rgba(0, 0, 0, 0.5);
-        padding: 10px 20px;
-        border-radius: 10px;
-        font-size: 2.5rem;
-    }
-
-    @media (max-width: 1000px) 
-    {
-    .banner {
-        height: 100px;
+  :root {
+            /* Primary */
+            --brand-primary: #6B4226;
+            /* Coffee Brown */
+            /* Background */
+            --bg-light-cream: #FAF3E7;
+            --bg-dark-brown: #3E2723;
+            /* Accents */
+            --accent-caramel: #D4A373;
+            --accent-olive: #7B8D42;
+            /* Text */
+            --text-main: #2C2C2C;
+            --text-secondary: #5C5C5C;
+            --text-inverse: #FFFFFF;
+            /* Borders */
+            --border-light: #E0D6CC;
+            --border-dark: #8B5E3C;
         }
 
-    .banner h1 
-        {
-        font-size: 1.5rem;
+        body {
+            background-color: var(--bg-light-cream);
+            color: var(--text-main);
         }
-    }
 
-    /* Footer */
-    footer {
-      background-color: #1C1C1C;
-      color: white;
-      text-align: center;
-      padding: 20px 0;
-      position: relative;
-    }
+        .text-secondary {
+            color: var(--text-secondary) !important;
+        }
 
-    h1 {
-      text-align: center;
-      margin-top: 20px;
-      color: #F2E2C4;
-    }
+        .card {
+            border-color: var(--border-light);
+        }
+
+        /* Navbar */
+        .nav-brandbar {
+            background-color: var(--brand-primary);
+        }
+
+        .nav-brandbar .navbar-brand,
+        .nav-brandbar .nav-link {
+            color: var(--text-inverse);
+        }
+
+        .nav-brandbar .nav-link:hover {
+            color: var(--text-inverse);
+            opacity: .9;
+        }
+
+        /* Hero */
+        .collections-hero {
+            background-color: var(--bg-light-cream);
+        }
+
+        /* Buttons */
+        .sbx-cta-primary {
+            background-color: var(--brand-primary);
+            color: var(--text-inverse);
+            border-color: var(--brand-primary);
+        }
+
+        .sbx-cta-primary:hover {
+            background-color: var(--accent-caramel);
+            border-color: var(--accent-caramel);
+            color: var(--text-main);
+        }
+
+        .sbx-cta-outline {
+            color: var(--brand-primary);
+            border-color: var(--brand-primary);
+            background: transparent;
+        }
+
+        .sbx-cta-outline:hover {
+            background-color: rgba(107, 66, 38, .08);
+        }
+
+        /* Badges */
+        .badge-origin {
+            background-color: var(--accent-olive);
+        }
+
+        .badge-notes {
+            background-color: var(--accent-caramel);
+            color: var(--text-main);
+        }
+
+        /* Section dividers */
+        .section-title {
+            border-bottom: 1px solid var(--border-light);
+            padding-bottom: .5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Footer */
+        .site-footer {
+            background-color: var(--bg-dark-brown);
+            color: var(--text-inverse);
+        }
+
+        .site-footer a {
+            color: var(--text-inverse);
+            text-decoration: none;
+            opacity: .9;
+        }
+
+        .site-footer a:hover {
+            opacity: 1;
+        }
+
+        /* Custom Styles for CoffeeBean Page */
+        .detail-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: .75rem 0;
+            border-bottom: 1px dashed var(--border-light);
+        }
+
+        .detail-item:last-child {
+            border-bottom: none;
+        }
